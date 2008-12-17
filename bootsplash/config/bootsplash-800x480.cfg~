@@ -1,0 +1,46 @@
+# This is a bootsplash configuration file for
+# ALT Linux, resolution 800x600.
+#
+# See www.bootsplash.org for more information.
+# Written by Jakub Steiner <jimmac@novell.com>
+# modified by Sergey V Turchin <zerg@altlinux.org>
+# modified by Anton V. Boyarshinov <boyarsh@altlinux.org>
+# modified by Sergey Alembekov <rt@altlinux.org>
+#
+version=3
+state=1
+progress_enable=1
+overpaintok=1
+
+
+fgcolor=7
+bgcolor=0
+
+tx=10
+ty=50
+tw=780
+th=550
+
+
+jpeg=/etc/bootsplash/themes/desktop/images/bootsplash-800x480.jpg
+silentjpeg=/etc/bootsplash/themes/desktop/images/silent-800x480.jpg
+
+box silent noover 99 370 701 372 #69696760
+box silent noover 99 372 701 377 #CCCDCC60
+box silent noover 99 377 701 387 #9A9A9A60 #9A9A9A60 #D7D7D760 #D7D7D760
+box silent noover 99 387 701 378 #CBCBCC60
+
+
+
+box silent inter 100 371 100 377 #66CC66
+box silent       100 371 700 377 #66CC66
+box silent inter 100 377 100 387 #66CC66
+box silent       100 377 700 387 #66CC66
+
+
+#mnganim silent_infotext /etc/bootsplash/themes/desktop/images/silent_infotext.mng initframe silent_infotext silent origin 6 0 590
+
+trigger "isdown" quit
+trigger "rlreached 5" quit
+trigger "rlchange 0" tosilent
+trigger "rlchange 6" tosilent
