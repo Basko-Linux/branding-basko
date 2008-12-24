@@ -1,13 +1,21 @@
 %define theme desktop
 %define brand alt
+%define status alpha
 
 Name: branding-%brand-%theme
 Version: 5.0
 Release: alt1
 BuildArch: noarch
-PreReq: coreutils
+
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
 BuildRequires: design-bootloader-source >= 5.0-alt2
+
+BuildRequires(pre): libqt4-core 
+BuildRequires: libalternatives-devel
+BuildRequires: libqt4-devel
+
+BuildRequires: ImageMagick
+
 Packager: Anton V. Boyarshinov <boyarsh at altlinux dot org>
 
 Source: %name-%version.tar
@@ -24,6 +32,7 @@ Group: System/Configuration/Boot and Init
 Summary: Graphical boot logo for lilo and syslinux
 License: GPL
 
+PreReq: coreutils
 Provides: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme
 
 Obsoletes: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme
@@ -42,6 +51,19 @@ Requires: bootsplash >= 3.3
 This package contains graphics for boot process
 (needs console splash screen enabled)
 
+%package browser-qt
+Summary: Design for QT alterator for Desktop version
+License: GPL
+Group: System/Configuration/Other
+Packager: Anton V. Boyarshiniv <boyarsh@altlinux.org>
+Provides: design-alterator-browser-%theme
+
+Requires: alterator-browser-qt
+PreReq(post,preun): alternatives >= 0.2
+
+%description browser-qt
+Design for QT alterator for Desktop version
+
 %prep
 %setup -q
 # bootloader
@@ -50,9 +72,18 @@ This package contains graphics for boot process
 
 
 %build
+autoconf
+./configure --with-distro=%theme --with-status=%status
+make
+
 #bootloader
     pushd design-bootloader-source/
     PATH=$PATH:/usr/sbin %make
+    popd
+
+#browser-qt
+    pushd browser-qt
+    %make_build
     popd
 
 %install
@@ -78,6 +109,19 @@ for i in 1; do \
  done
 done
 popd
+
+#browser-qt
+pushd browser-qt
+mkdir -p %buildroot/usr/share/alterator-browser-qt/design
+
+install theme.rcc %buildroot/usr/share/alterator-browser-qt/design/%theme.rcc
+
+mkdir -p %buildroot/%_altdir
+cat >%buildroot/%_altdir/%name <<__EOF__
+/etc/alterator/design-browser-qt	/usr/share/alterator-browser-qt/design/desktop.rcc 50
+__EOF__
+popd
+
 
 #bootloader
 %pre bootloader
@@ -106,6 +150,13 @@ popd
 [ $1 = 0 ] || exit 0
 [ "`readlink %_sysconfdir/bootsplash/themes/current`" != %theme ] ||
     %__rm -f %_sysconfdir/bootsplash/themes/current
+
+
+%files browser-qt
+%config %_altdir/%name
+/usr/share/alterator-browser-qt/design/desktop.rcc
+
+
 
 %files bootsplash
 %_sysconfdir/bootsplash/themes/%theme/

@@ -22,8 +22,8 @@ tw=780
 th=550
 
 
-jpeg=/etc/bootsplash/themes/desktop/images/bootsplash-800x600.jpg
-silentjpeg=/etc/bootsplash/themes/desktop/images/silent-800x600.jpg
+jpeg=/etc/bootsplash/themes/@theme@/images/bootsplash-800x600.jpg
+silentjpeg=/etc/bootsplash/themes/@theme@/images/silent-800x600.jpg
 
 box silent noover 99 370 701 372 #69696760
 box silent noover 99 372 701 377 #CCCDCC60
@@ -32,10 +32,10 @@ box silent noover 99 387 701 378 #CBCBCC60
 
 
 
-box silent inter 100 371 100 377 #3bb35780
-box silent       100 371 700 377 #3bb35780
-box silent inter 100 377 100 387 #00993380
-box silent       100 377 700 387 #00993380
+box silent inter 100 371 100 377 #3bb357
+box silent       100 371 700 377 #3bb357
+box silent inter 100 377 100 387 #009933
+box silent       100 377 700 387 #009933
 
 
 trigger "isdown" quit
