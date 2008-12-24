@@ -66,9 +66,6 @@ Design for QT alterator for Desktop version
 
 %prep
 %setup -q
-# bootloader
-    cp -a  /usr/src/design-bootloader-source ./
-    cp -a bootloader/config  bootloader/data-boot/ bootloader/data-install/ design-bootloader-source/
 
 
 %build
@@ -77,6 +74,8 @@ autoconf
 make
 
 #bootloader
+    cp -a  /usr/src/design-bootloader-source ./
+    cp -a bootloader/config  bootloader/data-boot/ bootloader/data-install/ design-bootloader-source/
     pushd design-bootloader-source/
     PATH=$PATH:/usr/sbin %make
     popd

@@ -7,8 +7,8 @@ AC_ARG_WITH(distro,
 			   [
 			    if test -n "$with_distro"  ; then
 				    theme="$with_distro"
-				    Theme="$with_distro"
-				    THEME="$with_distro"
+				    Theme=`echo "$with_distro" | sed 's/^./\u&/'`
+				    THEME=`echo "$with_distro" | sed 's/./\u&/'`
 			    fi
 			       ],
 				    [
@@ -43,6 +43,7 @@ AC_SUBST(STATUS)
 
 AC_CONFIG_FILES([
 		 Makefile
+		 bootloader/config
 		 bootsplash/config/bootsplash-640x480.cfg
 		 bootsplash/config/bootsplash-800x600.cfg
 ])
