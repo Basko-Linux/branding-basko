@@ -22,8 +22,8 @@ tw=620
 th=430
 
 
-jpeg=/etc/bootsplash/themes/@theme@/images/bootsplash-640x480.jpg
-silentjpeg=/etc/bootsplash/themes/@theme@/images/silent-640x480.jpg
+jpeg=/etc/bootsplash/themes/@THEME@/images/bootsplash-640x480.jpg
+silentjpeg=/etc/bootsplash/themes/@THEME@/images/silent-640x480.jpg
 
 box silent noover 99 370 541 372 #69696760
 box silent noover 99 372 541 377 #CCCDCC60

@@ -1,10 +1,14 @@
 all:
-	mogrify images/boot.jpg -gravity northwest -pointsize 20  -annotate 0 '@STATUS@'
-	cp -al images/boot.jpg bootloader/data-boot/
-	cp -al images/boot.jpg bootloader/data-install/
-	cp -al images/boot.jpg bootsplash/images/bootsplash-800x600.jpg
-	convert -resize '640x480!' bootsplash/images/bootsplash-800x600.jpg bootsplash/images/bootsplash-640x480.jpg
+	cp -a  /usr/src/design-bootloader-source ./
+	cp -a bootloader/config design-bootloader-source/
+	cp -a bootloader/gfxboot.cfg design-bootloader-source/data-install/
+	cp -a bootloader/gfxboot.cfg design-bootloader-source/data-boot/
+	convert images/boot.jpg -font sans -gravity northeast -pointsize 20  -annotate 0 '@STATUS@' boot.jpg
+	cp -al boot.jpg design-bootloader-source/data-boot/back.jpg
+	cp -al boot.jpg design-bootloader-source/data-install/back.jpg
+	cp -al boot.jpg bootsplash/images/silent-800x600.jpg
+	convert -resize '640x480!' bootsplash/images/silent-800x600.jpg bootsplash/images/silent-640x480.jpg
 # background
-	mogrify images/background.png -gravity northwest -pointsize 30  -annotate 0 '@STATUS@'
-	cp -al images/background.png graphics/backgrounds/default.png
-	convert -resize '800x600!' images/background.png browser-qt/design/bg.png
+	convert images/background.png -gravity northeast -pointsize 30  -annotate 0 '@STATUS@' background.png
+	cp -al background.png graphics/backgrounds/default.png
+	convert -resize '800x600!' background.png browser-qt/design/bg.png

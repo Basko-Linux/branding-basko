@@ -14,7 +14,7 @@ BuildRequires(pre): libqt4-core
 BuildRequires: libalternatives-devel
 BuildRequires: libqt4-devel
 
-BuildRequires: ImageMagick
+BuildRequires: ImageMagick fontconfig
 
 Packager: Anton V. Boyarshinov <boyarsh at altlinux dot org>
 
@@ -70,12 +70,10 @@ Design for QT alterator for Desktop version
 
 %build
 autoconf
-./configure --with-distro=%theme --with-status=%status
+./configure --with-distro=%theme --with-status=%status --with-verions=%version
 make
 
 #bootloader
-    cp -a  /usr/src/design-bootloader-source ./
-    cp -a bootloader/config  bootloader/data-boot/ bootloader/data-install/ design-bootloader-source/
     pushd design-bootloader-source/
     PATH=$PATH:/usr/sbin %make
     popd
@@ -124,7 +122,7 @@ popd
 
 #bootloader
 %pre bootloader
-[ -s /boot/splash/desktop ] && rm -fr  /boot/splash/desktop
+[ -s /boot/splash/%theme ] && rm -fr  /boot/splash/%theme ||:
 
 %post bootloader
 %__ln_s -nf %theme/message /boot/splash/message

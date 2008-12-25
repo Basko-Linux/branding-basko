@@ -1,26 +1,21 @@
 AC_INIT( [branding], [0.1], [http://bugzilla.altlinux.ru] )
 
-AC_ARG_WITH(aptconf,
 AC_ARG_WITH(distro,
 	    AC_HELP_STRING([--with-distro=distro],
 			   [base distro, e.g '--with-distro=lite' ]),
 			   [
 			    if test -n "$with_distro"  ; then
-				    theme="$with_distro"
-				    Theme=`echo "$with_distro" | sed 's/^./\u&/'`
-				    THEME=`echo "$with_distro" | sed 's/./\u&/'`
+				    THEME="$with_distro"
+				    THEMEMC=`echo "$with_distro" | sed 's/^./\u&/'`
+				    THEMEUC=`echo "$with_distro" | sed 's/./\u&/'`
 			    fi
 			       ],
 				    [
-				     theme="theme"
-				     Theme="Theme"
-				     THEME="THEME"
+				     THEME="theme"
+				     THEMEMC="Theme"
+				     THEMEUC="THEME"
 				     ]
 				    )
-			       ],
-				    [
-				     DESIGN=""
-				     ])
 
 AC_ARG_WITH(status,
 	    AC_HELP_STRING([--with-status=beta],
@@ -34,11 +29,24 @@ AC_ARG_WITH(status,
 				     STATUS=""
 				     ])
 
+AC_ARG_WITH(version,
+	    AC_HELP_STRING([--with-version=5.0],
+			   [version, e.g '--with-version=5.0']),
+			   [
+			    if test -n "$with_version"  ; then
+				    VERSION="$with_version"
+			    fi
+			       ],
+				    [
+				     VERSION=""
+				     ])
 
-AC_SUBST(theme)
-AC_SUBST(Theme)
+
+AC_SUBST(THEMEMC)
+AC_SUBST(THEMELC)
 AC_SUBST(THEME)
 AC_SUBST(STATUS)
+AC_SUBST(VERSION)
 
 
 AC_CONFIG_FILES([

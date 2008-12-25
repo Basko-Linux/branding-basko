@@ -1,2 +1,2 @@
-product=ALT Linux @VERSION@ @Theme@
+product=ALT Linux @VERSION@ @THEMEMC@
 based_on=ALT Linux Sisyphus
