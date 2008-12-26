@@ -37,6 +37,18 @@ AC_ARG_WITH(status,
 				    [
 				     STATUS=""
 				     ])
+AC_ARG_WITH(brand,
+	    AC_HELP_STRING([--with-status=brand],
+			   [brand, e.g '--with-brand="ALT Linux"']),
+			   [
+			    if test -n "$with_brand"  ; then
+				    BRAND_FNAME="$with_brand"
+			    fi
+			       ],
+				    [
+				     BRAND_FNAME=""
+				     ])
+
 
 AC_ARG_WITH(version,
 	    AC_HELP_STRING([--with-version=5.0],
@@ -59,6 +71,7 @@ INACTIVE_COLOR=`./fetch_color inactiveTitleBtnBg`
 AC_SUBST(THEMEMC)
 AC_SUBST(THEMELC)
 AC_SUBST(THEME)
+AC_SUBST(BRAND_FNAME)
 AC_SUBST(STATUS)
 AC_SUBST(VERSION)
 AC_SUBST(PROGRESS_COLOR)

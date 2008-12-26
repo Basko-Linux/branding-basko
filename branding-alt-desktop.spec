@@ -64,6 +64,18 @@ PreReq(post,preun): alternatives >= 0.2
 %description browser-qt
 Design for QT alterator for Desktop version
 
+%package graphics
+Summary: design for ALT
+License: Different licenses
+Group: Graphics
+
+Provides: design-graphics-%theme
+PreReq(post,preun): alternatives >= 0.2
+
+%description graphics
+This package contains some graphics for ALT design.
+
+
 %prep
 %setup -q
 
@@ -119,6 +131,23 @@ cat >%buildroot/%_altdir/%name <<__EOF__
 __EOF__
 popd
 
+#graphicks
+mkdir -p %buildroot/%_datadir/design/{%theme,backgrounds}
+cp -ar graphics/* %buildroot/%_datadir/design/%theme
+
+pushd %buildroot/%_datadir/design/%theme
+    pushd backgrounds
+	ln -sf ../../../wallpapers more
+    popd
+popd
+
+install -d %buildroot//etc/alternatives/packages.d
+cat >%buildroot/etc/alternatives/packages.d/%name <<__EOF__
+%_datadir/artworks	%_datadir/design/%theme 10	
+%_datadir/design-current	%_datadir/design/%theme	10
+__EOF__
+
+
 
 #bootloader
 %pre bootloader
@@ -154,6 +183,9 @@ popd
 /usr/share/alterator-browser-qt/design/desktop.rcc
 
 
+%files graphics
+%config /etc/alternatives/packages.d/%name
+%_datadir/design
 
 %files bootsplash
 %_sysconfdir/bootsplash/themes/%theme/
@@ -161,7 +193,8 @@ popd
 
 %changelog
 * Fri Dec 26 2008 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt2
-- colors integration 
+- colors integration
+- graphics package added
 
 * Thu Dec 18 2008 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt1
 - initial sceleton 
