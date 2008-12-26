@@ -32,10 +32,10 @@ box silent noover 99 387 701 378 #CBCBCC60
 
 
 
-box silent inter 100 371 100 377 #3bb357
-box silent       100 371 700 377 #3bb357
-box silent inter 100 377 100 387 #009933
-box silent       100 377 700 387 #009933
+box silent inter 100 371 100 377 #@INACTIVE_COLOR@
+box silent 100 371 700 377 #@INACTIVE_COLOR@
+box silent inter 100 377 100 387 #@PROGRESS_COLOR@ 
+box silent 100 377 700 387 #@PROGRESS_COLOR@
 
 
 trigger "isdown" quit

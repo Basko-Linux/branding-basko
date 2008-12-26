@@ -1,0 +1,17 @@
+[$Version]
+update_info=kwin_focus2.upd:kwin_focus2,kwin_focus1.upd:kwin_focus1,kwin3_plugin.upd:kde3.2,kwin.upd:kde3.0r1,kwin.upd:kde3.2Xinerama
+
+[Desktops]
+Name_1=
+Name_2=
+
+[Style]
+BorderSize=1
+ButtonsOnLeft=MS
+ButtonsOnRight=HIAX
+CustomButtonPositions=false
+PluginLib=kwin3_plastik
+ShowToolTips=true
+
+[Windows]
+IgnoreFocusStealingClasses=kio_uiserver

@@ -4,7 +4,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt1
+Release: alt2
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -70,7 +70,7 @@ Design for QT alterator for Desktop version
 
 %build
 autoconf
-./configure --with-distro=%theme --with-status=%status --with-verions=%version
+./configure --with-theme=%theme --with-name='Desktop' --with-brand='ALT Linux' --with-status=%status --with-verions=%version
 make
 
 #bootloader
@@ -160,6 +160,9 @@ popd
 
 
 %changelog
+* Fri Dec 26 2008 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt2
+- colors integration 
+
 * Thu Dec 18 2008 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt1
 - initial sceleton 
 

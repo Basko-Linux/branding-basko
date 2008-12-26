@@ -1,0 +1,2 @@
+#!/bin/bash
+grep $1 kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc.in | cut -d= -f 2| tr , ' '| xargs printf "%x%x%x\n"

@@ -1,0 +1,27 @@
+[Color Scheme]
+Name=@BRAND_FNAME@ @NAME@
+activeBackground=81,99,204
+activeBlend=242,241,241
+activeForeground=0,0,0
+activeTitleBtnBg=149,201,212
+alternateBackground=236,236,236
+background=231,230,230
+buttonBackground=231,230,230
+buttonForeground=0,0,0
+contrast=4
+foreground=0,0,0
+frame=92,150,204
+handle=92,150,204
+inactiveBackground=236,236,236
+inactiveBlend=242,241,241
+inactiveForeground=183,183,183
+inactiveFrame=149,201,212
+inactiveHandle=149,201,212
+inactiveTitleBtnBg=149,201,212
+linkColor=0,0,192
+selectBackground=92,150,204
+selectForeground=255,255,255
+shadeSortColumn=true
+visitedLinkColor=128,0,128
+windowBackground=255,255,255
+windowForeground=0,0,0

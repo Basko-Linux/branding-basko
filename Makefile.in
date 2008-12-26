@@ -3,7 +3,7 @@ all:
 	cp -a bootloader/config design-bootloader-source/
 	cp -a bootloader/gfxboot.cfg design-bootloader-source/data-install/
 	cp -a bootloader/gfxboot.cfg design-bootloader-source/data-boot/
-	convert images/boot.jpg -font sans -gravity northeast -pointsize 20  -annotate 0 '@STATUS@' boot.jpg
+	convert images/boot.jpg -gravity northeast -pointsize 20  -annotate 0 '@STATUS@' boot.jpg
 	cp -al boot.jpg design-bootloader-source/data-boot/back.jpg
 	cp -al boot.jpg design-bootloader-source/data-install/back.jpg
 	cp -al boot.jpg bootsplash/images/silent-800x600.jpg
@@ -12,3 +12,5 @@ all:
 	convert images/background.png -gravity northeast -pointsize 30  -annotate 0 '@STATUS@' background.png
 	cp -al background.png graphics/backgrounds/default.png
 	convert -resize '800x600!' background.png browser-qt/design/bg.png
+	
+	mv kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc "kde3-settings/apps/kdisplay/color-schemes/@BRAND_FNAME@ @NAME@.kcsrc"

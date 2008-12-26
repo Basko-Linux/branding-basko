@@ -1,0 +1,10 @@
+[General]
+ShowAlternativeShortcutConfig=true
+
+[KParts Plugins]
+kvieweffectsEnabled=true
+kviewpresenterEnabled=true
+kviewscannerEnabled=false
+
+[KView General]
+Resize Mode=1

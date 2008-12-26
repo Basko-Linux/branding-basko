@@ -1,0 +1,6 @@
+[AcpiDefault]
+EnableHibernate=true
+EnablePerformance=true
+EnableStandby=true
+EnableSuspend=true
+EnableThrottle=true
