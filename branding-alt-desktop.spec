@@ -82,7 +82,7 @@ This package contains some graphics for ALT design.
 
 %build
 autoconf
-./configure --with-theme=%theme --with-name='Desktop' --with-brand='ALT Linux' --with-status=%status --with-verions=%version
+THEME=%theme NAME='Desktop' BRAND_FNAME='ALT Linux' STATUS=%status VERSION=%version ./configure 
 make
 
 #bootloader
