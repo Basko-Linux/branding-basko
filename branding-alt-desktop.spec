@@ -1,10 +1,12 @@
 %define theme desktop
+%define Theme Desktop
+%define codename Inula Helenuim
 %define brand alt
 %define status alpha
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt2
+Release: alt3
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -76,13 +78,30 @@ PreReq(post,preun): alternatives >= 0.2
 This package contains some graphics for ALT design.
 
 
+%define provide_list altlinux fedora redhat system altlinux-release altlinux-release-%theme
+%define obsolete_list altlinux-release fedora-release redhat-release
+%define conflicts_list altlinux-release-sisyphus altlinux-release-4.0 altlinux-release-junior altlinux-release-master altlinux-release-server altlinux-release-terminal altlinux-release-small_business
+%package release
+
+Summary: %distribution %Theme release file
+Copyright: GPL
+Group: System/Configuration/Other
+BuildArch: noarch
+Packager: Anton V. Boyarshinov <boyarsh@altlinux.org>
+Provides: %(for n in %provide_list; do echo -n "$n-release = %version-%release "; done)
+Obsoletes: %obsolete_list
+Conflicts: %conflicts_list
+
+%description release
+%distribution %version %Theme release file.
+
 %prep
 %setup -q
 
 
 %build
 autoconf
-THEME=%theme NAME='Desktop' BRAND_FNAME='ALT Linux' STATUS=%status VERSION=%version ./configure 
+THEME=%theme NAME='%Theme' BRAND_FNAME='ALT Linux' STATUS=%status VERSION=%version ./configure 
 make
 
 #bootloader
@@ -131,7 +150,7 @@ cat >%buildroot/%_altdir/%name <<__EOF__
 __EOF__
 popd
 
-#graphicks
+#graphics
 mkdir -p %buildroot/%_datadir/design/{%theme,backgrounds}
 cp -ar graphics/* %buildroot/%_datadir/design/%theme
 
@@ -146,6 +165,14 @@ cat >%buildroot/etc/alternatives/packages.d/%name <<__EOF__
 %_datadir/artworks	%_datadir/design/%theme 10	
 %_datadir/design-current	%_datadir/design/%theme	10
 __EOF__
+
+#release
+install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%name-release
+echo "%distribution %version %Theme (%codename)" >%buildroot%_sysconfdir/altlinux-release
+for n in fedora redhat system; do
+	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
+done
+
 
 
 
@@ -191,7 +218,14 @@ __EOF__
 %_sysconfdir/bootsplash/themes/%theme/
 
 
+%files release
+%_sysconfdir/*-*
+%_sysconfdir/buildreqs/packages/ignore.d/*
+
 %changelog
+* Wed Jan 14 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt3
+- release subpackage added 
+
 * Fri Dec 26 2008 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt2
 - colors integration
 - graphics package added
