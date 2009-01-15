@@ -6,7 +6,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt3
+Release: alt4
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -78,7 +78,7 @@ PreReq(post,preun): alternatives >= 0.2
 This package contains some graphics for ALT design.
 
 
-%define provide_list altlinux fedora redhat system altlinux-release altlinux-release-%theme
+%define provide_list altlinux fedora redhat system altlinux
 %define obsolete_list altlinux-release fedora-release redhat-release
 %define conflicts_list altlinux-release-sisyphus altlinux-release-4.0 altlinux-release-junior altlinux-release-master altlinux-release-server altlinux-release-terminal altlinux-release-small_business
 %package release
@@ -88,7 +88,7 @@ Copyright: GPL
 Group: System/Configuration/Other
 BuildArch: noarch
 Packager: Anton V. Boyarshinov <boyarsh@altlinux.org>
-Provides: %(for n in %provide_list; do echo -n "$n-release = %version-%release "; done)
+Provides: %(for n in %provide_list; do echo -n "$n-release = %version-%release "; done) altlinux-release-%theme
 Obsoletes: %obsolete_list
 Conflicts: %conflicts_list
 
@@ -145,7 +145,7 @@ mkdir -p %buildroot/usr/share/alterator-browser-qt/design
 install theme.rcc %buildroot/usr/share/alterator-browser-qt/design/%theme.rcc
 
 mkdir -p %buildroot/%_altdir
-cat >%buildroot/%_altdir/%name <<__EOF__
+cat >%buildroot/%_altdir/%name-browser-qt <<__EOF__
 /etc/alterator/design-browser-qt	/usr/share/alterator-browser-qt/design/desktop.rcc 50
 __EOF__
 popd
@@ -161,7 +161,7 @@ pushd %buildroot/%_datadir/design/%theme
 popd
 
 install -d %buildroot//etc/alternatives/packages.d
-cat >%buildroot/etc/alternatives/packages.d/%name <<__EOF__
+cat >%buildroot/etc/alternatives/packages.d/%name-graphics <<__EOF__
 %_datadir/artworks	%_datadir/design/%theme 10	
 %_datadir/design-current	%_datadir/design/%theme	10
 __EOF__
@@ -206,12 +206,12 @@ done
 
 
 %files browser-qt
-%config %_altdir/%name
+%config %_altdir/%name-browser-qt
 /usr/share/alterator-browser-qt/design/desktop.rcc
 
 
 %files graphics
-%config /etc/alternatives/packages.d/%name
+%config /etc/alternatives/packages.d/%name-graphics
 %_datadir/design
 
 %files bootsplash
@@ -223,6 +223,9 @@ done
 %_sysconfdir/buildreqs/packages/ignore.d/*
 
 %changelog
+* Thu Jan 15 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt4
+- fixed problem with owerwritten alternative 
+
 * Wed Jan 14 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt3
 - release subpackage added 
 
