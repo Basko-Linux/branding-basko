@@ -182,8 +182,6 @@ done
 
 %post bootloader
 %__ln_s -nf %theme/message /boot/splash/message
-%__ln_s -nf /boot/splash/%theme /boot/splash/%theme
-%__ln_s -nf %_datadir/gfxboot/%theme %_datadir/gfxboot/%theme
 
 
 %preun bootloader
