@@ -1,7 +1,7 @@
-%define theme desktop
-%define Theme Desktop
-%define codename Inula Helenuim
-%define brand alt
+%define theme office-server
+%define Theme OfficeServer
+%define codename none 
+%define brand altlinux
 %define status alpha
 
 Name: branding-%brand-%theme
@@ -146,7 +146,7 @@ install theme.rcc %buildroot/usr/share/alterator-browser-qt/design/%theme.rcc
 
 mkdir -p %buildroot/%_altdir
 cat >%buildroot/%_altdir/%name-browser-qt <<__EOF__
-/etc/alterator/design-browser-qt	/usr/share/alterator-browser-qt/design/desktop.rcc 50
+/etc/alterator/design-browser-qt	/usr/share/alterator-browser-qt/design/%theme.rcc 50
 __EOF__
 popd
 
@@ -205,7 +205,7 @@ done
 
 %files browser-qt
 %config %_altdir/%name-browser-qt
-/usr/share/alterator-browser-qt/design/desktop.rcc
+/usr/share/alterator-browser-qt/design/%theme.rcc
 
 
 %files graphics
