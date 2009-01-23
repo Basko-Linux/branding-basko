@@ -1,6 +1,6 @@
-%define theme desktop 
-%define Theme Desktop
-%define codename Inula Helenium 
+%define theme office-server 
+%define Theme OfficeServer
+%define codename none 
 %define brand altlinux
 %define status alpha
 
