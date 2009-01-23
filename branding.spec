@@ -104,8 +104,8 @@ Obsoletes: alt-license-desktop
 Summary: Distribution license and release notes
 License: Distributable
 Group: Documentation
-Provides: alt-notes-desktop
-Obsoletes: alt-notes-desktop
+Provides: alt-notes-%theme
+Obsoletes: alt-notes-%theme
 
 %description notes
 Distribution license and release notes
