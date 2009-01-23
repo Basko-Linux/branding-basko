@@ -1,12 +1,12 @@
-%define theme office-server
-%define Theme OfficeServer
-%define codename none 
+%define theme desktop 
+%define Theme Desktop
+%define codename Inula Helenium 
 %define brand altlinux
 %define status alpha
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt4
+Release: alt5
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -35,9 +35,9 @@ Summary: Graphical boot logo for lilo and syslinux
 License: GPL
 
 PreReq: coreutils
-Provides: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme
+Provides: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
 
-Obsoletes: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme
+Obsoletes: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
 
 %description bootloader
 Here you find the graphical boot logo. Suitable for both lilo and syslinux.
@@ -46,8 +46,9 @@ Here you find the graphical boot logo. Suitable for both lilo and syslinux.
 Summary: Theme for splash animations during bootup
 License: Distributable
 Group:  System/Configuration/Boot and Init
-Provides: design-bootsplash design-bootsplash-%theme
+Provides: design-bootsplash design-bootsplash-%theme  branding-alt-%theme-bootsplash
 Requires: bootsplash >= 3.3
+Obsoletes:  branding-alt-%theme-bootsplash
 
 %description bootsplash
 This package contains graphics for boot process
@@ -58,7 +59,8 @@ Summary: Design for QT alterator for Desktop version
 License: GPL
 Group: System/Configuration/Other
 Packager: Anton V. Boyarshiniv <boyarsh@altlinux.org>
-Provides: design-alterator-browser-%theme
+Provides: design-alterator-browser-%theme  branding-alt-%theme-browser-qt
+Obsoletes:  branding-alt-%theme-browser-qt
 
 Requires: alterator-browser-qt
 PreReq(post,preun): alternatives >= 0.2
@@ -71,7 +73,8 @@ Summary: design for ALT
 License: Different licenses
 Group: Graphics
 
-Provides: design-graphics-%theme
+Provides: design-graphics-%theme  branding-alt-%theme-graphics
+Obsoletes:  branding-alt-%theme-graphics
 PreReq(post,preun): alternatives >= 0.2
 
 %description graphics
@@ -86,14 +89,26 @@ This package contains some graphics for ALT design.
 Summary: %distribution %Theme release file
 Copyright: GPL
 Group: System/Configuration/Other
-BuildArch: noarch
 Packager: Anton V. Boyarshinov <boyarsh@altlinux.org>
-Provides: %(for n in %provide_list; do echo -n "$n-release = %version-%release "; done) altlinux-release-%theme
-Obsoletes: %obsolete_list
+Provides: %(for n in %provide_list; do echo -n "$n-release = %version-%release "; done) altlinux-release-%theme  branding-alt-%theme-release
+Obsoletes: %obsolete_list  branding-alt-%theme-release
 Conflicts: %conflicts_list
 
 %description release
 %distribution %version %Theme release file.
+
+%package notes
+Provides: alt-license-desktop = %version
+Obsoletes: alt-license-desktop
+
+Summary: Distribution license and release notes
+License: Distributable
+Group: Documentation
+Provides: alt-notes-desktop
+Obsoletes: alt-notes-desktop
+
+%description notes
+Distribution license and release notes
 
 %prep
 %setup -q
@@ -173,7 +188,9 @@ for n in fedora redhat system; do
 	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
 done
 
-
+pushd notes
+%makeinstall
+popd
 
 
 #bootloader
@@ -220,7 +237,13 @@ done
 %_sysconfdir/*-*
 %_sysconfdir/buildreqs/packages/ignore.d/*
 
+%files notes
+%_datadir/alt-notes/*
+
 %changelog
+* Fri Jan 23 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt5
+- added 'notes' subpackage 
+
 * Thu Jan 15 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt4
 - fixed problem with owerwritten alternative 
 
