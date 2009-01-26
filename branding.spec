@@ -6,7 +6,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt5
+Release: alt6
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -241,6 +241,9 @@ popd
 %_datadir/alt-notes/*
 
 %changelog
+* Mon Jan 26 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt6
+- xdm background fixed 
+
 * Fri Jan 23 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt5
 - added 'notes' subpackage 
 
