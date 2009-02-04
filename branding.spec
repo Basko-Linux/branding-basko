@@ -1,4 +1,4 @@
-%define theme desktop 
+%define theme desktop
 %define Theme Desktop
 %define codename Inula Helenium 
 %define brand altlinux
