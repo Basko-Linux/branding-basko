@@ -106,6 +106,7 @@ License: Distributable
 Group: Documentation
 Provides: alt-notes-%theme
 Obsoletes: alt-notes-%theme
+Conflicts: alt-notes-children alt-notes-desktop alt-notes-hpc alt-notes-junior alt-notes-junior-sj alt-notes-junior-sm alt-notes-school-server alt-notes-server-lite alt-notes-skif alt-notes-terminal 
 
 %description notes
 Distribution license and release notes
