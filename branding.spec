@@ -6,7 +6,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt6
+Release: alt7
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -242,6 +242,9 @@ popd
 %_datadir/alt-notes/*
 
 %changelog
+* Wed Feb 04 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt7
+- added conflicts for notes 
+
 * Mon Jan 26 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt6
 - xdm background fixed 
 
