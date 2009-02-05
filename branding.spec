@@ -2,11 +2,12 @@
 %define Theme Desktop
 %define codename Inula Helenium 
 %define brand altlinux
+%define Brand ALT Linux
 %define status alpha
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt7
+Release: alt8
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -111,6 +112,15 @@ Conflicts: alt-notes-children alt-notes-desktop alt-notes-hpc alt-notes-junior a
 %description notes
 Distribution license and release notes
 
+%package kde4-settings
+
+Summary: KDE4 settings for %Brand %version %Theme
+License: Distributable
+Group: Graphical desktop/KDE
+
+%description kde4-settings
+KDE4 settings for %Brand %version %Theme
+
 %prep
 %setup -q
 
@@ -189,10 +199,18 @@ for n in fedora redhat system; do
 	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
 done
 
+#notes
 pushd notes
 %makeinstall
 popd
 
+#kde4-settings
+pushd kde4-settings
+mkdir -p %buildroot%_sysconfdir/skel/Desktop
+cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
+mkdir -p %buildroot%_sysconfdir/skel/.kde4
+cp -a kde4/* %buildroot%_sysconfdir/skel/.kde4/
+popd
 
 #bootloader
 %pre bootloader
@@ -241,7 +259,15 @@ popd
 %files notes
 %_datadir/alt-notes/*
 
+%files kde4-settings
+%_sysconfdir/skel/Desktop
+%_sysconfdir/skel/.kde4
+
+
 %changelog
+* Thu Feb 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt8
+- added kde4-settings subpackage 
+
 * Wed Feb 04 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt7
 - added conflicts for notes 
 
