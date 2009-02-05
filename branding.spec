@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt8
+Release: alt9
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -265,6 +265,9 @@ popd
 
 
 %changelog
+* Thu Feb 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt9
+- rebuild with new translations 
+
 * Thu Feb 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt8
 - added kde4-settings subpackage 
 
