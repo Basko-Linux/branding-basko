@@ -1,2 +1,2 @@
-product=@BRAND_FNAME@ @VERSION@ @NAME@
+product=@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@
 based_on=ALT Linux Sisyphus

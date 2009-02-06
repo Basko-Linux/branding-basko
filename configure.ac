@@ -23,5 +23,9 @@ AC_CONFIG_FILES([
 		 browser-qt/design/design.ini
 		 bootloader/gfxboot.cfg
 		 kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc
+		 notes/release-notes.ru.html
+		 notes/release-notes.all.html
+		 notes/license.ru.html
+		 notes/license.all.html
 ])
 AC_OUTPUT
