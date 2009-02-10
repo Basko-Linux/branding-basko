@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt9
+Release: alt10
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -75,7 +75,7 @@ License: Different licenses
 Group: Graphics
 
 Provides: design-graphics-%theme  branding-alt-%theme-graphics
-Obsoletes:  branding-alt-%theme-graphics
+Obsoletes:  branding-alt-%theme-graphics design-graphics-%theme
 PreReq(post,preun): alternatives >= 0.2
 
 %description graphics
@@ -99,8 +99,8 @@ Conflicts: %conflicts_list
 %distribution %version %Theme release file.
 
 %package notes
-Provides: alt-license-desktop = %version
-Obsoletes: alt-license-desktop
+Provides: alt-license-theme = %version alt-notes-%theme
+Obsoletes: alt-license-%theme alt-notes-%theme
 
 Summary: Distribution license and release notes
 License: Distributable
@@ -190,6 +190,7 @@ install -d %buildroot//etc/alternatives/packages.d
 cat >%buildroot/etc/alternatives/packages.d/%name-graphics <<__EOF__
 %_datadir/artworks	%_datadir/design/%theme 10	
 %_datadir/design-current	%_datadir/design/%theme	10
+%_datadir/design/current	%_datadir/design/%theme	10
 __EOF__
 
 #release
@@ -265,6 +266,10 @@ popd
 
 
 %changelog
+* Tue Feb 10 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt10
+- more kde4 settings from zerg@ 
+- alternative and obsoletes for graphics added
+
 * Thu Feb 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt9
 - rebuild with new translations 
 

@@ -1,7 +1,4 @@
-[Applet Browser]
-used=,pager,digital-clock,notifier,systemtray,tasks,launcher,networkmanager
-
-[Containments][9]
+[Containments][1]
 activity=
 desktop=0
 filter=0
@@ -15,19 +12,33 @@ screen=0
 url=desktop:/
 wallpaperplugin=image
 wallpaperpluginmode=SingleImage
-zvalue=0
 
-[Containments][9][Wallpaper][image]
+[Containments][1][Wallpaper][image]
 slideTimer=600
 slidepaths=/usr/share/wallpapers/
-userswallpapers=
-wallpaper=/usr/share/wallpapers/Air
+userswallpapers=/usr/share/design/current/backgrounds/default.png
+wallpaper=/usr/share/design/current/backgrounds/default.png
 wallpapercolor=56,111,150
 wallpaperposition=0
 
-[PlasmaViews][2]
+[KFileDialog Settings]
+Height 864=450
+Width 1152=700
+
+[KPropertiesDialog]
+Height 864=397
+Width 1152=886
+
+[PlasmaAppletBrowserDialog]
+Height 864=599
+Width 1152=570
+
+[PlasmaViews][1]
 panelVisibility=0
 
+[Theme]
+name=Aya
+
 [ViewIds]
-2=2
-9=1
+1=2
+3=1
