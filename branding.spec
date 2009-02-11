@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt10
+Release: alt11
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -101,13 +101,10 @@ Conflicts: %conflicts_list
 %package notes
 Provides: alt-license-theme = %version alt-notes-%theme
 Obsoletes: alt-license-%theme alt-notes-%theme
-
 Summary: Distribution license and release notes
 License: Distributable
 Group: Documentation
-Provides: alt-notes-%theme
-Obsoletes: alt-notes-%theme
-Conflicts: alt-notes-children alt-notes-desktop alt-notes-hpc alt-notes-junior alt-notes-junior-sj alt-notes-junior-sm alt-notes-school-server alt-notes-server-lite alt-notes-skif alt-notes-terminal 
+Conflicts: alt-notes-children alt-notes-hpc alt-notes-junior alt-notes-junior-sj alt-notes-junior-sm alt-notes-school-server alt-notes-server-lite alt-notes-skif alt-notes-terminal 
 
 %description notes
 Distribution license and release notes
@@ -266,6 +263,9 @@ popd
 
 
 %changelog
+* Wed Feb 11 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt11
+- fixed conflict of notes subpackage with itself 
+
 * Tue Feb 10 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt10
 - more kde4 settings from zerg@ 
 - alternative and obsoletes for graphics added
