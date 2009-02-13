@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt11
+Release: alt12
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -129,7 +129,7 @@ make
 
 #bootloader
     pushd design-bootloader-source/
-    PATH=$PATH:/usr/sbin %make
+    DEFAULT_LANG=ru_RU PATH=$PATH:/usr/sbin %make
     popd
 
 #browser-qt
@@ -263,6 +263,9 @@ popd
 
 
 %changelog
+* Fri Feb 13 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt12
+- default language set to ru_RU for system boot 
+
 * Wed Feb 11 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt11
 - fixed conflict of notes subpackage with itself 
 
