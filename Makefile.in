@@ -11,6 +11,7 @@ all:
 # background
 	convert images/background.png -gravity northeast -pointsize 30  -annotate 0 '@STATUS@' background.png
 	cp -al background.png graphics/backgrounds/default.png
+	cp -al background.png graphics/backgrounds/xdm.png
 	convert -resize '800x600!' background.png browser-qt/design/bg.png
 	
 	mv kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc "kde3-settings/apps/kdisplay/color-schemes/@BRAND_FNAME@ @NAME@.kcsrc"

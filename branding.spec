@@ -2,11 +2,12 @@
 %define Theme OfficeServer
 %define codename none 
 %define brand altlinux
+%define Brand ALT Linux
 %define status alpha
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt6
+Release: alt7
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -68,19 +69,6 @@ PreReq(post,preun): alternatives >= 0.2
 %description browser-qt
 Design for QT alterator for Desktop version
 
-%package graphics
-Summary: design for ALT
-License: Different licenses
-Group: Graphics
-
-Provides: design-graphics-%theme  branding-alt-%theme-graphics
-Obsoletes:  branding-alt-%theme-graphics
-PreReq(post,preun): alternatives >= 0.2
-
-%description graphics
-This package contains some graphics for ALT design.
-
-
 %define provide_list altlinux fedora redhat system altlinux
 %define obsolete_list altlinux-release fedora-release redhat-release
 %define conflicts_list altlinux-release-sisyphus altlinux-release-4.0 altlinux-release-junior altlinux-release-master altlinux-release-server altlinux-release-terminal altlinux-release-small_business
@@ -98,18 +86,16 @@ Conflicts: %conflicts_list
 %distribution %version %Theme release file.
 
 %package notes
-Provides: alt-license-desktop = %version
-Obsoletes: alt-license-desktop
-
+Provides: alt-license-theme = %version alt-notes-%theme
+Obsoletes: alt-license-%theme alt-notes-%theme
 Summary: Distribution license and release notes
 License: Distributable
 Group: Documentation
-Provides: alt-notes-%theme
-Obsoletes: alt-notes-%theme
 Conflicts: alt-notes-children alt-notes-desktop alt-notes-hpc alt-notes-junior alt-notes-junior-sj alt-notes-junior-sm alt-notes-school-server alt-notes-server-lite alt-notes-skif alt-notes-terminal 
 
 %description notes
 Distribution license and release notes
+
 
 %prep
 %setup -q
@@ -122,7 +108,7 @@ make
 
 #bootloader
     pushd design-bootloader-source/
-    PATH=$PATH:/usr/sbin %make
+    DEFAULT_LANG=ru PATH=$PATH:/usr/sbin %make
     popd
 
 #browser-qt
@@ -166,22 +152,6 @@ cat >%buildroot/%_altdir/%name-browser-qt <<__EOF__
 __EOF__
 popd
 
-#graphics
-mkdir -p %buildroot/%_datadir/design/{%theme,backgrounds}
-cp -ar graphics/* %buildroot/%_datadir/design/%theme
-
-pushd %buildroot/%_datadir/design/%theme
-    pushd backgrounds
-	ln -sf ../../../wallpapers more
-    popd
-popd
-
-install -d %buildroot//etc/alternatives/packages.d
-cat >%buildroot/etc/alternatives/packages.d/%name-graphics <<__EOF__
-%_datadir/artworks	%_datadir/design/%theme 10	
-%_datadir/design-current	%_datadir/design/%theme	10
-__EOF__
-
 #release
 install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%name-release
 echo "%distribution %version %Theme (%codename)" >%buildroot%_sysconfdir/altlinux-release
@@ -189,10 +159,10 @@ for n in fedora redhat system; do
 	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
 done
 
+#notes
 pushd notes
 %makeinstall
 popd
-
 
 #bootloader
 %pre bootloader
@@ -225,11 +195,6 @@ popd
 %config %_altdir/%name-browser-qt
 /usr/share/alterator-browser-qt/design/%theme.rcc
 
-
-%files graphics
-%config /etc/alternatives/packages.d/%name-graphics
-%_datadir/design
-
 %files bootsplash
 %_sysconfdir/bootsplash/themes/%theme/
 
@@ -241,10 +206,11 @@ popd
 %files notes
 %_datadir/alt-notes/*
 
+
 %changelog
-* Wed Feb 04 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt6
-- fixed theme name in bootloader
-- added conflicts for notes
+* Tue Feb 17 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt7
+- merge with desktop branch
+- unneded subpackages deleted
 
 * Fri Jan 23 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt5
 - added 'notes' subpackage 

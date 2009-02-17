@@ -7,6 +7,7 @@ INACTIVE_COLOR=`./fetch_color inactiveTitleBtnBg`
 
 
 AC_SUBST(THEME)
+AC_SUBST(NAME)
 AC_SUBST(BRAND_FNAME)
 AC_SUBST(STATUS)
 AC_SUBST(VERSION)
@@ -22,5 +23,9 @@ AC_CONFIG_FILES([
 		 browser-qt/design/design.ini
 		 bootloader/gfxboot.cfg
 		 kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc
+		 notes/release-notes.ru.html
+		 notes/release-notes.all.html
+		 notes/license.ru.html
+		 notes/license.all.html
 ])
 AC_OUTPUT

@@ -1,0 +1,44 @@
+[Containments][1]
+activity=
+desktop=0
+filter=0
+filterFiles=*
+formfactor=0
+immutability=1
+location=0
+mimeFilter=
+plugin=folderview
+screen=0
+url=desktop:/
+wallpaperplugin=image
+wallpaperpluginmode=SingleImage
+
+[Containments][1][Wallpaper][image]
+slideTimer=600
+slidepaths=/usr/share/wallpapers/
+userswallpapers=/usr/share/design/current/backgrounds/default.png
+wallpaper=/usr/share/design/current/backgrounds/default.png
+wallpapercolor=56,111,150
+wallpaperposition=0
+
+[KFileDialog Settings]
+Height 864=450
+Width 1152=700
+
+[KPropertiesDialog]
+Height 864=397
+Width 1152=886
+
+[PlasmaAppletBrowserDialog]
+Height 864=599
+Width 1152=570
+
+[PlasmaViews][1]
+panelVisibility=0
+
+[Theme]
+name=Aya
+
+[ViewIds]
+1=2
+3=1
