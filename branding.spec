@@ -264,7 +264,7 @@ popd
 
 %changelog
 * Tue Feb 17 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt14
-- set defaut language tu russian 
+- really set default language to russian 
 
 * Mon Feb 16 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt13
 - rebuild for fix oversized /boot/splash/message 
