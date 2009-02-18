@@ -129,7 +129,7 @@ make
 
 #bootloader
     pushd design-bootloader-source/
-    DEFAULT_LANG=ru PATH=$PATH:/usr/sbin %make
+    DEFAULT_LANG='--lang-to-subst--' PATH=$PATH:/usr/sbin %make
     popd
 
 #browser-qt
@@ -216,6 +216,12 @@ popd
 
 %post bootloader
 %__ln_s -nf %theme/message /boot/splash/message
+. /etc/sysconfig/i18n
+lang=$(echo $LANG | cut -d. -f 1)
+cd boot/splash/%theme/
+echo $lang > lang
+echo lang | cpio -o --append -F message
+
 
 
 %preun bootloader
@@ -264,7 +270,7 @@ popd
 
 %changelog
 * Tue Feb 17 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt14
-- really set default language to russian 
+- auto set default language for bootloader from /etc/sysconfig/i18n 
 
 * Mon Feb 16 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt13
 - rebuild for fix oversized /boot/splash/message 
