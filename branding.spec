@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt14
+Release: alt15
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -269,6 +269,9 @@ echo lang | cpio -o --append -F message
 
 
 %changelog
+* Wed Feb 18 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt15
+- rebuild with new bootloader-source with support of real language change 
+
 * Tue Feb 17 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt14
 - auto set default language for bootloader from /etc/sysconfig/i18n 
 
