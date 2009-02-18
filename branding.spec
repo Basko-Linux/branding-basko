@@ -214,7 +214,6 @@ echo lang | cpio -o --append -F message
 
 
 %changelog
-<<<<<<< HEAD:branding.spec
 * Tue Feb 17 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt7
 - merge with desktop branch
 - unneded subpackages deleted
