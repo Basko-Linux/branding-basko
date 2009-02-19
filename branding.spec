@@ -3,11 +3,11 @@
 %define codename Inula Helenium 
 %define brand altlinux
 %define Brand ALT Linux
-%define status alpha
+%define status beta
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt15
+Release: alt16
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -220,7 +220,7 @@ popd
 lang=$(echo $LANG | cut -d. -f 1)
 cd boot/splash/%theme/
 echo $lang > lang
-echo lang | cpio -o --append -F message
+[ "$lang" = "C" ] || echo lang | cpio -o --append -F message
 
 
 
@@ -269,6 +269,9 @@ echo lang | cpio -o --append -F message
 
 
 %changelog
+* Thu Feb 19 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt16
+- not setup language in bootloader during install (when it is 'C') 
+
 * Wed Feb 18 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt15
 - rebuild with new bootloader-source with support of real language change 
 
