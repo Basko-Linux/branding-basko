@@ -271,6 +271,7 @@ echo $lang > lang
 %changelog
 * Tue Feb 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt17
 - 1024x768 added 
+- fonts changed
 
 * Thu Feb 19 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt16
 - not setup language in bootloader during install (when it is 'C') 
