@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt16
+Release: alt17
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -269,6 +269,9 @@ echo $lang > lang
 
 
 %changelog
+* Tue Feb 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt17
+- 1024x768 added 
+
 * Thu Feb 19 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt16
 - not setup language in bootloader during install (when it is 'C') 
 
