@@ -3,11 +3,11 @@
 %define codename none 
 %define brand altlinux
 %define Brand ALT Linux
-%define status alpha
+%define status beta
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt7
+Release: alt8
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -174,7 +174,7 @@ popd
 lang=$(echo $LANG | cut -d. -f 1)
 cd boot/splash/%theme/
 echo $lang > lang
-echo lang | cpio -o --append -F message
+[ "$lang" = "C" ] || echo lang | cpio -o --append -F message
 
 
 
@@ -214,35 +214,13 @@ echo lang | cpio -o --append -F message
 
 
 %changelog
-* Tue Feb 17 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt7
+* Tue Feb 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt8
+- merge desktop branch
+- added adderesses into notes
+
+* Tue Feb 17 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt6
 - merge with desktop branch
 - unneded subpackages deleted
-
-* Mon Feb 16 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt13
-- rebuild for fix oversized /boot/splash/message 
-
-* Fri Feb 13 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt12
-- default language set to ru_RU for system boot 
-
-* Wed Feb 11 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt11
-- fixed conflict of notes subpackage with itself 
-
-* Tue Feb 10 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt10
-- more kde4 settings from zerg@ 
-- alternative and obsoletes for graphics added
-
-* Thu Feb 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt9
-- rebuild with new translations 
-
-* Thu Feb 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt8
-- added kde4-settings subpackage 
-
-* Wed Feb 04 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt7
-- added conflicts for notes 
-
-* Mon Jan 26 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt6
-- xdm background fixed 
->>>>>>> alt-desktop:branding.spec
 
 * Fri Jan 23 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt5
 - added 'notes' subpackage 
