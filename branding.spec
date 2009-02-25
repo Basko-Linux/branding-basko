@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt17
+Release: alt18
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -269,6 +269,10 @@ echo $lang > lang
 
 
 %changelog
+* Wed Feb 25 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt18
+- 1024x768 removed :D
+- more transparent menu selection bar
+
 * Tue Feb 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt17
 - 1024x768 added 
 - fonts changed
