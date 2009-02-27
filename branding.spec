@@ -3,7 +3,7 @@
 %define codename none 
 %define brand altlinux
 %define Brand ALT Linux
-%define status beta
+%define status alpha 
 
 Name: branding-%brand-%theme
 Version: 5.0
