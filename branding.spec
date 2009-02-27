@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt18
+Release: alt19
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -118,6 +118,16 @@ Group: Graphical desktop/KDE
 %description kde4-settings
 KDE4 settings for %Brand %version %Theme
 
+%package slideshow
+
+Summary: Slideshow for %Brand %version %Theme installer
+License: Distributable
+Group: System/Configuration/Other 
+
+%description slideshow
+Slideshow for %Brand %version %Theme installer
+
+
 %prep
 %setup -q
 
@@ -210,6 +220,10 @@ mkdir -p %buildroot%_sysconfdir/skel/.kde4
 cp -a kde4/* %buildroot%_sysconfdir/skel/.kde4/
 popd
 
+#slideshow
+mkdir -p %buildroot/usr/share/install2/slideshow
+install slideshow/*  %buildroot/usr/share/install2/slideshow/
+
 #bootloader
 %pre bootloader
 [ -s /boot/splash/%theme ] && rm -fr  /boot/splash/%theme ||:
@@ -267,8 +281,13 @@ echo $lang > lang
 %_sysconfdir/skel/Desktop
 %_sysconfdir/skel/.kde4
 
+%files slideshow
+/usr/share/install2/slideshow
 
 %changelog
+* Fri Feb 27 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt19
+- sample slideshow added
+
 * Wed Feb 25 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt18
 - 1024x768 removed :D
 - more transparent menu selection bar
