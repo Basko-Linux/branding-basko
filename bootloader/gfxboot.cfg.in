@@ -35,11 +35,11 @@ mainmenu.entries=8
 ; minimal main menu selection bar width
 mainmenu.bar.minwidth=300
 ; main menu selection bar transparency (0..255)
-mainmenu.bar.transparency=100
+mainmenu.bar.transparency=200
 ; main menu colors
-mainmenu.bar.color=0x000000
-mainmenu.normal.fg=0x000000
-mainmenu.selected.fg=0x000000
+mainmenu.bar.color=0xffffff
+mainmenu.normal.fg=0xffffff
+mainmenu.selected.fg=0xffffff
 ; boot option colors
 bootopt.label.fg=0xffffff
 bootopt.text.fg=0xffffff
@@ -47,7 +47,7 @@ bootopt.text.fg=0xffffff
 progress.bar.color=0x@PROGRESS_COLOR@
 ; menu colors
 menu.normal.bg=0xd8deed
-menu.normal.fg=0x000000
+menu.normal.fg=0xffffff
 menu.selected.bg=0x6c6c6c
 menu.selected.fg=0xffffff
 ; window colors
@@ -63,7 +63,7 @@ help.link.selected.bg=0x0000a0
 help.highlight.fg=0x009000
 ; panel colors
 panel.fg=0x000000
-panel.title.fg=0x000000
+panel.title.fg=0xffffff
 panel.f-key.fg=0xffe050
 ; default keymap (e.g. de_DE, czech)
 keymap=
@@ -136,7 +136,7 @@ serial.line1=1,0,ttyS1
 serial.line2=
 serial.line3=
 ; show keymap menu as submenu in lang dialog
-keymap.submenu=1
+keymap.submenu=0
 ; show keymap in main menu
 keymap.mainmenu=0
 
@@ -148,5 +148,5 @@ beep=1
 ; show keymap menu as submenu in lang dialog
 keymap.submenu=0
 ; show keymap in main menu
-keymap.mainmenu=1
+keymap.mainmenu=0
 

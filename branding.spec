@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt8
+Release: alt9
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -97,6 +97,16 @@ Conflicts: alt-notes-children alt-notes-desktop alt-notes-hpc alt-notes-junior a
 Distribution license and release notes
 
 
+%package slideshow
+
+Summary: Slideshow for %Brand %version %Theme installer
+License: Distributable
+Group: System/Configuration/Other 
+
+%description slideshow
+Slideshow for %Brand %version %Theme installer
+
+
 %prep
 %setup -q
 
@@ -164,6 +174,11 @@ pushd notes
 %makeinstall
 popd
 
+
+#slideshow
+mkdir -p %buildroot/usr/share/install2/slideshow
+install slideshow/*  %buildroot/usr/share/install2/slideshow/
+
 #bootloader
 %pre bootloader
 [ -s /boot/splash/%theme ] && rm -fr  /boot/splash/%theme ||:
@@ -213,7 +228,13 @@ echo $lang > lang
 %_datadir/alt-notes/*
 
 
+%files slideshow
+/usr/share/install2/slideshow
+
 %changelog
+* Fri Feb 27 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt9
+- merge with desktop branch 
+
 * Tue Feb 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt8
 - merge desktop branch
 - added adderesses into notes
