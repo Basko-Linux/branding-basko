@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt19
+Release: alt20
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -61,6 +61,7 @@ License: GPL
 Group: System/Configuration/Other
 Packager: Anton V. Boyarshiniv <boyarsh@altlinux.org>
 Provides: design-alterator-browser-%theme  branding-alt-%theme-browser-qt
+Provides: alterator-icons design-alterator-%theme
 Obsoletes:  branding-alt-%theme-browser-qt
 
 Requires: alterator-browser-qt
@@ -127,7 +128,6 @@ Group: System/Configuration/Other
 %description slideshow
 Slideshow for %Brand %version %Theme installer
 
-
 %prep
 %setup -q
 
@@ -177,11 +177,15 @@ mkdir -p %buildroot/usr/share/alterator-browser-qt/design
 
 install theme.rcc %buildroot/usr/share/alterator-browser-qt/design/%theme.rcc
 
+popd
+
+mkdir -p %buildroot/usr/share/alterator/design/images/steps/
+install steps/* %buildroot/usr/share/alterator/design/images/steps/
+
 mkdir -p %buildroot/%_altdir
 cat >%buildroot/%_altdir/%name-browser-qt <<__EOF__
 /etc/alterator/design-browser-qt	/usr/share/alterator-browser-qt/design/%theme.rcc 50
 __EOF__
-popd
 
 #graphics
 mkdir -p %buildroot/%_datadir/design/{%theme,backgrounds}
@@ -260,7 +264,7 @@ echo $lang > lang
 %files browser-qt
 %config %_altdir/%name-browser-qt
 /usr/share/alterator-browser-qt/design/%theme.rcc
-
+/usr/share/alterator/design/images/steps/
 
 %files graphics
 %config /etc/alternatives/packages.d/%name-graphics
@@ -285,6 +289,9 @@ echo $lang > lang
 /usr/share/install2/slideshow
 
 %changelog
+* Thu Mar 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt20
+- steps icons added 
+
 * Fri Feb 27 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt19
 - sample slideshow added
 
