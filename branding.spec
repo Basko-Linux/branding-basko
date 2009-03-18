@@ -4,10 +4,11 @@
 %define brand altlinux
 %define Brand ALT Linux
 %define status beta
+%define variants altlinux-office-desktop altlinux-office-server
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt20
+Release: alt21
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -39,6 +40,7 @@ PreReq: coreutils
 Provides: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
 
 Obsoletes: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-bootloader ";done )
 
 %description bootloader
 Here you find the graphical boot logo. Suitable for both lilo and syslinux.
@@ -51,6 +53,7 @@ Provides: design-bootsplash design-bootsplash-%theme  branding-alt-%theme-bootsp
 Requires: bootsplash >= 3.3
 Obsoletes:  branding-alt-%theme-bootsplash
 
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-bootsplash ";done )
 %description bootsplash
 This package contains graphics for boot process
 (needs console splash screen enabled)
@@ -64,6 +67,7 @@ Provides: design-alterator-browser-%theme  branding-alt-%theme-browser-qt
 Provides: alterator-icons design-alterator-%theme
 Obsoletes:  branding-alt-%theme-browser-qt
 
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-browser-qt ";done )
 Requires: alterator-browser-qt
 PreReq(post,preun): alternatives >= 0.2
 
@@ -78,6 +82,7 @@ Group: Graphics
 Provides: design-graphics-%theme  branding-alt-%theme-graphics
 Obsoletes:  branding-alt-%theme-graphics design-graphics-%theme
 PreReq(post,preun): alternatives >= 0.2
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-graphics ";done )
 
 %description graphics
 This package contains some graphics for ALT design.
@@ -95,6 +100,7 @@ Packager: Anton V. Boyarshinov <boyarsh@altlinux.org>
 Provides: %(for n in %provide_list; do echo -n "$n-release = %version-%release "; done) altlinux-release-%theme  branding-alt-%theme-release
 Obsoletes: %obsolete_list  branding-alt-%theme-release
 Conflicts: %conflicts_list
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-release ";done )
 
 %description release
 %distribution %version %Theme release file.
@@ -106,6 +112,7 @@ Summary: Distribution license and release notes
 License: Distributable
 Group: Documentation
 Conflicts: alt-notes-children alt-notes-hpc alt-notes-junior alt-notes-junior-sj alt-notes-junior-sm alt-notes-school-server alt-notes-server-lite alt-notes-skif alt-notes-terminal 
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-notes ";done )
 
 %description notes
 Distribution license and release notes
@@ -115,6 +122,7 @@ Distribution license and release notes
 Summary: KDE4 settings for %Brand %version %Theme
 License: Distributable
 Group: Graphical desktop/KDE
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-kde4-settings ";done )
 
 %description kde4-settings
 KDE4 settings for %Brand %version %Theme
@@ -124,6 +132,7 @@ KDE4 settings for %Brand %version %Theme
 Summary: Slideshow for %Brand %version %Theme installer
 License: Distributable
 Group: System/Configuration/Other 
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-slideshow ";done )
 
 %description slideshow
 Slideshow for %Brand %version %Theme installer
@@ -177,10 +186,10 @@ mkdir -p %buildroot/usr/share/alterator-browser-qt/design
 
 install theme.rcc %buildroot/usr/share/alterator-browser-qt/design/%theme.rcc
 
-popd
 
-mkdir -p %buildroot/usr/share/alterator/design/images/steps/
-install steps/* %buildroot/usr/share/alterator/design/images/steps/
+mkdir -p %buildroot/usr/share/alterator/design/
+cp -a images %buildroot/usr/share/alterator/design/
+popd
 
 mkdir -p %buildroot/%_altdir
 cat >%buildroot/%_altdir/%name-browser-qt <<__EOF__
@@ -264,7 +273,7 @@ echo $lang > lang
 %files browser-qt
 %config %_altdir/%name-browser-qt
 /usr/share/alterator-browser-qt/design/%theme.rcc
-/usr/share/alterator/design/images/steps/
+/usr/share/alterator/design/images
 
 %files graphics
 %config /etc/alternatives/packages.d/%name-graphics
@@ -289,6 +298,12 @@ echo $lang > lang
 /usr/share/install2/slideshow
 
 %changelog
+* Wed Mar 18 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt21
+- other images for browser-qt added
+- gtkrcs added into kde4-settings
+- plasma-applet-networkmanagenemt removed from kde4 by default
+- conflicts bitween different brandings added
+
 * Thu Mar 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt20
 - steps icons added 
 
