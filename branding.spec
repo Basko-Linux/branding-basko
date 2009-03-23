@@ -8,7 +8,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt21
+Release: alt22
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -298,6 +298,9 @@ echo $lang > lang
 /usr/share/install2/slideshow
 
 %changelog
+* Mon Mar 23 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt22
+- nepomukserverrc added into kde4 
+
 * Wed Mar 18 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt21
 - other images for browser-qt added
 - gtkrcs added into kde4-settings
