@@ -153,7 +153,7 @@ Conflicts: indexhtml-school_terminal
 Conflicts: indexhtml-small_business
 Conflicts: indexhtml-school-server
 
-Requires: xdg-utils
+Requires: xdg-utils indexhml-common
 
 %description indexhtml
 ALT Linux index.html welcome page.
