@@ -142,7 +142,7 @@ Slideshow for %Brand %version %Theme installer
 Summary: %name -- ALT Linux html welcome page
 License: distributable
 Group: System/Base
-Provides: indexhtml indexhtml-desktop indexhtml-Desktop
+Provides: indexhtml indexhtml-%theme indexhtml-Desktop
 Obsoletes: indexhtml-desktop indexhtml-Desktop
 
 Conflicts: indexhtml-sisyphus
