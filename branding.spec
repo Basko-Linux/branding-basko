@@ -8,7 +8,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt22
+Release: alt23
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -137,6 +137,27 @@ Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "brandi
 %description slideshow
 Slideshow for %Brand %version %Theme installer
 
+%package indexhtml
+
+Summary: %name -- ALT Linux html welcome page
+License: distributable
+Group: System/Base
+Provides: indexhtml indexhtml-desktop indexhtml-Desktop
+Obsoletes: indexhtml-desktop indexhtml-Desktop
+
+Conflicts: indexhtml-sisyphus
+Conflicts: indexhtml-school_junior
+Conflicts: indexhtml-school_lite
+Conflicts: indexhtml-school_master
+Conflicts: indexhtml-school_terminal
+Conflicts: indexhtml-small_business
+Conflicts: indexhtml-school-server
+
+Requires: xdg-utils
+
+%description indexhtml
+ALT Linux index.html welcome page.
+
 %prep
 %setup -q
 
@@ -237,6 +258,16 @@ popd
 mkdir -p %buildroot/usr/share/install2/slideshow
 install slideshow/*  %buildroot/usr/share/install2/slideshow/
 
+#indexhtml
+%define _altdocsdir %_defaultdocdir/alt-docs
+%define _indexhtmldir %_altdocsdir/indexhtml
+pushd indexhtml
+mkdir -p %buildroot{%_indexhtmldir/,%_desktopdir/}
+cp -r * %buildroot%_indexhtmldir/
+touch %buildroot%_indexhtmldir/index.html
+popd
+install -m644 indexhtml.desktop %buildroot%_desktopdir/
+
 #bootloader
 %pre bootloader
 [ -s /boot/splash/%theme ] && rm -fr  /boot/splash/%theme ||:
@@ -255,6 +286,9 @@ echo $lang > lang
 [ $1 = 0 ] || exit 0
 [ "`readlink /boot/splash/message`" != "%theme/message" ] ||
     %__rm -f /boot/splash/message
+
+%post indexhtml
+%_sbindir/indexhtml-update
 
 %files bootloader
 %_datadir/gfxboot/%theme
@@ -297,7 +331,15 @@ echo $lang > lang
 %files slideshow
 /usr/share/install2/slideshow
 
+%files indexhtml
+%ghost %_indexhtmldir/index.html
+%_indexhtmldir/*
+%_desktopdir/*
+
 %changelog
+* Tue Mar 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt23
+- indexhtml subpackage added 
+
 * Mon Mar 23 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt22
 - nepomukserverrc added into kde4 
 

@@ -27,5 +27,6 @@ AC_CONFIG_FILES([
 		 notes/release-notes.all.html
 		 notes/license.ru.html
 		 notes/license.all.html
+		 indexhtml.desktop
 ])
 AC_OUTPUT
