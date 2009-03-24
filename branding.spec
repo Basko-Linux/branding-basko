@@ -264,6 +264,7 @@ install slideshow/*  %buildroot/usr/share/install2/slideshow/
 pushd indexhtml
 mkdir -p %buildroot{%_indexhtmldir/,%_desktopdir/}
 cp -r * %buildroot%_indexhtmldir/
+rm -f %buildroot%_indexhtmldir/*.in
 touch %buildroot%_indexhtmldir/index.html
 popd
 install -m644 indexhtml.desktop %buildroot%_desktopdir/

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>ALT Linux 4.1 Desktop</title>
+  <title>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
@@ -18,7 +18,7 @@
 
 <table border="0" cellspacing="10"><tr>
 <td><img src="img/altlinux-logo.png" width="95" height="84" style="margin-right: 15px;"></td>
-<td width="99%" valign="bottom"><h1 class="shadow" title="ALT Linux 4.1 Desktop"><nobr>ALT Linux 4.1 Desktop</nobr></h1></td>
+<td width="99%" valign="bottom"><h1 class="shadow" title="@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr></h1></td>
 </tr></table>
 
 <div id="main">
@@ -52,12 +52,12 @@
 </div>
 </div>
 
-<p align="justify">Ласкаво просимо до <nobr>ALT Linux 4.1 Desktop</nobr>. Дистрибутив налаштований та готовий до роботи, можна починати. Ми сподіваємось, що наша праця буде для Вас корисною.</p>
+<p align="justify">Ласкаво просимо до <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>. Дистрибутив налаштований та готовий до роботи, можна починати. Ми сподіваємось, що наша праця буде для Вас корисною.</p>
 
 <div id="documentation">
 <h2>Документація (рос.)</h2>
 <ul>
- <li><a href="../desktop/index.html">Посібник користувача</a></li>
+ <li><a href="../@THEME@/index.html">Посібник користувача</a></li>
  <li><a href="../modules/index.html">Додаткова документація</a></li>
 </ul>
 </div>
@@ -76,7 +76,7 @@
 </div>
 </div>
 
-<p class="footer"><nobr>ALT Linux 4.1 Desktop</nobr> &copy; ALT Linux, 2008. Усі права застережено.<br />
+<p class="footer"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2008. Усі права застережено.<br />
 Адреса: м. Москва, 5-й Донський проїзд, 15, буд. 11<br />
 Телефон/факс: +7 (495) 662-3883</p>
 </div>
