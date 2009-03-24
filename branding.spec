@@ -4,7 +4,7 @@
 %define brand altlinux
 %define Brand ALT Linux
 %define status beta
-%define variants altlinux-office-desktop altlinux-office-server
+%define variants altlinux-office-desktop altlinux-office-server altlinux-lite
 
 Name: branding-%brand-%theme
 Version: 5.0
