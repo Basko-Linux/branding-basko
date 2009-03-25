@@ -8,7 +8,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt23
+Release: alt24
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -142,7 +142,7 @@ Slideshow for %Brand %version %Theme installer
 Summary: %name -- ALT Linux html welcome page
 License: distributable
 Group: System/Base
-Provides: indexhtml indexhtml-%theme indexhtml-Desktop
+Provides: indexhtml indexhtml-%theme = %version indexhtml-Desktop = 1:5.0
 Obsoletes: indexhtml-desktop indexhtml-Desktop
 
 Conflicts: indexhtml-sisyphus
@@ -339,6 +339,9 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Wed Mar 25 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt24
+- added versioned provides for indexhtml 
+
 * Tue Mar 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt23
 - indexhtml subpackage added 
 
