@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <title>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+
+<div id=lang>
+ <a href="index-en.html">English</a> |
+ <a href="index-uk.html">Українська</a>
+</div>
+
+<div id="content">
+
+<table border="0" cellspacing="10"><tr>
+<td><img src="img/altlinux-logo.png" width="95" height="84" style="margin-right: 15px;"></td>
+<td width="99%" valign="bottom"><h1 class="shadow" title="@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr></h1></td>
+</tr></table>
+
+<div id="main">
+
+<div id="pane">
+<div class="footer">Поиск по сайтам ALT Linux</div>
+<!-- Google CSE Search Box Begins  -->
+<form action="http://www.google.com/cse" id="searchbox_014412136813254060649:m2__wfh9ajy">
+<!--table border="1" width="100%">
+<tbody><tr><td-->
+<input type="hidden" name="cx" value="014412136813254060649:m2__wfh9ajy" />
+<input type="text" name="q" size="23" />
+<input type="submit" name="sa" value="Поиск" id="button" />
+<!--/td></tr></tbody></table-->
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_014412136813254060649%3Am2__wfh9ajy"></script>
+<!-- Google CSE Search Box Ends -->
+
+<div id="team">
+<h2>ALT Linux Team</h2>
+
+<img src="img/alt-linux-team.png" width="144" height="55">
+
+<p align="justify" style="padding: 15px;">Этот дистрибутив не появился бы без активного участия ALT Linux Team &mdash; сообщества разработчиков свободного программного обеспечения.</p>
+<ul>
+ <li><a href="http://www.altlinux.org/">Wiki сообщества</a></li>
+ <li><a href="http://backports.altlinux.org/">Backports</a></li>
+ <li><a href="http://bugs.altlinux.org/">Сообщить об ошибке</a></li>
+</ul>
+</div>
+</div>
+
+<p align="justify">Добро пожаловать в <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>. Дистрибутив настроен и готов к работе, можно приступать. Мы надеемся, что наша работа будет для Вас полезной.</p>
+
+<div id="documentation">
+<h2>Документация</h2>
+<ul>
+ <li><a href="../@THEME@/index.html">Руководство пользователя</a></li>
+ <li><a href="../modules/index.html">Дополнительная документация</a></li>
+</ul>
+</div>
+
+<div id="web">
+<h2>Информация в Интернете</h2>
+<ul>
+ <li><a href="http://www.altlinux.ru/">Сайт компании ALT Linux</a></li>
+ <li><a href="http://faq.altlinux.ru/">Ответы на часто задаваемые вопросы</a></li>
+ <li><a href="http://search.altlinux.ru/">Поиск информации по ALT Linux</a></li>
+ <li><a href="http://www.altlinux.ru/online_help/users_mailing_lists.html">Списки рассылки</a></li>
+ <li><a href="http://forum.altlinux.org/">Форум пользователей ALT Linux</a></li>
+ <li><a href="http://support.altlinux.ru/">Техническая поддержка через веб-сайт</a></li>
+</ul>
+</div>
+</div>
+
+<p class="footer"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2008. Все права защищены.<br />
+Адрес: г. Москва, 5-й Донской проезд, д. 15, стр. 11<br />
+Телефон/факс: +7 (495) 662-3883</p>
+</div>
+
+</body>
+</html>

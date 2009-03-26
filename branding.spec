@@ -7,7 +7,9 @@
 
 Name: branding-%brand-%theme
 Version: 5.0
-Release: alt9
+Release: alt10
+%define variants altlinux-office-desktop altlinux-office-server altlinux-lite
+
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -39,6 +41,7 @@ PreReq: coreutils
 Provides: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
 
 Obsoletes: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-bootloader ";done )
 
 %description bootloader
 Here you find the graphical boot logo. Suitable for both lilo and syslinux.
@@ -51,6 +54,7 @@ Provides: design-bootsplash design-bootsplash-%theme  branding-alt-%theme-bootsp
 Requires: bootsplash >= 3.3
 Obsoletes:  branding-alt-%theme-bootsplash
 
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-bootsplash ";done )
 %description bootsplash
 This package contains graphics for boot process
 (needs console splash screen enabled)
@@ -61,13 +65,16 @@ License: GPL
 Group: System/Configuration/Other
 Packager: Anton V. Boyarshiniv <boyarsh@altlinux.org>
 Provides: design-alterator-browser-%theme  branding-alt-%theme-browser-qt
+Provides: alterator-icons design-alterator-%theme
 Obsoletes:  branding-alt-%theme-browser-qt
 
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-browser-qt ";done )
 Requires: alterator-browser-qt
 PreReq(post,preun): alternatives >= 0.2
 
 %description browser-qt
 Design for QT alterator for Desktop version
+
 
 %define provide_list altlinux fedora redhat system altlinux
 %define obsolete_list altlinux-release fedora-release redhat-release
@@ -81,6 +88,7 @@ Packager: Anton V. Boyarshinov <boyarsh@altlinux.org>
 Provides: %(for n in %provide_list; do echo -n "$n-release = %version-%release "; done) altlinux-release-%theme  branding-alt-%theme-release
 Obsoletes: %obsolete_list  branding-alt-%theme-release
 Conflicts: %conflicts_list
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-release ";done )
 
 %description release
 %distribution %version %Theme release file.
@@ -91,7 +99,8 @@ Obsoletes: alt-license-%theme alt-notes-%theme
 Summary: Distribution license and release notes
 License: Distributable
 Group: Documentation
-Conflicts: alt-notes-children alt-notes-desktop alt-notes-hpc alt-notes-junior alt-notes-junior-sj alt-notes-junior-sm alt-notes-school-server alt-notes-server-lite alt-notes-skif alt-notes-terminal 
+Conflicts: alt-notes-children alt-notes-hpc alt-notes-junior alt-notes-junior-sj alt-notes-junior-sm alt-notes-school-server alt-notes-server-lite alt-notes-skif alt-notes-terminal 
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-notes ";done )
 
 %description notes
 Distribution license and release notes
@@ -102,10 +111,32 @@ Distribution license and release notes
 Summary: Slideshow for %Brand %version %Theme installer
 License: Distributable
 Group: System/Configuration/Other 
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-slideshow ";done )
 
 %description slideshow
 Slideshow for %Brand %version %Theme installer
 
+%package indexhtml
+
+Summary: %name -- ALT Linux html welcome page
+License: distributable
+Group: System/Base
+Provides: indexhtml indexhtml-%theme = %version indexhtml-Desktop = 1:5.0
+Obsoletes: indexhtml-desktop indexhtml-Desktop
+
+Conflicts: indexhtml-sisyphus
+Conflicts: indexhtml-school_junior
+Conflicts: indexhtml-school_lite
+Conflicts: indexhtml-school_master
+Conflicts: indexhtml-school_terminal
+Conflicts: indexhtml-small_business
+Conflicts: indexhtml-school-server
+
+Requires: xdg-utils 
+Requires(post): indexhtml-common
+
+%description indexhtml
+ALT Linux index.html welcome page.
 
 %prep
 %setup -q
@@ -156,11 +187,15 @@ mkdir -p %buildroot/usr/share/alterator-browser-qt/design
 
 install theme.rcc %buildroot/usr/share/alterator-browser-qt/design/%theme.rcc
 
+
+mkdir -p %buildroot/usr/share/alterator/design/
+cp -a images %buildroot/usr/share/alterator/design/
+popd
+
 mkdir -p %buildroot/%_altdir
 cat >%buildroot/%_altdir/%name-browser-qt <<__EOF__
 /etc/alterator/design-browser-qt	/usr/share/alterator-browser-qt/design/%theme.rcc 50
 __EOF__
-popd
 
 #release
 install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%name-release
@@ -178,6 +213,17 @@ popd
 #slideshow
 mkdir -p %buildroot/usr/share/install2/slideshow
 install slideshow/*  %buildroot/usr/share/install2/slideshow/
+
+#indexhtml
+%define _altdocsdir %_defaultdocdir/alt-docs
+%define _indexhtmldir %_altdocsdir/indexhtml
+pushd indexhtml
+mkdir -p %buildroot{%_indexhtmldir/,%_desktopdir/}
+cp -r * %buildroot%_indexhtmldir/
+rm -f %buildroot%_indexhtmldir/*.in
+touch %buildroot%_indexhtmldir/index.html
+popd
+install -m644 indexhtml.desktop %buildroot%_desktopdir/
 
 #bootloader
 %pre bootloader
@@ -198,6 +244,9 @@ echo $lang > lang
 [ "`readlink /boot/splash/message`" != "%theme/message" ] ||
     %__rm -f /boot/splash/message
 
+%post indexhtml
+%_sbindir/indexhtml-update
+
 %files bootloader
 %_datadir/gfxboot/%theme
 /boot/splash/%theme
@@ -215,6 +264,8 @@ echo $lang > lang
 %files browser-qt
 %config %_altdir/%name-browser-qt
 /usr/share/alterator-browser-qt/design/%theme.rcc
+/usr/share/alterator/design/images
+
 
 %files bootsplash
 %_sysconfdir/bootsplash/themes/%theme/
@@ -231,9 +282,23 @@ echo $lang > lang
 %files slideshow
 /usr/share/install2/slideshow
 
+%files indexhtml
+%ghost %_indexhtmldir/index.html
+%_indexhtmldir/*
+%_desktopdir/*
+
 %changelog
+* Wed Mar 25 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt10
+- added versioned provides for indexhtml 
+- indexhtml subpackage added 
+- other images for browser-qt added
+- conflicts bitween different brandings added
+- steps icons added 
+- sample slideshow added
+
 * Fri Feb 27 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt9
 - merge with desktop branch 
+
 
 * Tue Feb 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt8
 - merge desktop branch
