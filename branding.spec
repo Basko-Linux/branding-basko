@@ -7,8 +7,8 @@
 %define variants altlinux-office-desktop altlinux-office-server altlinux-lite
 
 Name: branding-%brand-%theme
-Version: 5.0
-Release: alt24
+Version: 5.0.0
+Release: alt1
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -237,7 +237,7 @@ __EOF__
 
 #release
 install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%name-release
-echo "%distribution %version %Theme (%codename)" >%buildroot%_sysconfdir/altlinux-release
+echo "%distribution %version %Theme %status (%codename)" >%buildroot%_sysconfdir/altlinux-release
 for n in fedora redhat system; do
 	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
 done
@@ -339,6 +339,10 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Fri Mar 27 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt1
+- addes \%status to altlinux-release
+- images for verbose bootsplash mode from one source
+
 * Wed Mar 25 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt24
 - added versioned provides for indexhtml 
 
