@@ -20,7 +20,7 @@ AC_CONFIG_FILES([
 		 bootloader/config
 		 bootsplash/config/bootsplash-640x480.cfg
 		 bootsplash/config/bootsplash-800x600.cfg
-		 browser-qt/design/design.ini
+		 alterator/design/design.ini
 		 bootloader/gfxboot.cfg
 		 kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc
 		 notes/release-notes.ru.html
