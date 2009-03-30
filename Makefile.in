@@ -14,7 +14,7 @@ all:
 	convert images/background.png -gravity northeast -pointsize 30  -annotate 0 '@STATUS@' background.png
 	cp -al background.png graphics/backgrounds/default.png
 	cp -al background.png graphics/backgrounds/xdm.png
-	convert -resize '800x600!' background.png browser-qt/design/bg.png
+	convert -resize '800x600!' background.png alterator/design/bg.png
 # console background
 	cp -al images/console.jpg bootsplash/images/bootsplash-800x600.jpg
 	convert -resize '640x480!' bootsplash/images/bootsplash-800x600.jpg bootsplash/images/bootsplash-640x480.jpg

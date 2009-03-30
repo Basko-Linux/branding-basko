@@ -1,4 +1,2 @@
-
-install: install-ui
-
-include /usr/share/alterator/build/ui2.mak
+all:
+	rcc-qt4 -binary theme.qrc -o theme.rcc

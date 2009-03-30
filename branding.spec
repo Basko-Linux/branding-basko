@@ -8,7 +8,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt1
+Release: alt2
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -58,21 +58,20 @@ Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "brandi
 This package contains graphics for boot process
 (needs console splash screen enabled)
 
-%package browser-qt
-Summary: Design for QT alterator for Desktop version
+%package alterator
+Summary: Design for alterator for %Brand %Theme 
 License: GPL
 Group: System/Configuration/Other
 Packager: Anton V. Boyarshiniv <boyarsh@altlinux.org>
-Provides: design-alterator-browser-%theme  branding-alt-%theme-browser-qt
+Provides: design-alterator-browser-%theme  branding-alt-%theme-browser-qt branding-altlinux-%theme-browser-qt
 Provides: alterator-icons design-alterator-%theme
-Obsoletes:  branding-alt-%theme-browser-qt
+Obsoletes:  branding-alt-%theme-browser-qt  branding-altlinux-%theme-browser-qt
 
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-browser-qt ";done )
-Requires: alterator-browser-qt
 PreReq(post,preun): alternatives >= 0.2
 
-%description browser-qt
-Design for QT alterator for Desktop version
+%description alterator
+Design for QT and web alterator for %Brand %Theme 
 
 %package graphics
 Summary: design for ALT
@@ -173,8 +172,8 @@ make
     DEFAULT_LANG='--lang-to-subst--' PATH=$PATH:/usr/sbin %make
     popd
 
-#browser-qt
-    pushd browser-qt
+#altarator
+    pushd alterator
     %make_build
     popd
 
@@ -202,8 +201,8 @@ for i in 1; do \
 done
 popd
 
-#browser-qt
-pushd browser-qt
+#alterator
+pushd alterator
 mkdir -p %buildroot/usr/share/alterator-browser-qt/design
 
 install theme.rcc %buildroot/usr/share/alterator-browser-qt/design/%theme.rcc
@@ -306,7 +305,7 @@ echo $lang > lang
     %__rm -f %_sysconfdir/bootsplash/themes/current
 
 
-%files browser-qt
+%files alterator
 %config %_altdir/%name-browser-qt
 /usr/share/alterator-browser-qt/design/%theme.rcc
 /usr/share/alterator/design/images
@@ -339,6 +338,9 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Mon Mar 30 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt2
+- -browser-qt subpackage remaned to -alterator as it really is
+
 * Fri Mar 27 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt1
 - addes \%status to altlinux-release
 - images for verbose bootsplash mode from one source
