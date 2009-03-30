@@ -4,6 +4,8 @@
 %define brand altlinux
 %define Brand ALT Linux
 %define status alpha 
+%define variants altlinux-office-desktop altlinux-desktop altlinux-lite
+
 
 Name: branding-%brand-%theme
 Version: 5.0.0
