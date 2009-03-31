@@ -68,7 +68,7 @@ Provides: alterator-icons design-alterator-%theme
 Obsoletes:  branding-alt-%theme-browser-qt  branding-altlinux-%theme-browser-qt
 
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-browser-qt ";done )
-PreReq(post,preun): alternatives >= 0.2
+PreReq(post,preun): alternatives >= 0.2 alterator
 
 %description alterator
 Design for QT and web alterator for %Brand %Theme 
