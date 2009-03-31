@@ -9,7 +9,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt3
+Release: alt4
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -190,6 +190,7 @@ install theme.rcc %buildroot/usr/share/alterator-browser-qt/design/%theme.rcc
 
 mkdir -p %buildroot/usr/share/alterator/design/
 cp -a images %buildroot/usr/share/alterator/design/
+cp -a styles %buildroot/usr/share/alterator/design/
 popd
 
 mkdir -p %buildroot/%_altdir
@@ -264,7 +265,7 @@ echo $lang > lang
 %files alterator
 %config %_altdir/%name-browser-qt
 /usr/share/alterator-browser-qt/design/%theme.rcc
-/usr/share/alterator/design/images
+/usr/share/alterator/design/*
 
 
 %files bootsplash
@@ -288,6 +289,9 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Tue Mar 31 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt4
+- www design fixed 
+
 * Tue Mar 31 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt3
 - conflicts for -alterator subpackages added
 - design for web alterator changed
