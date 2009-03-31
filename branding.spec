@@ -65,7 +65,7 @@ License: GPL
 Group: System/Configuration/Other
 Packager: Anton V. Boyarshiniv <boyarsh@altlinux.org>
 Provides: design-alterator-browser-%theme  branding-alt-%theme-browser-qt branding-altlinux-%theme-browser-qt
-Provides: alterator-icons design-alterator-%theme
+Provides: alterator-icons design-alterator design-alterator-%theme
 Obsoletes:  branding-alt-%theme-browser-qt  branding-altlinux-%theme-browser-qt
 
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-browser-qt ";done )
