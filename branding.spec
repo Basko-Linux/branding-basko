@@ -8,7 +8,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt2
+Release: alt3
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -68,6 +68,7 @@ Provides: alterator-icons design-alterator-%theme
 Obsoletes:  branding-alt-%theme-browser-qt  branding-altlinux-%theme-browser-qt
 
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-browser-qt ";done )
+Conflicts: design-alterator-server design-alterator-desktop design-altertor-browser-desktop  design-altertor-browser-server 
 PreReq(post,preun): alternatives >= 0.2 alterator
 
 %description alterator
@@ -338,6 +339,10 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Tue Mar 31 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt3
+- conflicts for -alterator subpackages added
+- design for web alterator changed
+
 * Mon Mar 30 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt2
 - -browser-qt subpackage remaned to -alterator as it really is
 
