@@ -65,10 +65,10 @@ Group: System/Configuration/Other
 Packager: Anton V. Boyarshiniv <boyarsh@altlinux.org>
 Provides: design-alterator-browser-%theme  branding-alt-%theme-browser-qt branding-altlinux-%theme-browser-qt
 Provides: alterator-icons design-alterator design-alterator-%theme
-Obsoletes:  branding-alt-%theme-browser-qt  branding-altlinux-%theme-browser-qt
+Obsoletes:  branding-alt-%theme-browser-qt  branding-altlinux-%theme-browser-qt 
 
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-browser-qt ";done )
-Conflicts: design-alterator-server design-alterator-desktop design-altertor-browser-desktop  design-altertor-browser-server 
+Obsoletes: design-alterator-server design-alterator-desktop design-altertor-browser-desktop  design-altertor-browser-server 
 PreReq(post,preun): alternatives >= 0.2 alterator
 
 %description alterator
