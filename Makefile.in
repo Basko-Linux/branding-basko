@@ -20,6 +20,6 @@ all:
 	cp -al images/console.jpg bootsplash/images/bootsplash-800x600.jpg
 	convert -resize '640x480!' bootsplash/images/bootsplash-800x600.jpg bootsplash/images/bootsplash-640x480.jpg
 # logo for web alterator
-	cp images/logo.gif alterator/images/
+	cp images/logo.png alterator/images/
 #color scheme
 	mv kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc "kde3-settings/apps/kdisplay/color-schemes/@BRAND_FNAME@ @NAME@.kcsrc"

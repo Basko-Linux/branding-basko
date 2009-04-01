@@ -3,7 +3,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt4
+Release: alt5
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -341,6 +341,9 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Wed Apr 01 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt5
+- logo in www design fixed 
+
 * Tue Mar 31 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt4
 - www design fixed 
 
