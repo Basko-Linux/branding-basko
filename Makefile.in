@@ -22,3 +22,5 @@ all:
 	cp images/logo.gif alterator/images/
 #color scheme
 	mv kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc "kde3-settings/apps/kdisplay/color-schemes/@BRAND_FNAME@ @NAME@.kcsrc"
+#wallpaper
+	convert graphics/backgrounds/wallpaper.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 27,27 "@STATUS@"' ALTLinux Desktop-4.0.png
