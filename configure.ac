@@ -4,10 +4,12 @@ AC_INIT( [branding], [0.1], [http://bugzilla.altlinux.ru] )
 PROGRESS_COLOR=`./fetch_color selectBackground`
 TITLE_COLOR=`./fetch_color handle`
 INACTIVE_COLOR=`./fetch_color inactiveTitleBtnBg`
-LIGHT_COLOR_DEC="223,223,224"
-MIDDLE_COLOR_DEC="200,201,203"
-DARK_COLOR_DEC="144,145,149"
-
+LIGHT_COLOR_HEX="DFDFFE0"
+MIDDLE_COLOR_HEX="C8C9CB"
+DARK_COLOR_HEX="909195"
+LIGHT_COLOR_DEC=`./color-dec $LIGHT_COLOR_HEX`
+MIDDLE_COLOR_DEC=`./color-dec $MIDDLE_COLOR_HEX`
+DARK_COLOR_DEC=`./color-dec $DARK_COLOR_HEX`
 
 AC_SUBST(THEME)
 AC_SUBST(NAME)
