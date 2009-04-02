@@ -7,6 +7,8 @@ INACTIVE_COLOR=`./fetch_color inactiveTitleBtnBg`
 LIGHT_COLOR_HEX="DFDFFE0"
 MIDDLE_COLOR_HEX="C8C9CB"
 DARK_COLOR_HEX="909195"
+LIGHT_LABELS_HEX="FFFFFF"
+DARK_LABELS_HEX="000000"
 LIGHT_COLOR_DEC=`./color-dec $LIGHT_COLOR_HEX`
 MIDDLE_COLOR_DEC=`./color-dec $MIDDLE_COLOR_HEX`
 DARK_COLOR_DEC=`./color-dec $DARK_COLOR_HEX`
@@ -40,5 +42,6 @@ AC_CONFIG_FILES([
 		 indexhtml/index-ru.html
 		 indexhtml/index-uk.html
 		 indexhtml/index-en.html
+		 indexhtml/index.css.in
 ])
 AC_OUTPUT

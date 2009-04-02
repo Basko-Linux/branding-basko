@@ -3,7 +3,7 @@
 %define codename Inula Helenium 
 %define brand altlinux
 %define Brand ALT Linux
-%define status beta
+%define status ПРОТОТИП
 %define variants altlinux-office-desktop altlinux-office-server altlinux-lite
 
 Name: branding-%brand-%theme

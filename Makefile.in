@@ -3,15 +3,15 @@ all:
 	cp -a bootloader/config design-bootloader-source/
 	cp -a bootloader/gfxboot.cfg design-bootloader-source/data-install/
 	cp -a bootloader/gfxboot.cfg design-bootloader-source/data-boot/
-	convert images/boot.jpg -gravity northeast -pointsize 20  -annotate 0 '@STATUS@' boot.jpg
-	convert images/boot.jpg -resize 800x600 -gravity northeast -pointsize 20  -annotate 0 '@STATUS@' boot-800x600.jpg
+	convert images/boot.jpg -resize 800x600 -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 27,27 "@STATUS@"' boot.jpg
+	convert images/boot.jpg -resize 800x600 -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 27,27 "@STATUS@"' boot-800x600.jpg
 	cp -al boot-800x600.jpg design-bootloader-source/data-boot/back.jpg
 	cp -al boot-800x600.jpg design-bootloader-source/data-install/back.jpg
 	cp -al boot.jpg bootsplash/images/silent-1024x768.jpg
 	convert -resize '800x600!' bootsplash/images/silent-1024x768.jpg bootsplash/images/silent-800x600.jpg
 	convert -resize '640x480!' bootsplash/images/silent-800x600.jpg bootsplash/images/silent-640x480.jpg
 # background
-	convert images/background.png -gravity northeast -pointsize 30  -annotate 0 '@STATUS@' background.png
+	convert images/background.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 27,27 "@STATUS@"' background.png
 	cp -al background.png graphics/backgrounds/default.png
 	cp -al background.png graphics/backgrounds/xdm.png
 	convert -resize '800x600!' background.png alterator/design/bg.png
