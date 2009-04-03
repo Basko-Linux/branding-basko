@@ -1,14 +1,9 @@
 %define theme desktop
-%define Theme Desktop
-%define codename Inula Helenium 
 %define brand altlinux
-%define Brand ALT Linux
-%define status beta
-%define variants altlinux-office-desktop altlinux-office-server altlinux-lite
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt5
+Release: alt6
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -19,6 +14,13 @@ BuildRequires: libalternatives-devel
 BuildRequires: libqt4-devel
 
 BuildRequires: ImageMagick fontconfig
+
+%define Theme Desktop
+%define codename Inula Helenium 
+%define Brand ALT Linux
+%define status ПРОТОТИП
+%define status_en Prototype
+%define variants altlinux-office-desktop altlinux-office-server altlinux-lite
 
 Packager: Anton V. Boyarshinov <boyarsh at altlinux dot org>
 
@@ -165,7 +167,7 @@ ALT Linux index.html welcome page.
 
 %build
 autoconf
-THEME=%theme NAME='%Theme' BRAND_FNAME='ALT Linux' STATUS=%status VERSION=%version ./configure 
+THEME=%theme NAME='%Theme' BRAND_FNAME='ALT Linux' STATUS_EN=%status_en STATUS=%status VERSION=%version ./configure 
 make
 
 #bootloader
@@ -238,7 +240,7 @@ __EOF__
 
 #release
 install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%name-release
-echo "%distribution %version %Theme %status (%codename)" >%buildroot%_sysconfdir/altlinux-release
+echo "%distribution %version %Theme %status_en (%codename)" >%buildroot%_sysconfdir/altlinux-release
 for n in fedora redhat system; do
 	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
 done
@@ -340,6 +342,10 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Fri Apr 03 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt6
+- default gray design from mex3@
+- \%status_en intorduces for release file 
+
 * Wed Apr 01 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt5
 - logo in www design fixed 
 

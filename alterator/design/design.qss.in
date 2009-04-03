@@ -22,7 +22,7 @@ QLineEdit[echoMode="2"] {
 
 /* Customize tooltips. */
 QToolTip {
-    background-color: rgb(200,200,255);
+    background-color: rgb(@MIDDLE_COLOR_DEC@);
     border-color: darkslategray;
     border-width: 1px;
     border-style: solid;
