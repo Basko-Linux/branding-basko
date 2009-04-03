@@ -34,8 +34,8 @@ box silent noover 99 387 701 378 #CBCBCC60
 
 box silent inter 100 371 100 377 #@LIGHT_COLOR_HEX@
 box silent 100 371 700 377 #@LIGHT_COLOR_HEX@
-box silent inter 100 377 100 387 #@MIDDLE_COLOR_HEX@ 
-box silent 100 377 700 387 #@MIDDLE_COLOR_HEX@
+box silent inter 100 377 100 387 #@DARK_COLOR_HEX@ 
+box silent 100 377 700 387 #@DARK_COLOR_HEX@
 
 
 trigger "isdown" quit

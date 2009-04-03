@@ -35,21 +35,21 @@ mainmenu.entries=8
 ; minimal main menu selection bar width
 mainmenu.bar.minwidth=300
 ; main menu selection bar transparency (0..255)
-mainmenu.bar.transparency=200
+mainmenu.bar.transparency=0
 ; main menu colors
-mainmenu.bar.color=0x@DARK_LABELS@
+mainmenu.bar.color=0x798491
 mainmenu.normal.fg=0x000000
-mainmenu.selected.fg=0x@DARK_LABELS@
+mainmenu.selected.fg=0x@LIGHT_LABELS_HEX@
 ; boot option colors
-bootopt.label.fg=0x@LIGHT_COLOR_HEX@
+bootopt.label.fg=0x@DARK_LABELS_HEX@
 bootopt.text.fg=0x@DARK_LABELS_HEX@
 ; progress bar color
 progress.bar.color=0x@MIDDLE_COLOR_HEX@
 ; menu colors
 menu.normal.bg=0x798491
 menu.normal.fg=0x@DARK_LABELS_HEX@
-menu.selected.bg=0x798491
-menu.selected.fg=0x@LIGHT_LABELS_HEX@
+menu.selected.bg=0x@LIGHT_COLOR_HEX@
+menu.selected.fg=0x@DARK_LABELS_HEX@
 ; window colors
 window.bg=0xd8deed
 window.fg=0x000000
@@ -64,6 +64,7 @@ help.highlight.fg=0x@DARK_COLOR_HEX@
 ; panel colors
 panel.fg=0x000000
 panel.title.fg=0x5c6570
+panel.normal.fg=0x5c6570
 panel.f-key.fg=0x@DARK_LABELS_HEX@
 ; default keymap (e.g. de_DE, czech)
 keymap=
