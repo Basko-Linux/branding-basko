@@ -80,7 +80,7 @@ div#pane {
 }
 
 div#team {
-	background: #@LIGHT_COLOR_HEX@;
+	background: #@MIDDLE_COLOR_HEX@;
 	width: 100%;
 	text-align: center;
 	margin: 0px;

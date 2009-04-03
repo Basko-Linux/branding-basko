@@ -44,9 +44,9 @@ mainmenu.selected.fg=0x@DARK_LABELS@
 bootopt.label.fg=0x@LIGHT_COLOR_HEX@
 bootopt.text.fg=0x@DARK_LABELS_HEX@
 ; progress bar color
-progress.bar.color=0x@PROGRESS_COLOR@
+progress.bar.color=0x@MIDDLE_COLOR_HEX@
 ; menu colors
-menu.normal.bg=0xd8deed
+menu.normal.bg=0x798491
 menu.normal.fg=0x@DARK_LABELS_HEX@
 menu.selected.bg=0x798491
 menu.selected.fg=0x@LIGHT_LABELS_HEX@
@@ -54,13 +54,13 @@ menu.selected.fg=0x@LIGHT_LABELS_HEX@
 window.bg=0xd8deed
 window.fg=0x000000
 window.title.bg=0x@TITLE_COLOR@
-window.title.fg=0xffffff
+window.title.fg=0x@DARK_LABELS_HEX@
 window.title.error.bg=0xc00000
 ; help system colors
-help.link.fg=0x0000a0
+help.link.fg=0x@DARK_COLOR_HEX@
 help.link.selected.fg=0xffffff
-help.link.selected.bg=0x0000a0
-help.highlight.fg=0x009000
+help.link.selected.bg=0x@DARK_COLOR_HEX@
+help.highlight.fg=0x@DARK_COLOR_HEX@
 ; panel colors
 panel.fg=0x000000
 panel.title.fg=0x5c6570

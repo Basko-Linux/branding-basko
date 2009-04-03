@@ -1,7 +1,7 @@
 AC_INIT( [branding], [0.1], [http://bugzilla.altlinux.ru] )
 
 
-PROGRESS_COLOR=`./fetch_color selectBackground`
+PROGRESS_COLOR=`./fetch_color selectBackground` //MIDDLE_COLOR_DEC
 TITLE_COLOR=`./fetch_color handle`
 INACTIVE_COLOR=`./fetch_color inactiveTitleBtnBg`
 LIGHT_COLOR_HEX=DFDFFE0
