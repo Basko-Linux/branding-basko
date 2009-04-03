@@ -12,7 +12,8 @@ all:
 	convert -resize '640x480!' bootsplash/images/silent-800x600.jpg bootsplash/images/silent-640x480.jpg
 # background
 	convert images/background.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' background.png
-	cp -al background.png graphics/backgrounds/default.png
+	convert graphics/backgrounds/wallpaper.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' prototype.png
+	cp -al prototype.png graphics/backgrounds/default.png
 	cp -al background.png graphics/backgrounds/xdm.png
 	convert -resize '800x600!' background.png alterator/design/bg.png
 # console background
@@ -22,5 +23,3 @@ all:
 	cp images/logo.gif alterator/images/
 #color scheme
 	mv kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc "kde3-settings/apps/kdisplay/color-schemes/@BRAND_FNAME@ @NAME@.kcsrc"
-#wallpaper
-	convert graphics/backgrounds/wallpaper.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' graphics/backgrounds/ALTLinux\ Desktop-4.0.png
