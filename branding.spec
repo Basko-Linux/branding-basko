@@ -1,10 +1,5 @@
 %define theme desktop
-%define Theme Desktop
-%define codename Inula Helenium 
 %define brand altlinux
-%define Brand ALT Linux
-%define status ПРОТОТИП
-%define variants altlinux-office-desktop altlinux-office-server altlinux-lite
 
 Name: branding-%brand-%theme
 Version: 5.0.0
@@ -19,6 +14,12 @@ BuildRequires: libalternatives-devel
 BuildRequires: libqt4-devel
 
 BuildRequires: ImageMagick fontconfig
+
+%define Theme Desktop
+%define codename Inula Helenium 
+%define Brand ALT Linux
+%define status ПРОТОТИП
+%define variants altlinux-office-desktop altlinux-office-server altlinux-lite
 
 Packager: Anton V. Boyarshinov <boyarsh at altlinux dot org>
 
