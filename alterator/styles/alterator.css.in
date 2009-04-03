@@ -1,6 +1,6 @@
 body {
-	background-color: #cdcdcd;/*#92b2b8;/*#67999a;/*#c0dbdb;*/
-	color: #178093;
+	background-color: #@MIDDLE_COLOR_HEX@;/*#92b2b8;/*#67999a;/*#c0dbdb;*/
+	color: #@DARK_COLOR_HEX@;
 	margin: 0px;
 	padding: 10px;
 	font-family : Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -8,13 +8,13 @@ body {
 }
 
 a {
-	color: #178093;
+	color: #@DARK_COLOR_HEX@;
 	font-weight: bold;
 }
 
 table {
 	font-size: 9pt;
-	border-color: #178093;
+	border-color: #@DARK_COLOR_HEX@;
 	border-collapse: collapse;
 }
 
@@ -37,23 +37,23 @@ h1 {
 }
 
 textarea, select, input.text {
-	border: 1px solid #178093;
+	border: 1px solid #@DARK_COLOR_HEX@;
 	font-size: 8pt;
 	margin: 1px 3px 1px 0px;
 	padding: 1px 3px;
 }
 
 .btn {
-	background-color: #cdcdcd;
-	color: #178093;
-	border: 1px solid #178093;
+	background-color: #@MIDDLE_COLOR_HEX@;
+	color: #@DARK_COLOR_HEX@;
+	border: 1px solid #@DARK_COLOR_HEX@;
 	cursor: pointer;
 	font-size: 9pt;
 	padding: 0px 3px;
 }
 
 .btn:hover {
-	background-color: #94c4cd;
+	background-color: #@MIDDLE_COLOR_HEX@;
 }
 
 .error-message {
@@ -66,7 +66,7 @@ textarea, select, input.text {
 
 .info-name {
 	font-size: 18pt;
-	border-bottom: 2px solid #178093;
+	border-bottom: 2px solid #@DARK_COLOR_HEX@;
 }
 
 .info-description {
@@ -89,25 +89,25 @@ textarea, select, input.text {
 }
 
 .disabled {
-	color: #6e6e6e;
+	color: #@DARK_COLOR_HEX@;
 }
 
 .alterator-progress {
-	border: 1px solid #178093;
+	border: 1px solid #@DARK_COLOR_HEX@;
 	height: 20px;
 	width: 200px;
 	padding: 2px;
-	background-color: #FFFFFF;
+	background-color: #@LIGHT_LABELS_HEX@;
 }
 
 .alterator-progress div {
-	background-color: #178093;
+	background-color: #@DARK_COLOR_HEX@;
 	height: 20px;
 }
 
 .year {
 	font-weight: bold;
-	background-color: #baeaea;
+	background-color: #@LIGHT_COLOR_HEX@;
 }
 
 .week {
@@ -126,18 +126,18 @@ textarea, select, input.text {
 .day {
 	border-style:solid;
 	border-width:1px;
-	background-color: #baeaea;
+	background-color: #@LIGHT_COLOR_HEX@;
 	cursor: pointer;
 }
 
 .day:hover {
-	background-color: #178093;
+	background-color: #@DARK_COLOR_HEX@;
 }
 
 .alterator-dateedit-calendar table {
 	width: 100%;
 	text-align: center;
-	background-color: #baeaea;
+	background-color: #@LIGHT_COLOR_HEX@;
 	border-style: solid;
 	border-width: 1px;
 }
@@ -166,7 +166,7 @@ table.alterator-listbox th {
 }
 
 table.alterator-listbox td {
-	background: #ffffff;
+	background: #@LIGHT_COLOR_HEX@;
 	border-left: solid 1px;
 	border-right: solid 1px;
 	padding: 3px;

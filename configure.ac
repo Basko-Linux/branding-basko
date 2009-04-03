@@ -48,5 +48,7 @@ AC_CONFIG_FILES([
 		 indexhtml/index-uk.html
 		 indexhtml/index-en.html
 		 indexhtml/index.css
+		 alterator/styles/alterator.css
+		 alterator/styles/menu.css
 ])
 AC_OUTPUT
