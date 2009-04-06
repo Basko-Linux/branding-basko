@@ -31,10 +31,10 @@ box silent noover 99 377 541 387 #9A9A9A60 #9A9A9A60 #D7D7D760 #D7D7D760
 box silent noover 99 387 541 378 #CBCBCC60
 
 
-box silent inter 100 371 100 377 #@INACTIVE_COLOR@
-box silent       100 371 540 377 #@INACTIVE_COLOR@
-box silent inter 100 377 100 387 #@PROGRESS_COLOR@
-box silent       100 377 540 387 #@PROGRESS_COLOR@
+box silent inter 100 371 100 377 #@LIGHT_COLOR_HEX@
+box silent       100 371 540 377 #@LIGHT_COLOR_HEX@
+box silent inter 100 377 100 387 #@DARK_COLOR_HEX@
+box silent       100 377 540 387 #@DARK_COLOR_HEX@
 
 
 trigger "isdown" quit

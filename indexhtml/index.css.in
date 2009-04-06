@@ -4,7 +4,7 @@ body {
 	font-family: Verdana,'DejaVu Sans',Helvetica,sans;
 	text-align:  left;
 	font-size: 12px;
-	background: #FFF;
+	background: #@LIGHT_COLOR_HEX@;
 	background-image: url('img/bg.png');
 }
 
@@ -66,7 +66,7 @@ div#content, div#lang {
 div#main {
     background: #FFF;
     width: 100%;
-	border: 1px solid #CCC;
+	border: 1px solid #@MIDDLE_COLOR_HEX@;
 	padding: 2mm;
 	padding-left: 5mm;
 }
@@ -80,17 +80,17 @@ div#pane {
 }
 
 div#team {
-	background: #E5FFE5;
+	background: #@MIDDLE_COLOR_HEX@;
 	width: 100%;
 	text-align: center;
 	margin: 0px;
 	padding: 0px;
-	border: 1px solid #66CC66;
+	border: 1px solid #@DARK_COLOR_HEX@;
 }
 
 .footer {
 	font-size: 9px;
-	color: #666;
+	color: #@DARK_COLOR_HEX@;
 }
 
 div.columns  { float: left; }
@@ -105,5 +105,5 @@ div#lang {
   text-align: center;
   background: #fff;
   padding: 0.2em;
-  border: 1px solid #CCC;
+  border: 1px solid #@DARK_COLOR_HEX@;
 }
