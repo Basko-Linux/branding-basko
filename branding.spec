@@ -3,13 +3,11 @@
 %define codename none 
 %define brand altlinux
 %define Brand ALT Linux
-%define status alpha 
-%define variants altlinux-office-desktop altlinux-desktop altlinux-lite
 
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt3
+Release: alt7
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -20,6 +18,11 @@ BuildRequires: libalternatives-devel
 BuildRequires: libqt4-devel
 
 BuildRequires: ImageMagick fontconfig
+
+%define Theme Office Server 
+%define status ПРОТОТИП
+%define status_en Prototype
+%define variants altlinux-office-desktop altlinux-desktop altlinux-lite
 
 Packager: Anton V. Boyarshinov <boyarsh at altlinux dot org>
 
@@ -75,6 +78,19 @@ PreReq(post,preun): alternatives >= 0.2 alterator
 %description alterator
 Design for QT and web alterator for %Brand %Theme 
 
+%package graphics
+Summary: design for ALT
+License: Different licenses
+Group: Graphics
+
+Provides: design-graphics-%theme  branding-alt-%theme-graphics
+Obsoletes:  branding-alt-%theme-graphics design-graphics-%theme
+PreReq(post,preun): alternatives >= 0.2
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-graphics ";done )
+
+%description graphics
+This package contains some graphics for ALT design.
+
 
 %define provide_list altlinux fedora redhat system altlinux
 %define obsolete_list altlinux-release fedora-release redhat-release
@@ -105,6 +121,15 @@ Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "brandi
 %description notes
 Distribution license and release notes
 
+%package kde4-settings
+
+Summary: KDE4 settings for %Brand %version %Theme
+License: Distributable
+Group: Graphical desktop/KDE
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-kde4-settings ";done )
+
+%description kde4-settings
+KDE4 settings for %Brand %version %Theme
 
 %package slideshow
 
@@ -144,7 +169,7 @@ ALT Linux index.html welcome page.
 
 %build
 autoconf
-THEME=%theme NAME='%Theme' BRAND_FNAME='ALT Linux' STATUS=%status VERSION=%version ./configure 
+THEME=%theme NAME='%Theme' BRAND_FNAME='ALT Linux' STATUS_EN=%status_en STATUS=%status VERSION=%version ./configure 
 make
 
 #bootloader
@@ -190,6 +215,7 @@ install theme.rcc %buildroot/usr/share/alterator-browser-qt/design/%theme.rcc
 
 mkdir -p %buildroot/usr/share/alterator/design/
 cp -a images %buildroot/usr/share/alterator/design/
+cp -a styles %buildroot/usr/share/alterator/design/
 popd
 
 mkdir -p %buildroot/%_altdir
@@ -197,9 +223,26 @@ cat >%buildroot/%_altdir/%name-browser-qt <<__EOF__
 /etc/alterator/design-browser-qt	/usr/share/alterator-browser-qt/design/%theme.rcc 50
 __EOF__
 
+#graphics
+mkdir -p %buildroot/%_datadir/design/{%theme,backgrounds}
+cp -ar graphics/* %buildroot/%_datadir/design/%theme
+
+pushd %buildroot/%_datadir/design/%theme
+    pushd backgrounds
+	ln -sf ../../../wallpapers more
+    popd
+popd
+
+install -d %buildroot//etc/alternatives/packages.d
+cat >%buildroot/etc/alternatives/packages.d/%name-graphics <<__EOF__
+%_datadir/artworks	%_datadir/design/%theme 10	
+%_datadir/design-current	%_datadir/design/%theme	10
+%_datadir/design/current	%_datadir/design/%theme	10
+__EOF__
+
 #release
 install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%name-release
-echo "%distribution %version %Theme %status (%codename)" >%buildroot%_sysconfdir/altlinux-release
+echo "%distribution %version %Theme %status_en (%codename)" >%buildroot%_sysconfdir/altlinux-release
 for n in fedora redhat system; do
 	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
 done
@@ -209,6 +252,13 @@ pushd notes
 %makeinstall
 popd
 
+#kde4-settings
+pushd kde4-settings
+mkdir -p %buildroot%_sysconfdir/skel/Desktop
+cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
+mkdir -p %buildroot%_sysconfdir/skel/.kde4
+cp -a kde4/* %buildroot%_sysconfdir/skel/.kde4/
+popd
 
 #slideshow
 mkdir -p %buildroot/usr/share/install2/slideshow
@@ -264,8 +314,11 @@ echo $lang > lang
 %files alterator
 %config %_altdir/%name-browser-qt
 /usr/share/alterator-browser-qt/design/%theme.rcc
-/usr/share/alterator/design/images
+/usr/share/alterator/design/*
 
+%files graphics
+%config /etc/alternatives/packages.d/%name-graphics
+%_datadir/design
 
 %files bootsplash
 %_sysconfdir/bootsplash/themes/%theme/
@@ -278,6 +331,9 @@ echo $lang > lang
 %files notes
 %_datadir/alt-notes/*
 
+%files kde4-settings
+%_sysconfdir/skel/Desktop
+%_sysconfdir/skel/.kde4
 
 %files slideshow
 /usr/share/install2/slideshow
@@ -288,6 +344,19 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Tue Apr 07 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt7
+- fixes for installer design from mex3@ 
+
+* Fri Apr 03 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt6
+- default gray design from mex3@
+- \%status_en intorduces for release file 
+
+* Wed Apr 01 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt5
+- logo in www design fixed 
+
+* Tue Mar 31 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt4
+- www design fixed 
+
 * Tue Mar 31 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt3
 - conflicts for -alterator subpackages added
 - design for web alterator changed
@@ -299,25 +368,68 @@ echo $lang > lang
 - addes \%status to altlinux-release
 - images for verbose bootsplash mode from one source
 
-* Wed Mar 25 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt10
+* Wed Mar 25 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt24
 - added versioned provides for indexhtml 
+
+* Tue Mar 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt23
 - indexhtml subpackage added 
+
+* Mon Mar 23 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt22
+- nepomukserverrc added into kde4 
+
+* Wed Mar 18 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt21
 - other images for browser-qt added
+- gtkrcs added into kde4-settings
+- plasma-applet-networkmanagenemt removed from kde4 by default
 - conflicts bitween different brandings added
+
+* Thu Mar 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt20
 - steps icons added 
+
+* Fri Feb 27 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt19
 - sample slideshow added
 
-* Fri Feb 27 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt9
-- merge with desktop branch 
+* Wed Feb 25 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt18
+- 1024x768 removed :D
+- more transparent menu selection bar
 
+* Tue Feb 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt17
+- 1024x768 added 
+- fonts changed
 
-* Tue Feb 24 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt8
-- merge desktop branch
-- added adderesses into notes
+* Thu Feb 19 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt16
+- not setup language in bootloader during install (when it is 'C') 
 
-* Tue Feb 17 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt6
-- merge with desktop branch
-- unneded subpackages deleted
+* Wed Feb 18 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt15
+- rebuild with new bootloader-source with support of real language change 
+
+* Tue Feb 17 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt14
+- auto set default language for bootloader from /etc/sysconfig/i18n 
+
+* Mon Feb 16 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt13
+- rebuild for fix oversized /boot/splash/message 
+
+* Fri Feb 13 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt12
+- default language set to ru_RU for system boot 
+
+* Wed Feb 11 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt11
+- fixed conflict of notes subpackage with itself 
+
+* Tue Feb 10 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt10
+- more kde4 settings from zerg@ 
+- alternative and obsoletes for graphics added
+
+* Thu Feb 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt9
+- rebuild with new translations 
+
+* Thu Feb 05 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt8
+- added kde4-settings subpackage 
+
+* Wed Feb 04 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt7
+- added conflicts for notes 
+
+* Mon Jan 26 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt6
+- xdm background fixed 
 
 * Fri Jan 23 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0-alt5
 - added 'notes' subpackage 
