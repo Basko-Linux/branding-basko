@@ -15,7 +15,7 @@ all:
 	convert graphics/backgrounds/wallpaper.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' prototype.png
 	cp -al prototype.png graphics/backgrounds/default.png
 	cp -al background.png graphics/backgrounds/xdm.png
-	convert -resize '800x600!' background.png alterator/design/bg.png
+	convert -resize '800x600!' alterator/images/background.png alterator/design/bg.png
 # console background
 	cp -al images/console.jpg bootsplash/images/bootsplash-800x600.jpg
 	convert -resize '640x480!' bootsplash/images/bootsplash-800x600.jpg bootsplash/images/bootsplash-640x480.jpg
