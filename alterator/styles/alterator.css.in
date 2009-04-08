@@ -131,7 +131,7 @@ textarea, select, input.text {
 }
 
 .day:hover {
-	background-color: #@DARK_COLOR_HEX@;
+	background-color: #@MIDDLE_COLOR_HEX@;
 }
 
 .alterator-dateedit-calendar table {
