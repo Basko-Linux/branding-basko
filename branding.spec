@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt7
+Release: alt8
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -344,6 +344,9 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Wed Apr 08 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt8
+- gradients and some colors in css fixed
+
 * Tue Apr 07 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt7
 - fixes for installer design from mex3@ 
 
