@@ -103,7 +103,7 @@
 #main-td {
 /*	padding: 10px 20px;*/
 /*	background-color: #baeaea;*/
-	background-color: #@LIGHT_COLOR_HEX@;
+	background-color: #ffffff;
 	width: 100%;
 	/*border: 1px solid #056560;;*/
 	-moz-border-radius-bottomright: 1em;
