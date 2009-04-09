@@ -1,5 +1,11 @@
 /* c0dbdb */
 
+.top-button-menu {
+        background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
+        padding-right: 10px;
+        padding-top: 10px;
+}
+
 #logo-td {
 	border-left: none;
 	padding-left: 10px;
@@ -46,7 +52,7 @@
 /*	border-left: none; */
 	padding-left: 10px;
 	padding-top: 10px;
-	color: #@LIGHT_LABELS_TEXT@;
+	color: #@LIGHT_LABELS_HEX@;
 	padding-right: 10px;
 	text-align:center;
 	width: 100px;
@@ -171,7 +177,7 @@
 #help-popup {
 	padding-left: 10px;
 	width: 95%;
-	background-color: #@MIDDLE_COLOR_HEX@;
+	background-color: #@LIGHT_COLOR_HEX@;
 /*	padding-right: 5px;
 	padding-top: 10px;*/
 }
