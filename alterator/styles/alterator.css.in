@@ -1,6 +1,6 @@
 body {
 	background-color: #@MIDDLE_COLOR_HEX@;/*#92b2b8;/*#67999a;/*#c0dbdb;*/
-	color: #@DARK_COLOR_HEX@;
+	color: #@MIDDLE_LABELS_HEX@;
 	margin: 0px;
 	padding: 10px;
 	font-family : Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -8,13 +8,13 @@ body {
 }
 
 a {
-	color: #@DARK_COLOR_HEX@;
+	color: #@MIDDLE_LABELS_HEX@;
 	font-weight: bold;
 }
 
 table {
 	font-size: 9pt;
-	border-color: #@DARK_COLOR_HEX@;
+	border-color: #@MIDDLE_LABELS_HEX@;
 	border-collapse: collapse;
 }
 
@@ -37,7 +37,7 @@ h1 {
 }
 
 textarea, select, input.text {
-	border: 1px solid #@DARK_COLOR_HEX@;
+	border: 1px solid #@MIDDLE_LABELS_HEX@;
 	font-size: 8pt;
 	margin: 1px 3px 1px 0px;
 	padding: 1px 3px;
@@ -46,7 +46,7 @@ textarea, select, input.text {
 .btn {
 	background-color: #@MIDDLE_COLOR_HEX@;
 	color: #@DARK_COLOR_HEX@;
-	border: 1px solid #@DARK_COLOR_HEX@;
+	border: 1px solid #@MIDDLE_LABELS_HEX@;
 	cursor: pointer;
 	font-size: 9pt;
 	padding: 0px 3px;
@@ -66,7 +66,7 @@ textarea, select, input.text {
 
 .info-name {
 	font-size: 18pt;
-	border-bottom: 2px solid #@DARK_COLOR_HEX@;
+	border-bottom: 2px solid #@MIDDLE_LABELS_HEX@;
 }
 
 .info-description {
@@ -89,11 +89,11 @@ textarea, select, input.text {
 }
 
 .disabled {
-	color: #@DARK_COLOR_HEX@;
+	color: #@MIDDLE_LABELS_HEX@;
 }
 
 .alterator-progress {
-	border: 1px solid #@DARK_COLOR_HEX@;
+	border: 1px solid #@MIDDLE_LABELS_HEX@;
 	height: 20px;
 	width: 200px;
 	padding: 2px;
@@ -101,7 +101,7 @@ textarea, select, input.text {
 }
 
 .alterator-progress div {
-	background-color: #@DARK_COLOR_HEX@;
+	background-color: #@MIDDLE_LABELS_HEX@;
 	height: 20px;
 }
 
