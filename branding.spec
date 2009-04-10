@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt9
+Release: alt10
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -344,6 +344,9 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Fri Apr 10 2009 Alxandra Panyukova <mex3@altlinux.ru> 5.0.0-alt10
+- some misspells fixed
+
 * Thu Apr 09 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt9
 - darker text and new logo for web
 
