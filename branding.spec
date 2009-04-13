@@ -1,6 +1,6 @@
-%define theme office-server
-%define Theme OfficeServer
-%define codename none 
+%define theme desktop
+%define Theme Desktop
+%define codename Inula Helenium
 %define brand altlinux
 %define Brand ALT Linux
 
@@ -19,10 +19,10 @@ BuildRequires: libqt4-devel
 
 BuildRequires: ImageMagick fontconfig
 
-%define Theme Office Server 
+%define Theme Desktop
 %define status ПРОТОТИП
 %define status_en Prototype
-%define variants altlinux-office-desktop altlinux-desktop altlinux-lite
+%define variants altlinux-office-desktop altlinux-office-server altlinux-lite
 
 Packager: Anton V. Boyarshinov <boyarsh at altlinux dot org>
 
