@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt12
+Release: alt13
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -344,6 +344,10 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Thu Apr 16 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt13
+- alterator.css = alterator.css+menu.css
+- some strange results of merge fixed
+
 * Fri Apr 10 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt12
 - gear-rules fixed
 
