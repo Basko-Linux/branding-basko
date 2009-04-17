@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt13
+Release: alt14
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -344,6 +344,9 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Fri Apr 17 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt14
+- better quality background image for installer
+
 * Thu Apr 16 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt13
 - alterator.css = alterator.css+menu.css
 - some strange results of merge fixed
