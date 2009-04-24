@@ -154,24 +154,6 @@ textarea, select, input.text {
 	height: 16px;
 }
 
-table.alterator-listbox {
-	border: solid 1px;
-}
-
-table.alterator-listbox th {
-	background-color:  #cdcdcd;
-	font-weight: bold;
-	border: solid 1px;
-	padding: 3px;
-}
-
-table.alterator-listbox td {
-	background: #@LIGHT_COLOR_HEX@;
-	border-left: solid 1px;
-	border-right: solid 1px;
-	padding: 3px;
-}
-
 .top-button-menu {
         background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
         padding-right: 10px;
@@ -362,4 +344,54 @@ table.alterator-listbox td {
 
 .hresizeable:hover {
 	background-color: #@DARK_COLOR_HEX@;
+}
+
+/* tables */
+
+table.alterator-listbox {
+	font-family:arial;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+	border: solid 1px;
+}
+
+table.alterator-listbox thead tr th, table.alterator-listbox tfoot tr th {
+	background-color:  #@MIDDLE_COLOR_HEX@;
+	border: solid 1px;
+	font-size: 8pt;
+	padding: 4px;
+}
+
+table.alterator-listbox thead tr .header {
+	background-image: url(/design/images/asc-desc.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.alterator-listbox tbody td {
+	color: #@DARK_COLOR_HEX@;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+	border-left: solid 1px;
+	border-right: solid 1px;
+}
+
+table.alterator-listbox tbody tr.odd td {
+	background-color:#@LIGHT_COLOR_HEX@;
+}
+
+table.alterator-listbox thead tr .headerSortUp {
+	background-image: url(/design/images/asc.gif);
+}
+
+table.alterator-listbox thead tr .headerSortDown {
+	background-image: url(/design/images/desc.gif);
+}
+
+table.alterator-listbox thead tr .headerSortDown, table.alterator-listbox thead tr .headerSortUp {
+	background-color: #@LIGHT_COLOR_HEX@;
 }
