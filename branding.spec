@@ -164,7 +164,7 @@ Requires(post): indexhtml-common
 ALT Linux index.html welcome page.
 
 %prep
-%setup -q
+%setup -n branding
 
 
 %build
