@@ -26,7 +26,7 @@ BuildRequires: ImageMagick fontconfig
 
 Packager: Anton V. Boyarshinov <boyarsh at altlinux dot org>
 
-Source: %name-%version.tar
+Source: branding.tar
 
 Group: Graphics
 Summary: System/Base
