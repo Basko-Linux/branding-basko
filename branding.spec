@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt15
+Release: alt16
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -344,6 +344,10 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Wed May 13 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt16
+- %setup fixed from boyarsh@
+- remove package name from .gear-rules from boyarsh@
+
 * Fri Apr 24 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt15
 - minor fixes of strange merge
 - changes in alterator.css.in from inger@
