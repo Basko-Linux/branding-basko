@@ -1,0 +1,37 @@
+[KSplash Theme: ALTLinux@NAME@]
+Name = @BRAND_FNAME@ @VERSION@ @NAME@
+Description = @BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@ Default KDE Splash Theme
+Description[ru] = Заставка KDE по умолчанию для @BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@
+Version = @VERSION@
+Author = Alexandra Panyukova <mex3@altlinux.ru>
+Author[ru] = Александра Панюкова <mex3@altlinux.ru>
+Homepage = http://www.altlinux.ru
+
+Engine = Moodin
+
+BeginOpacity = 0.1
+BaseResolution = 800,600
+
+UseIconSet = true
+IconSetSize = 48
+
+Image1 = kcmsystem
+Image2 = kcontrol
+Image3 = kcmpci
+Image7 = gohome
+Image8 = kmenu
+
+ImageCoords1 = 36,100
+ImageCoords2 = 140,100
+ImageCoords3 = 234,100
+ImageCoords4 = 328,100
+ImageCoords5 = 422,100
+ImageCoords6 = 516,100
+ImageCoords7 = 610,100
+ImageCoords8 = 704,100
+
+Labels = 1
+
+StatusCoords = -400,80
+
+ImageOffset1 = 0,20

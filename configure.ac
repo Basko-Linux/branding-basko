@@ -52,5 +52,6 @@ AC_CONFIG_FILES([
 		 indexhtml/index-en.html
 		 indexhtml/index.css
 		 alterator/styles/alterator.css
+		 kde3-styles-splash/Theme.rc
 ])
 AC_OUTPUT
