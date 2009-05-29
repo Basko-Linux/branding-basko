@@ -275,7 +275,7 @@ pushd kde3-settings
 mkdir -p %buildroot%_sysconfdir/skel/Desktop
 cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
 mkdir -p %buildroot%_sysconfdir/skel/.kde
-cp -a kde4/* %buildroot%_sysconfdir/skel/.kde/
+cp -a kde/* %buildroot%_sysconfdir/skel/.kde/
 popd
 
 #slideshow
@@ -355,7 +355,7 @@ echo $lang > lang
 
 %files kde3-settings
 %_sysconfdir/skel/Desktop
-%_sysconfdir/skel/.kde3
+%_sysconfdir/skel/.kde
 
 %files slideshow
 /usr/share/install2/slideshow
