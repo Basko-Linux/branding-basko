@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
-Release: alt16
+Release: alt17
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -130,6 +130,16 @@ Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "brandi
 
 %description kde4-settings
 KDE4 settings for %Brand %version %Theme
+
+%package kde3-settings
+
+Summary: KDE3 settings for %Brand %version %Theme
+License: Distributable
+Group: Graphical desktop/KDE
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-kde3-settings ";done )
+
+%description kde3-settings
+KDE3 settings for %Brand %version %Theme
 
 %package slideshow
 
@@ -260,6 +270,14 @@ mkdir -p %buildroot%_sysconfdir/skel/.kde4
 cp -a kde4/* %buildroot%_sysconfdir/skel/.kde4/
 popd
 
+#kde3-settings
+pushd kde3-settings
+mkdir -p %buildroot%_sysconfdir/skel/Desktop
+cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
+mkdir -p %buildroot%_sysconfdir/skel/.kde
+cp -a kde4/* %buildroot%_sysconfdir/skel/.kde/
+popd
+
 #slideshow
 mkdir -p %buildroot/usr/share/install2/slideshow
 install slideshow/*  %buildroot/usr/share/install2/slideshow/
@@ -335,6 +353,10 @@ echo $lang > lang
 %_sysconfdir/skel/Desktop
 %_sysconfdir/skel/.kde4
 
+%files kde3-settings
+%_sysconfdir/skel/Desktop
+%_sysconfdir/skel/.kde3
+
 %files slideshow
 /usr/share/install2/slideshow
 
@@ -344,6 +366,9 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
+* Fri May 29 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt17
+- kde3-settings added
+
 * Wed May 13 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt16
 - %setup fixed from boyarsh@
 - remove package name from .gear-rules from boyarsh@
