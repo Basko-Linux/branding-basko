@@ -276,6 +276,11 @@ mkdir -p %buildroot%_sysconfdir/skel/Desktop
 cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
 mkdir -p %buildroot%_sysconfdir/skel/.kde
 cp -a kde/* %buildroot%_sysconfdir/skel/.kde/
+#splash
+mkdir -p %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme
+install -m 644 *.jpg %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/
+install -m 644 *.png %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/
+install -m 644 *.rc %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/
 popd
 
 #slideshow
@@ -356,6 +361,7 @@ echo $lang > lang
 %files kde3-settings
 %_sysconfdir/skel/Desktop
 %_sysconfdir/skel/.kde
+%_datadir/apps/ksplash/Themes/ALTLinux%Theme/*
 
 %files slideshow
 /usr/share/install2/slideshow
@@ -367,7 +373,7 @@ echo $lang > lang
 
 %changelog
 * Fri May 29 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt17
-- kde3-settings added
+- kde3-settings and splash for kde3 added
 
 * Wed May 13 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt16
 - %setup fixed from boyarsh@
