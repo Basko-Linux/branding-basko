@@ -276,7 +276,10 @@ mkdir -p %buildroot%_sysconfdir/skel/Desktop
 cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
 mkdir -p %buildroot%_sysconfdir/skel/.kde
 cp -a kde/* %buildroot%_sysconfdir/skel/.kde/
-#splash
+popd
+
+#kde3-splash
+pushd kde3-styles-splash
 mkdir -p %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme
 install -m 644 *.jpg %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/
 install -m 644 *.png %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/
