@@ -277,6 +277,11 @@ mkdir -p %buildroot%_sysconfdir/skel/Desktop
 cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
 mkdir -p %buildroot%_sysconfdir/skel/.kde
 cp -a kde/* %buildroot%_sysconfdir/skel/.kde/
+mkdir -p %buildroot%_sysconfdir/skel/.kde/share
+mkdir -p %buildroot%_sysconfdir/skel/.kde/share/config
+mkdir -p %buildroot%_sysconfdir/skel/.kde/share/apps
+cp -a config/* %buildroot%_sysconfdir/skel/.kde/share/config/
+cp -a apps/* %buildroot%_sysconfdir/skel/.kde/share/apps/
 popd
 
 #kde3-splash
