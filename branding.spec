@@ -142,6 +142,17 @@ Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "brandi
 %description kde3-settings
 KDE3 settings for %Brand %version %Theme
 
+%package gnome-settings
+
+Summary: GNOME settings for %Brand %version %Theme
+License: Distributable
+Group: Graphical desktop/KDE
+Requires: gtk2-theme-mist
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-kde3-settings ";done )
+
+%description gnome-settings
+GNOME settings for %Brand %version %Theme
+
 %package slideshow
 
 Summary: Slideshow for %Brand %version %Theme installer
@@ -180,7 +191,7 @@ ALT Linux index.html welcome page.
 
 %build
 autoconf
-THEME=%theme NAME='%Theme' BRAND_FNAME='ALT Linux' STATUS_EN=%status_en STATUS=%status VERSION=%version ./configure 
+THEME=%theme NAME='%Theme' BRAND_FNAME='%Brand' BRAND='%brand' STATUS_EN=%status_en STATUS=%status VERSION=%version ./configure 
 make
 
 #bootloader
@@ -292,6 +303,16 @@ install -m 644 *.png %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/
 install -m 644 *.rc %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/
 popd
 
+#gnome-settings
+pushd gnome-settings
+mkdir -p %buildroot/%_datadir/themes/theme-%brand-%theme
+mkdir -p %buildroot/%_datadir/themes/theme-%brand-%theme/gtk-2.0
+install -m 644 gtkrc %buildroot/%_datadir/themes/theme-%brand-%theme/gtk-2.0
+mkdir -p %buildroot/%_datadir/themes/theme-%brand-%theme/metacity-1
+install -m 644 metacity-theme-1.xml %buildroot/%_datadir/themes/theme-%brand-%theme/metacity-1/
+install -m 644 index.theme %buildroot/%_datadir/themes/theme-%brand-%theme/
+popd
+
 #slideshow
 mkdir -p %buildroot/usr/share/install2/slideshow
 install slideshow/*  %buildroot/usr/share/install2/slideshow/
@@ -372,6 +393,9 @@ echo $lang > lang
 %_sysconfdir/skel/.kde
 %_datadir/apps/ksplash/Themes/ALTLinux%Theme/*
 
+%files gnome-settings
+%_datadir/themes/theme-%brand-%theme/*
+
 %files slideshow
 /usr/share/install2/slideshow
 
@@ -383,6 +407,7 @@ echo $lang > lang
 %changelog
 * Fri May 29 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt17
 - kde3-settings and splash for kde3 added
+- gnome-settngs added
 
 * Wed May 13 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt16
 - %setup fixed from boyarsh@

@@ -51,6 +51,9 @@ AC_CONFIG_FILES([
 		 indexhtml/index-uk.html
 		 indexhtml/index-en.html
 		 indexhtml/index.css
+		 gnome-settings/gtkrc
+		 gnome-settings/index.theme
+		 gnome-settings/metacity-theme-1.xml
 		 alterator/styles/alterator.css
 		 kde3-styles-splash/Theme.rc
 ])
