@@ -405,9 +405,10 @@ echo $lang > lang
 %_desktopdir/*
 
 %changelog
-* Fri May 29 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt17
-- kde3-settings and splash for kde3 added
-- gnome-settngs added
+* Thu Jun 11 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt17
+- ksplashrc added for kde4
+- kde3-settings and splash for kde3 added (mex@)
+- gnome-settngs added (mex@)
 
 * Wed May 13 2009 Alexandra Panyukova <mex3@altlinux.ru> 5.0.0-alt16
 - %setup fixed from boyarsh@
