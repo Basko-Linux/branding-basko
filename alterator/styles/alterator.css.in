@@ -1,5 +1,7 @@
+/* basic elements and widgets */
+
 body {
-	background-color: #@MIDDLE_COLOR_HEX@;/*#92b2b8;/*#67999a;/*#c0dbdb;*/
+	background-color: #@MIDDLE_COLOR_HEX@;
 	color: #@MIDDLE_LABELS_HEX@;
 	margin: 0px;
 	padding: 10px;
@@ -64,18 +66,6 @@ textarea, select, input.text {
 	margin-bottom:10px;
 }
 
-.info-name {
-	font-size: 18pt;
-	border-bottom: 2px solid #@MIDDLE_LABELS_HEX@;
-}
-
-.info-description {
-	font-size: 12pt;
-	font-weight: bold;
-	padding-top: 10px;
-}
-
-
 .frame-table {
 	border-style:solid;
 	border-width:1px;
@@ -104,6 +94,8 @@ textarea, select, input.text {
 	background-color: #@MIDDLE_LABELS_HEX@;
 	height: 20px;
 }
+
+/* calendar and dateedit */
 
 .year {
 	font-weight: bold;
@@ -160,6 +152,8 @@ textarea, select, input.text {
         padding-top: 10px;
 }
 
+/* control center page */
+
 #logo-td {
 	border-left: none;
 	padding-left: 10px;
@@ -192,17 +186,10 @@ textarea, select, input.text {
 	width: 20px;
 	text-align:left;
 	color: #@LIGHT_LABELS_HEX@;
-/*        border-bottom: 1px solid #056560;;*/
 	background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
-/*	-moz-border-radius-topleft: 1em;
-	-moz-border-radius-topright: 1em;
-        -webkit-border-radius-topleft: 1em;
-        -khtml-border-radius-topleft: 1em;
-        border-radius-topleft: 1em; */
 }
 
 #locale-td {
-/*	border-left: none; */
 	padding-left: 10px;
 	padding-top: 10px;
 	color: #@LIGHT_LABELS_HEX@;
@@ -210,9 +197,6 @@ textarea, select, input.text {
 	text-align:center;
 	width: 100px;
 	background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
-/*	border-left: 1px solid #056560;;
-	border-right: 1px solid #@DARK_COLOR_HEX@;;
-	border-bottom: 1px solid #@DARK_COLOR_HEX@;; */
 	-moz-border-radius-topright: 1em;
         -webkit-border-radius-topright: 1em;
         -khtml-border-radius-topright: 1em;
@@ -220,16 +204,8 @@ textarea, select, input.text {
 }
 
 #hostinfo-td {
-/*	border-left:  1px solid #056560;;
-	border-top:  1px solid #@DARK_COLOR_HEX@;;
-	border-right:  1px solid #@DARK_COLOR_HEX@;; */
 	background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
-/*	-moz-border-radius-topleft: 1em;
-        -webkit-border-radius-topleft: 1em;
-        -khtml-border-radius-topleft: 1em;
-        border-radius-topleft: 1em;
-	*/
-	
+
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 10px;
@@ -241,13 +217,6 @@ textarea, select, input.text {
 	font-size:large;
 }
 
-.expanded {
-/*	padding-left: 40px;*/
-    width: 100%;
-}
-
-
-
 /* main menu */
 
 #menu-td {
@@ -258,10 +227,7 @@ textarea, select, input.text {
 	padding: 10px 20px;
 }
 
-
 #main-td {
-/*	padding: 10px 20px;*/
-/*	background-color: #baeaea;*/
 	background-color: #ffffff;
 	width: 100%;
 	/*border: 1px solid #056560;;*/
@@ -310,13 +276,9 @@ textarea, select, input.text {
 .menu-group {
 	padding-bottom: 5px;
 	/*width:250px;*/
-/*	padding-right: 5px;*/
 	padding-top: 5px;
 	border-collapse: collapse;
 	background: url(/design/images/gradient-menu.png) 0% 0% repeat-x;
-/*	border-bottom: 1px solid #056560;;
-	border-left: 1px solid #@DARK_COLOR_HEX@;;
-	border-right: 1px solid #@DARK_COLOR_HEX@;; */
 	-moz-border-radius-bottomright: 1em;     /* mozilla 1.5 */
 	-webkit-border-radius-bottomright: 1em;  /* safari 3 */
 	-khtml-border-radius-bottomright: 1em;   /* Konqueror */
@@ -327,12 +289,12 @@ textarea, select, input.text {
 	border-radius-bottomleft: 1em;          /* CSS3 */
 }
 
+/* help popup */
+
 #help-popup {
 	padding-left: 10px;
 	width: 95%;
 	background-color: #@LIGHT_COLOR_HEX@;
-/*	padding-right: 5px;
-	padding-top: 10px;*/
 }
 
 .hresizeable {
@@ -394,4 +356,10 @@ table.alterator-listbox thead tr .headerSortDown {
 
 table.alterator-listbox thead tr .headerSortDown, table.alterator-listbox thead tr .headerSortUp {
 	background-color: #@LIGHT_COLOR_HEX@;
+}
+
+/* deprecated */
+
+.expanded {
+    width: 100%;
 }
