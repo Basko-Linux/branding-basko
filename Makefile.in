@@ -17,7 +17,8 @@ all:
 	convert background.png kde3-styles-splash/Background.jpg
 	cp -al background.png kde3-styles-splash/Background.png
 	convert -resize '400x320!' images/background.png kde3-styles-splash/Preview.png
-	convert images/background.png -resize '800x600!' -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' alterator/design/bg.png
+# installer background
+	convert images/installer.png -resize '800x600!' -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' alterator/design/bg.png
 # console background
 	cp -al images/console.jpg bootsplash/images/bootsplash-800x600.jpg
 	convert -resize '640x480!' bootsplash/images/bootsplash-800x600.jpg bootsplash/images/bootsplash-640x480.jpg
