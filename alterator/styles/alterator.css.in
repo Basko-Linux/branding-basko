@@ -95,6 +95,17 @@ textarea, select, input.text {
 	height: 20px;
 }
 
+.alterator-information-message {
+    font-style:italic;
+    font-size:small;
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+.alterator-information-message img {
+    vertical-align:middle;
+}
+
 /* calendar and dateedit */
 
 .year {
