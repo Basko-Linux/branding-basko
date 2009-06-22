@@ -12,13 +12,12 @@ all:
 	convert -resize '640x480!' bootsplash/images/silent-800x600.jpg bootsplash/images/silent-640x480.jpg
 # background
 	convert images/background.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' background.png
-	convert graphics/backgrounds/wallpaper.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' prototype.png
-	cp -al prototype.png graphics/backgrounds/default.png
+	cp -al background.png graphics/backgrounds/default.png
 	cp -al background.png graphics/backgrounds/xdm.png
-	convert images/background.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' kde3-styles-splash/Background.jpg
+	convert background.png kde3-styles-splash/Background.jpg
+	cp -al background.png kde3-styles-splash/Background.png
 	convert -resize '400x320!' images/background.png kde3-styles-splash/Preview.png
-#	cp -al prototype.png kde3-styles-splash/Background.png
-	convert alterator/images/background.png -resize '800x600!' -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' alterator/design/bg.png
+	convert images/background.png -resize '800x600!' -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' alterator/design/bg.png
 # console background
 	cp -al images/console.jpg bootsplash/images/bootsplash-800x600.jpg
 	convert -resize '640x480!' bootsplash/images/bootsplash-800x600.jpg bootsplash/images/bootsplash-640x480.jpg
