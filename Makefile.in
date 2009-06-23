@@ -1,5 +1,7 @@
 STATUS=@STATUS@
 THEME=@THEME@
+NAME=@NAME@
+VERSION=@VERSION@
 
 all:
 	cp -a  /usr/src/design-bootloader-source ./
@@ -23,8 +25,6 @@ all:
 # console background
 	cp -al images/console.jpg bootsplash/images/bootsplash-800x600.jpg
 	convert -resize '640x480!' bootsplash/images/bootsplash-800x600.jpg bootsplash/images/bootsplash-640x480.jpg
-# logo for web alterator
-	convert images/logo.png -fill '#ffffff' -font /usr/share/fonts/ttf/dejavu/DejaVuSans-Bold.ttf -style Normal -weight Normal -pointsize 24 -gravity northwest -draw 'text 0,0 "@VERSION@ @NAME@"' alterator/images/logo.png
 #color scheme
 	mv kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc "kde3-settings/apps/kdisplay/color-schemes/@BRAND_FNAME@ @NAME@.kcsrc"
 
