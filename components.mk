@@ -1,6 +1,6 @@
 # browser-qt
 
-alterator/design/bg.png: alterator/images/background.png
+alterator/design/bg.png: images/installer.png
 	convert $< -resize '800x600!' -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' $@
 
 browser-qt:alterator/design/bg.png
