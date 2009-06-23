@@ -4,17 +4,6 @@ NAME=@NAME@
 VERSION=@VERSION@
 
 all:
-	cp -a  /usr/src/design-bootloader-source ./
-	cp -a bootloader/config design-bootloader-source/
-	cp -a bootloader/gfxboot.cfg design-bootloader-source/data-install/
-	cp -a bootloader/gfxboot.cfg design-bootloader-source/data-boot/
-	for size in 1024x768 800x600 640x480; do \
-		convert images/boot.jpg -resize "$$size!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' boot-$$size.jpg ;\
-		cp -al boot-$$size.jpg bootsplash/images/silent-$$size.jpg ;\
-		convert -resize "$$size!" images/console.jpg bootsplash/images/bootsplash-$$size.jpg;\
-	done
-	cp -al boot-800x600.jpg design-bootloader-source/data-boot/back.jpg
-	cp -al boot-800x600.jpg design-bootloader-source/data-install/back.jpg
 # background
 	convert images/background.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' background.png
 	cp -al background.png graphics/backgrounds/default.png
@@ -26,4 +15,4 @@ all:
 	mv kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc "kde3-settings/apps/kdisplay/color-schemes/@BRAND_FNAME@ @NAME@.kcsrc"
 
 include components.mk
-install: browser-qt ahttpd
+install: browser-qt ahttpd boot

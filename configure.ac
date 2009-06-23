@@ -1,7 +1,7 @@
 AC_INIT( [branding], [0.1], [http://bugzilla.altlinux.ru] )
 
 
-PROGRESS_COLOR=`./fetch_color selectBackground` //MIDDLE_COLOR_DEC
+PROGRESS_COLOR=`./fetch_color selectBackground` #MIDDLE_COLOR_DEC
 TITLE_COLOR=`./fetch_color handle`
 INACTIVE_COLOR=`./fetch_color inactiveTitleBtnBg`
 LIGHT_COLOR_HEX=DFDFE0
@@ -35,18 +35,18 @@ AC_SUBST(INACTIVE_COLOR)
 
 AC_CONFIG_FILES([
 		 Makefile
-		 bootloader/config
-		 bootsplash/config/bootsplash-640x480.cfg
-		 bootsplash/config/bootsplash-800x600.cfg
+		 components/bootloader/config
+		 components/bootsplash/config/bootsplash-640x480.cfg
+		 components/bootsplash/config/bootsplash-800x600.cfg
 		 components/browser-qt/design/design.ini
 		 components/browser-qt/design/design.qss
-		 bootloader/gfxboot.cfg
+		 components/bootloader/gfxboot.cfg
 		 kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc
 		 notes/release-notes.ru.html
 		 notes/release-notes.all.html
 		 notes/license.ru.html
 		 notes/license.all.html
-		 indexhtml.desktop
+		 indexhtml/indexhtml.desktop
 		 indexhtml/index-ru.html
 		 indexhtml/index-uk.html
 		 indexhtml/index-en.html

@@ -17,7 +17,7 @@ BuildRequires(pre): libqt4-core
 BuildRequires: libalternatives-devel
 BuildRequires: libqt4-devel
 
-BuildRequires: ImageMagick fontconfig
+BuildRequires: ImageMagick fontconfig bc
 
 %define Theme Desktop
 %define status ПРОТОТИП
@@ -194,36 +194,8 @@ autoconf
 THEME=%theme NAME='%Theme' BRAND_FNAME='%Brand' BRAND='%brand' STATUS_EN=%status_en STATUS=%status VERSION=%version ./configure 
 make
 
-#bootloader
-    pushd design-bootloader-source/
-    DEFAULT_LANG='--lang-to-subst--' PATH=$PATH:/usr/sbin %make
-    popd
-
 %install
 %makeinstall
-
-#bootloader
-    pushd design-bootloader-source
-    install -d -m 755 %buildroot/boot/splash/%theme
-    install -d -m 755 %buildroot/%_datadir/gfxboot/%theme
-    install -m 644 message %buildroot/boot/splash/%theme
-    install -m 644 bootlogo %buildroot%_datadir/gfxboot/%theme
-    popd
-
-#bootsplash
-## create directory structure
-mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/bootsplash/themes/%theme
-cp -a bootsplash/* $RPM_BUILD_ROOT%_sysconfdir/bootsplash/themes/%theme
-
-pushd $RPM_BUILD_ROOT%_sysconfdir/bootsplash/themes/%theme/config
-#for i in 1 2 3 4 5 11; do \
-for i in 1; do \
- for f in bootsplash-*.cfg; do \
-    res=`echo "$f"| sed 's|.*\-\(.*\)\.cfg|\1|'`
-    ln -s $f vt${i}-${res}.cfg
- done
-done
-popd
 
 #graphics
 mkdir -p %buildroot/%_datadir/design/{%theme,backgrounds}
