@@ -277,10 +277,10 @@ popd
 
 #kde3-splash
 pushd kde3-styles-splash
-mkdir -p %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme
-install -m 644 *.jpg %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/
-install -m 644 *.png %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/
-install -m 644 *.rc %buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/
+mkdir -p "%buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme"
+install -m 644 *.jpg "%buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/"
+install -m 644 *.png "%buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/"
+install -m 644 *.rc "%buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/"
 popd
 
 #gnome-settings
