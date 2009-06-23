@@ -11,6 +11,7 @@ all:
 	for size in 1024x768 800x600 640x480; do \
 		convert images/boot.jpg -resize "$$size!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' boot-$$size.jpg ;\
 		cp -al boot-$$size.jpg bootsplash/images/silent-$$size.jpg ;\
+		convert -resize "$$size!" images/console.jpg bootsplash/images/bootsplash-$$size.jpg;\
 	done
 	cp -al boot-800x600.jpg design-bootloader-source/data-boot/back.jpg
 	cp -al boot-800x600.jpg design-bootloader-source/data-install/back.jpg
@@ -21,9 +22,6 @@ all:
 	convert background.png kde3-styles-splash/Background.jpg
 	cp -al background.png kde3-styles-splash/Background.png
 	convert -resize '400x320!' images/background.png kde3-styles-splash/Preview.png
-# console background
-	cp -al images/console.jpg bootsplash/images/bootsplash-800x600.jpg
-	convert -resize '640x480!' bootsplash/images/bootsplash-800x600.jpg bootsplash/images/bootsplash-640x480.jpg
 #color scheme
 	mv kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc "kde3-settings/apps/kdisplay/color-schemes/@BRAND_FNAME@ @NAME@.kcsrc"
 
