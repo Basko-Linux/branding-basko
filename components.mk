@@ -14,4 +14,5 @@ browser-qt:alterator/design/bg.png
 ahttpd:
 	install -d $(datadir)/alterator/design/styles
 	cp -a alterator/images $(datadir)/alterator/design
+	[ ! -f images/logo.png ] || convert images/logo.png -fill '#ffffff' -font /usr/share/fonts/ttf/dejavu/DejaVuSans-Bold.ttf -style Normal -weight Normal -pointsize 24 -gravity northwest -draw 'text 0,0 "$(VERSION) $(NAME)"' $(datadir)/alterator/design/images/logo.png
 	cp -a alterator/styles/*.css $(datadir)/alterator/design/styles
