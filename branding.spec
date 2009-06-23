@@ -199,12 +199,9 @@ make
     DEFAULT_LANG='--lang-to-subst--' PATH=$PATH:/usr/sbin %make
     popd
 
-#altarator
-    pushd alterator
-    %make_build
-    popd
-
 %install
+%makeinstall
+
 #bootloader
     pushd design-bootloader-source
     install -d -m 755 %buildroot/boot/splash/%theme
@@ -227,23 +224,6 @@ for i in 1; do \
  done
 done
 popd
-
-#alterator
-pushd alterator
-mkdir -p %buildroot/usr/share/alterator-browser-qt/design
-
-install theme.rcc %buildroot/usr/share/alterator-browser-qt/design/%theme.rcc
-
-
-mkdir -p %buildroot/usr/share/alterator/design/
-cp -a images %buildroot/usr/share/alterator/design/
-cp -a styles %buildroot/usr/share/alterator/design/
-popd
-
-mkdir -p %buildroot/%_altdir
-cat >%buildroot/%_altdir/%name-browser-qt <<__EOF__
-/etc/alterator/design-browser-qt	/usr/share/alterator-browser-qt/design/%theme.rcc 50
-__EOF__
 
 #graphics
 mkdir -p %buildroot/%_datadir/design/{%theme,backgrounds}
@@ -365,8 +345,8 @@ echo $lang > lang
 
 
 %files alterator
-%config %_altdir/%name-browser-qt
-/usr/share/alterator-browser-qt/design/%theme.rcc
+%config %_altdir/*.rcc
+/usr/share/alterator-browser-qt/design/*.rcc
 /usr/share/alterator/design/*
 
 %files graphics
