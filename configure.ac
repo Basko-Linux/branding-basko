@@ -38,6 +38,7 @@ AC_CONFIG_FILES([
 		 components/bootloader/config
 		 components/bootsplash/config/bootsplash-640x480.cfg
 		 components/bootsplash/config/bootsplash-800x600.cfg
+		 components/bootsplash/config/bootsplash-1024x768.cfg
 		 components/browser-qt/design/design.ini
 		 components/browser-qt/design/design.qss
 		 components/bootloader/gfxboot.cfg
