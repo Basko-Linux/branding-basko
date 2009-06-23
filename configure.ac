@@ -38,8 +38,8 @@ AC_CONFIG_FILES([
 		 bootloader/config
 		 bootsplash/config/bootsplash-640x480.cfg
 		 bootsplash/config/bootsplash-800x600.cfg
-		 alterator/design/design.ini
-		 alterator/design/design.qss
+		 components/browser-qt/design/design.ini
+		 components/browser-qt/design/design.qss
 		 bootloader/gfxboot.cfg
 		 kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc
 		 notes/release-notes.ru.html
@@ -54,7 +54,7 @@ AC_CONFIG_FILES([
 		 gnome-settings/gtkrc
 		 gnome-settings/index.theme
 		 gnome-settings/metacity-theme-1.xml
-		 alterator/styles/alterator.css
+		 components/ahttpd/styles/alterator.css
 		 kde3-styles-splash/Theme.rc
 ])
 AC_OUTPUT
