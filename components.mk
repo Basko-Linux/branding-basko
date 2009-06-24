@@ -24,7 +24,7 @@ boot:
 	cp -a components/bootloader/gfxboot.cfg design-bootloader-source/data-install/
 	cp -a components/bootloader/gfxboot.cfg design-bootloader-source/data-boot/
 	for size in 1024x768 800x600 640x480; do \
-		convert images/boot.jpg -resize "$$size!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' boot-$$size.jpg ;\
+		convert images/boot.jpg -resize "$$size!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' boot-$$size.jpg ;\
 		cp -al boot-$$size.jpg components/bootsplash/images/silent-$$size.jpg ;\
 		convert -resize "$$size!" images/console.jpg components/bootsplash/images/bootsplash-$$size.jpg;\
 	done
