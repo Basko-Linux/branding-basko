@@ -5,12 +5,12 @@ VERSION=@VERSION@
 
 all:
 # background
-	convert images/background.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' background.png
-	cp -al background.png graphics/backgrounds/default.png
-	cp -al background.png graphics/backgrounds/xdm.png
-	convert background.png kde3-styles-splash/Background.jpg
-	cp -al background.png kde3-styles-splash/Background.png
-	convert -resize '400x320!' images/background.png kde3-styles-splash/Preview.png
+	convert images/wallpaper.png -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "@STATUS@"' wallpaper.png
+	cp -al wallpaper.png graphics/backgrounds/default.png
+	cp -al wallpaper.png graphics/backgrounds/xdm.png
+	convert wallpaper.png kde3-styles-splash/Background.jpg
+	cp -al wallpaper.png kde3-styles-splash/Background.png
+	convert -resize '400x320!' images/wallpaper.png kde3-styles-splash/Preview.png
 #color scheme
 	mv kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc "kde3-settings/apps/kdisplay/color-schemes/@BRAND_FNAME@ @NAME@.kcsrc"
 
