@@ -30,7 +30,7 @@ tr {
 
 hr {
 	border: none;
-	border-top: 1px solid #5ac;
+	border-top: 1px solid #@MIDDLE_LABELS_HEX@;;
 }
 
 h1 {
@@ -58,13 +58,6 @@ textarea, select, input.text {
 	background-color: #@LIGHT_COLOR_HEX@;
 }
 
-.error-message {
-	background-color: #FFCACA;
-	border: 1px solid #FF6060;
-	padding-left:10px;
-	padding-right:10px;
-	margin-bottom:10px;
-}
 
 .frame-table {
 	border-style:solid;
@@ -396,4 +389,12 @@ table.alterator-listbox thead tr .headerSortDown, table.alterator-listbox thead 
 
 .expanded {
     width: 100%;
+}
+
+.error-message {
+	background-color: #FFCACA;
+	border: 1px solid #FF6060;
+	padding-left:10px;
+	padding-right:10px;
+	margin-bottom:10px;
 }
