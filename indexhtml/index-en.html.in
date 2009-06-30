@@ -56,8 +56,7 @@
 <div id="documentation">
 <h2>Documentation</h2>
 <ul>
- <li><a href="../@THEME@/index.html">User manual</a></li>
- <li><a href="../modules/index.html">Additional documentation</a></li>
+ <li><a href="../../@THEME@/index.html">User manual</a></li>
 </ul>
 </div>
 

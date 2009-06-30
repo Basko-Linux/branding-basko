@@ -57,8 +57,7 @@
 <div id="documentation">
 <h2>Документація (рос.)</h2>
 <ul>
- <li><a href="../@THEME@/index.html">Посібник користувача</a></li>
- <li><a href="../modules/index.html">Додаткова документація</a></li>
+ <li><a href="../../@THEME@/index.html">Посібник користувача</a></li>
 </ul>
 </div>
 
