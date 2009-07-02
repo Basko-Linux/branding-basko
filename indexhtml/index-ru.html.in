@@ -56,7 +56,8 @@
 <div id="documentation">
 <h2>Документация</h2>
 <ul>
- <li><a href="../../@THEME@/index.html">Руководство пользователя</a></li>
+ <li><a href="../@THEME@/index.html">Руководство пользователя</a></li>
+ <li><a href="../modules/index.html">Дополнительная документация</a></li>
 </ul>
 </div>
 
