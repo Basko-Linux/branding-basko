@@ -343,7 +343,7 @@ echo $lang > lang
 %files kde3-settings
 %_sysconfdir/skel/Desktop
 %_sysconfdir/skel/.kde
-%_datadir/apps/ksplash/Themes/ALTLinux%Theme/*
+%_datadir/apps/ksplash/Themes/*
 
 %files gnome-settings
 %_datadir/themes/theme-%brand-%theme/*
