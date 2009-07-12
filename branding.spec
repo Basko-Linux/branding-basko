@@ -148,6 +148,9 @@ Summary: GNOME settings for %Brand %version %Theme
 License: Distributable
 Group: Graphical desktop/KDE
 Requires: gtk2-theme-mist
+Provides: gnome-theme-%brand-%theme = %version-%release
+Provides: metacity-theme-%brand-%theme = %version-%release
+Provides: metacity-theme
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-kde3-settings ";done )
 
 %description gnome-settings
