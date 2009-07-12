@@ -2,11 +2,11 @@
 <!-- 	$Id$	 -->
 <metacity_theme>
 <info>
-  <name>@BRAND@-@THEME@</name>
+  <name>@BRAND_FNAME@ @NAME@</name>
   <author>Dave Camp &lt;dave@ximian.com&gt;</author>
   <copyright>&#194; 2002 Ximian, Inc. </copyright>
   <date>Sep, 2002</date>
-  <description>A dumb metacity theme, similar to tigertcrack but not</description>
+  <description>The Mist theme</description>
 </info>
  
 <frame_geometry name="normal" rounded_top_left="false" rounded_top_right="false" rounded_bottom_left="false" rounded_bottom_right="false">

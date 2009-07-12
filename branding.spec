@@ -256,13 +256,14 @@ install -m 644 *.rc "%buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/"
 popd
 
 #gnome-settings
+%define XdgThemeName "%Brand %Theme'
 pushd gnome-settings
-mkdir -p %buildroot/%_datadir/themes/theme-%brand-%theme
-mkdir -p %buildroot/%_datadir/themes/theme-%brand-%theme/gtk-2.0
-install -m 644 gtkrc %buildroot/%_datadir/themes/theme-%brand-%theme/gtk-2.0
-mkdir -p %buildroot/%_datadir/themes/theme-%brand-%theme/metacity-1
-install -m 644 metacity-theme-1.xml %buildroot/%_datadir/themes/theme-%brand-%theme/metacity-1/
-install -m 644 index.theme %buildroot/%_datadir/themes/theme-%brand-%theme/
+mkdir -p '%buildroot/%_datadir/themes/%XdgThemeName'
+mkdir -p '%buildroot/%_datadir/themes/%XdgThemeName/gtk-2.0'
+install -m 644 gtkrc '%buildroot/%_datadir/themes/%XdgThemeName/gtk-2.0'
+mkdir -p '%buildroot/%_datadir/themes/%XdgThemeName/metacity-1'
+install -m 644 metacity-theme-1.xml '%buildroot/%_datadir/themes/%XdgThemeName/metacity-1/'
+install -m 644 index.theme '%buildroot/%_datadir/themes/%XdgThemeName/'
 popd
 
 #slideshow
@@ -346,7 +347,7 @@ echo $lang > lang
 %_datadir/apps/ksplash/Themes/*
 
 %files gnome-settings
-%_datadir/themes/theme-%brand-%theme/*
+%_datadir/themes/*
 
 %files slideshow
 /usr/share/install2/slideshow
