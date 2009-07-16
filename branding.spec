@@ -147,6 +147,7 @@ KDE3 settings for %Brand %version %Theme
 Summary: GNOME settings for %Brand %version %Theme
 License: Distributable
 Group: Graphical desktop/KDE
+Requires: altlinux-menus
 Requires: gtk2-theme-mist
 Provides: gnome-theme-%brand-%theme = %version-%release
 Provides: metacity-theme-%brand-%theme = %version-%release
@@ -271,6 +272,8 @@ install -m 644 metacity-theme-1.xml '%buildroot/%_datadir/themes/%XdgThemeName/m
 install -m 644 index.theme '%buildroot/%_datadir/themes/%XdgThemeName/'
 mkdir -p '%buildroot/etc/gnome/xdg/menus/applications-merged/'
 install -m 644 applications.menu '%buildroot/etc/gnome/xdg/menus/applications-merged/'
+mkdir -p '%buildroot/etc/xdg/menus/'
+install -m 644 settings.menu '%buildroot/etc/xdg/menus/'
 popd
 
 #slideshow
@@ -356,6 +359,7 @@ echo $lang > lang
 %files gnome-settings
 %_datadir/themes/*
 /etc/gnome/xdg/menus/applications-merged/
+/etc/xdg/menus/*
 
 %files slideshow
 /usr/share/install2/slideshow
