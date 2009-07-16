@@ -274,6 +274,7 @@ mkdir -p '%buildroot/etc/gnome/xdg/menus/applications-merged/'
 install -m 644 applications.menu '%buildroot/etc/gnome/xdg/menus/applications-merged/'
 mkdir -p '%buildroot/etc/xdg/menus/'
 install -m 644 settings.menu '%buildroot/etc/xdg/menus/'
+cp -a skel/.gconf  '%buildroot/etc/skel/'
 popd
 
 #slideshow
@@ -360,6 +361,7 @@ echo $lang > lang
 %_datadir/themes/*
 /etc/gnome/xdg/menus/applications-merged/
 /etc/xdg/menus/*
+/etc/skel/.gconf
 
 %files slideshow
 /usr/share/install2/slideshow
