@@ -151,7 +151,9 @@ Requires: gtk2-theme-mist
 Provides: gnome-theme-%brand-%theme = %version-%release
 Provides: metacity-theme-%brand-%theme = %version-%release
 Provides: metacity-theme
-Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-kde3-settings ";done )
+Provides: gnome-menus
+Conflicts: gnome-menus > 2
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-gnome-settings ";done )
 
 %description gnome-settings
 GNOME settings for %Brand %version %Theme
@@ -267,6 +269,8 @@ install -m 644 gtkrc '%buildroot/%_datadir/themes/%XdgThemeName/gtk-2.0'
 mkdir -p '%buildroot/%_datadir/themes/%XdgThemeName/metacity-1'
 install -m 644 metacity-theme-1.xml '%buildroot/%_datadir/themes/%XdgThemeName/metacity-1/'
 install -m 644 index.theme '%buildroot/%_datadir/themes/%XdgThemeName/'
+mkdir -p '%buildroot/etc/gnome/xdg/menus/applications-merged/'
+install -m 644 applications.menu '%buildroot/etc/gnome/xdg/menus/applications-merged/'
 popd
 
 #slideshow
@@ -351,6 +355,7 @@ echo $lang > lang
 
 %files gnome-settings
 %_datadir/themes/*
+/etc/gnome/xdg/menus/applications-merged/
 
 %files slideshow
 /usr/share/install2/slideshow
