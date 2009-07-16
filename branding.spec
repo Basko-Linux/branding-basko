@@ -259,7 +259,7 @@ install -m 644 *.rc "%buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/"
 popd
 
 #gnome-settings
-%define XdgThemeName "%Brand %Theme'
+%define XdgThemeName "%Brand %Theme"
 pushd gnome-settings
 mkdir -p '%buildroot/%_datadir/themes/%XdgThemeName'
 mkdir -p '%buildroot/%_datadir/themes/%XdgThemeName/gtk-2.0'
