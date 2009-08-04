@@ -152,8 +152,7 @@ Requires: gtk2-theme-mist
 Provides: gnome-theme-%brand-%theme = %version-%release
 Provides: metacity-theme-%brand-%theme = %version-%release
 Provides: metacity-theme
-Provides: gnome-menus = 2.12
-Conflicts: gnome-menus > 2.12
+#Provides: gnome-menus
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-gnome-settings ";done )
 
 %description gnome-settings
@@ -359,8 +358,8 @@ echo $lang > lang
 
 %files gnome-settings
 %_datadir/themes/*
-/etc/gnome/xdg/menus/applications-merged/
-/etc/xdg/menus/*
+#/etc/gnome/xdg/menus/applications-merged/
+#/etc/xdg/menus/*
 /etc/skel/.gconf
 
 %files slideshow
