@@ -22,7 +22,7 @@ BuildRequires: ImageMagick fontconfig bc
 %define Theme Desktop
 %define status ПРОТОТИП
 %define status_en Prototype
-%define variants altlinux-office-desktop altlinux-office-server altlinux-lite
+%define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master altlinux-gnome-desktop
 
 Packager: Anton V. Boyarshinov <boyarsh at altlinux dot org>
 
@@ -146,7 +146,7 @@ KDE3 settings for %Brand %version %Theme
 
 Summary: GNOME settings for %Brand %version %Theme
 License: Distributable
-Group: Graphical desktop/KDE
+Group: Graphical desktop/GNOME
 Requires: altlinux-menus
 Requires: gtk2-theme-mist
 Provides: gnome-theme-%brand-%theme = %version-%release
@@ -157,6 +157,18 @@ Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "brandi
 
 %description gnome-settings
 GNOME settings for %Brand %version %Theme
+
+%package xfce-settings
+
+Summary: XFCE settings for %Brand %version %Theme
+License: Distributable
+Group: Graphical desktop
+#Provides: gnome-menus
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-xfce-settings ";done )
+
+%description xfce-settings
+XFCE settings for %Brand %version %Theme
+
 
 %package slideshow
 
@@ -291,6 +303,33 @@ touch %buildroot%_indexhtmldir/index.html
 install -m644 indexhtml.desktop %buildroot%_desktopdir/
 popd
 
+#xfce-settings
+pushd xfce-settings
+mkdir -p %buildroot/etc/skel/.config/xfce4/desktop
+mkdir -p %buildroot/etc/skel/.config/xfce4/mcs_settings
+mkdir -p %buildroot/etc/skel/.config/xfce4/panel
+mkdir -p %buildroot/etc/skel/.config/xfce4-session
+mkdir -p %buildroot/etc/skel/.config/autostart
+mkdir -p %buildroot/etc/skel/.local/share/applications
+mkdir -p %buildroot/etc/skel/Templates
+install -m 644 etcskel/Templates/* %buildroot/etc/skel/Templates/
+install -m 644 etcskel/.config/xfce4/helpers.rc %buildroot/etc/skel/.config/xfce4/
+install -m 644 etcskel/.config/xfce4/desktop/* %buildroot/etc/skel/.config/xfce4/desktop
+install -m 644 etcskel/.config/xfce4/mcs_settings/* %buildroot/etc/skel/.config/xfce4/mcs_settings
+install -m 644 etcskel/.config/xfce4/panel/* %buildroot/etc/skel/.config/xfce4/panel
+install -m 644 etcskel/.config/xfce4-session/* %buildroot/etc/skel/.config/xfce4-session/
+install -m 644 etcskel/.config/autostart/*  %buildroot/etc/skel/.config/autostart
+install -m 644 etcskel/.local/share/applications/*  %buildroot/etc/skel/.local/share/applications
+install -m 644 etcskel/.wm-select %buildroot/etc/skel/
+install -m 644 etcskel/.Xdefaults %buildroot/etc/skel/
+
+mkdir -p  %buildroot/usr/share/xfce4/backdrops
+install -m 644 backgrounds/* %buildroot/usr/share/xfce4/backdrops
+mkdir -p  '%buildroot/usr/share/themes/ALTLinux-%Theme/gtk-2.0'
+install -m 644 'themes/ALTLinux/gtk-2.0/* %buildroot/usr/share/themes/ALTLinux-%Theme/gtk-2.0/'
+install -m 644 'themes/ALTLinux/*.png %buildroot/usr/share/themes/ALTLinux-%Theme/'
+popd
+
 #bootloader
 %pre bootloader
 [ -s /boot/splash/%theme ] && rm -fr  /boot/splash/%theme ||:
@@ -369,6 +408,21 @@ echo $lang > lang
 %ghost %_indexhtmldir/index.html
 %_indexhtmldir/*
 %_desktopdir/*
+
+%files xfce-settings
+/etc/skel/Templates
+%exclude /etc/skel/Templates/*
+/etc/skel/.wm-select
+/etc/skel/.Xdefaults
+/etc/skel/.config
+/etc/skel/.config
+/etc/skel/.local
+%exclude /etc/skel/.config/xfce4/panel/launcher-11888137035.rc
+%exclude /etc/skel/.config/xfce4/panel/launcher-12888137035.rc
+%exclude /etc/skel/.config/xfce4/panel/launcher-10.rc
+/usr/share/themes/*
+/usr/share/xfce4/backdrops
+
 
 %changelog
 * Thu Jun 11 2009 Anton V. Boyarshinov <boyarsh@altlinux.ru> 5.0.0-alt17
