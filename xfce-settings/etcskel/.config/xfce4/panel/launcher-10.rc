@@ -1,0 +1,7 @@
+[Entry 0]
+Name=Web Browser
+Exec=exo-open --launch WebBrowser
+Terminal=false
+StartupNotify=false
+Comment=Интернет
+Icon=/usr/share/icons/hicolor/32x32/apps/firefox.png

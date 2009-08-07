@@ -163,7 +163,8 @@ GNOME settings for %Brand %version %Theme
 Summary: XFCE settings for %Brand %version %Theme
 License: Distributable
 Group: Graphical desktop
-#Provides: gnome-menus
+Requires: PolicyKit-gnome
+Obsoletes: xfce-settings-lite xfce-settings-school-lite
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-xfce-settings ";done )
 
 %description xfce-settings
@@ -328,6 +329,9 @@ install -m 644 backgrounds/* %buildroot/usr/share/xfce4/backdrops
 mkdir -p  '%buildroot/usr/share/themes/ALTLinux-%Theme/gtk-2.0'
 install -m 644 'themes/ALTLinux/gtk-2.0/* %buildroot/usr/share/themes/ALTLinux-%Theme/gtk-2.0/'
 install -m 644 'themes/ALTLinux/*.png %buildroot/usr/share/themes/ALTLinux-%Theme/'
+
+mkdir -p %buildroot/%_bindir
+install -m 644 bin/* %buildroot/%_bindir
 popd
 
 #bootloader
@@ -417,11 +421,9 @@ echo $lang > lang
 /etc/skel/.config
 /etc/skel/.config
 /etc/skel/.local
-%exclude /etc/skel/.config/xfce4/panel/launcher-11888137035.rc
-%exclude /etc/skel/.config/xfce4/panel/launcher-12888137035.rc
-%exclude /etc/skel/.config/xfce4/panel/launcher-10.rc
 /usr/share/themes/*
 /usr/share/xfce4/backdrops
+%_bindir/*
 
 
 %changelog

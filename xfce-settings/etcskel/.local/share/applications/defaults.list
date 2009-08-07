@@ -1,0 +1,19 @@
+[Default Applications]
+application/vnd.oasis.opendocument.text-template=oowriter.desktop
+application/vnd.oasis.opendocument.text=oowriter.desktop
+application/vnd.oasis.opendocument.spreadsheet=oocalc.desktop
+application/vnd.oasis.opendocument.spreadsheet-template=oocalc.desktop
+application/vnd.oasis.opendocument.presentation-template=ooimpress.desktop
+application/vnd.oasis.opendocument.presentation=ooimpress.desktop
+application/x-rpm=xarchiver.desktop
+application/zip=xarchiver-usercreated.desktop
+application/x-cpio=xarchiver.desktop
+application/x-compressed-tar=xarchiver.desktop
+application/x-compressed-rar=xarchiver.desktop
+application/x-compressed-arj=xarchiver.desktop
+image/jpeg=gqview.desktop
+image/png=gqview.desktop
+image/gif=gqview.desktop
+image/tiff=gqview.desktop
+image/bmp=gqview.desktop
+

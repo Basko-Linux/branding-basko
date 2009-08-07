@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdesktop-menu>
+	<title name="Меню рабочего стола" icon="xfce4-backdrop"/>
+	<separator/>
+	<app name="Выполнить..." cmd="xfrun4" icon="gnome-fs-executable"/>
+	<separator/>
+	<app name="Терминал" cmd="xfterm4" icon="gnome-terminal"/>
+	<app name="Файловый менеджер" cmd="thunar" icon="file-manager"/>
+	<app name="Интернет-браузер" cmd="xfbrowser4" icon="gnome-globe"/>
+	<separator/>
+	<include type="system" style="simple" unique="true" legacy="true"/>
+	<separator/>
+	<app name="Помощь" cmd="xfhelp4" icon="gnome-help"/>
+	<app name="Об Xfce" cmd="xfce4-about"/>
+	<builtin name="Выйти" cmd="quit" icon="gnome-logout"/>
+</xfdesktop-menu>

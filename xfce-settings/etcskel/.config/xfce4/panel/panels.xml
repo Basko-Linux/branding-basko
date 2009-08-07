@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config SYSTEM "config.dtd">
+<panels>
+	<panel>
+		<properties>
+			<property name="size" value="36"/>
+			<property name="monitor" value="0"/>
+			<property name="screen-position" value="11"/>
+			<property name="fullwidth" value="1"/>
+			<property name="xoffset" value="0"/>
+			<property name="yoffset" value="862"/>
+			<property name="handlestyle" value="0"/>
+			<property name="autohide" value="0"/>
+			<property name="transparency" value="20"/>
+			<property name="activetrans" value="0"/>
+		</properties>
+		<items>
+			<item name="xfce4-menu" id="5"/>
+			<item name="separator" id="6"/>
+			<item name="launcher" id="9"/>
+			<item name="launcher" id="10"/>
+			<item name="separator" id="11"/>
+			<item name="launcher" id="11888137035"/>
+			<item name="separator" id="13"/>
+			<item name="pager" id="11888131361"/>
+			<item name="tasklist" id="11888145122"/>
+			<item name="xkb-plugin" id="11896827708"/>
+			<item name="xfce4-mixer" id="11888134323"/>
+			<item name="systray" id="11888132202"/>
+			<item name="clock" id="14"/>
+		</items>
+	</panel>
+</panels>
