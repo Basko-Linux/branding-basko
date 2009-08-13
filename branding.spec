@@ -164,7 +164,7 @@ GNOME settings for %Brand %version %Theme
 
 Summary: XFCE settings for %Brand %version %Theme
 License: Distributable
-Group: Graphical desktop
+Group: Graphical desktop/XFce
 Requires: PolicyKit-gnome
 Obsoletes: xfce-settings-lite xfce-settings-school-lite
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-xfce-settings ";done )
