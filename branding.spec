@@ -127,6 +127,7 @@ Summary: KDE4 settings for %Brand %version %Theme
 License: Distributable
 Group: Graphical desktop/KDE
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-kde4-settings ";done )
+PreReq: %name-graphics
 
 %description kde4-settings
 KDE4 settings for %Brand %version %Theme
@@ -137,6 +138,7 @@ Summary: KDE3 settings for %Brand %version %Theme
 License: Distributable
 Group: Graphical desktop/KDE
 Requires: ksplash-engine-moodin
+PreReq: %name-graphics
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-kde3-settings ";done )
 
 %description kde3-settings
