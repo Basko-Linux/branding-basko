@@ -90,7 +90,7 @@ bootopt.pos=263,380
 ; show welcome animation
 welcome=0
 ; beep when menu is ready
-beep=1
+beep=0
 ; main menu item shown only if iso is tagged for media check
 mediacheck=mediachk
 ; main menu items where user can't add boot options
@@ -145,7 +145,7 @@ keymap.mainmenu=0
 ; show welcome animation
 welcome=0
 ; beep when menu is ready
-beep=1
+beep=0
 ; show keymap menu as submenu in lang dialog
 keymap.submenu=0
 ; show keymap in main menu
