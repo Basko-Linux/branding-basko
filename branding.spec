@@ -252,6 +252,8 @@ mkdir -p %buildroot%_sysconfdir/skel/Desktop
 cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
 mkdir -p %buildroot%_sysconfdir/skel/.kde4
 cp -a kde4/* %buildroot%_sysconfdir/skel/.kde4/
+mkdir -p %buildroot%_sysconfdir/kde4/xdg/menus/
+install -m 644 kde4-settings/menu/* %buildroot%_sysconfdir/kde4/xdg/menus/
 popd
 
 #kde3-settings
