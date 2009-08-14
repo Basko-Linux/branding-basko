@@ -252,8 +252,8 @@ mkdir -p %buildroot%_sysconfdir/skel/Desktop
 cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
 mkdir -p %buildroot%_sysconfdir/skel/.kde4
 cp -a kde4/* %buildroot%_sysconfdir/skel/.kde4/
-mkdir -p %buildroot%_sysconfdir/kde4/xdg/menus/
-install -m 644 kde4-settings/menu/* %buildroot%_sysconfdir/kde4/xdg/menus/
+mkdir -p %buildroot%_sysconfdir/kde4/xdg/menus/applications-merged/
+install -m 644 kde4-settings/menu/* %buildroot%_sysconfdir/kde4/xdg/menus/applications-merged/
 popd
 
 #kde3-settings
@@ -397,6 +397,7 @@ echo $lang > lang
 %files kde4-settings
 %_sysconfdir/skel/Desktop
 %_sysconfdir/skel/.kde4
+%_sysconfdir/kde4/xdg/menus/applications-merged/*
 
 %files kde3-settings
 %_sysconfdir/skel/Desktop
