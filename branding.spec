@@ -391,12 +391,10 @@ echo $lang > lang
 %_datadir/alt-notes/*
 
 %files kde4-settings
-%_sysconfdir/skel/Desktop
 %_sysconfdir/skel/.kde4
 %_sysconfdir/kde4/xdg/menus/applications-merged/*
 
 %files kde3-settings
-%_sysconfdir/skel/Desktop
 %_sysconfdir/skel/.kde
 %_datadir/apps/ksplash/Themes/*
 
