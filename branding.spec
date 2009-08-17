@@ -248,8 +248,6 @@ popd
 
 #kde4-settings
 pushd kde4-settings
-mkdir -p %buildroot%_sysconfdir/skel/Desktop
-cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
 mkdir -p %buildroot%_sysconfdir/skel/.kde4
 cp -a kde4/* %buildroot%_sysconfdir/skel/.kde4/
 mkdir -p %buildroot%_sysconfdir/kde4/xdg/menus/applications-merged/
@@ -258,8 +256,6 @@ popd
 
 #kde3-settings
 pushd kde3-settings
-mkdir -p %buildroot%_sysconfdir/skel/Desktop
-cp -a Desktop/* %buildroot%_sysconfdir/skel/Desktop/
 mkdir -p %buildroot%_sysconfdir/skel/.kde
 cp -a kde/* %buildroot%_sysconfdir/skel/.kde/
 mkdir -p %buildroot%_sysconfdir/skel/.kde/share
