@@ -385,6 +385,41 @@ table.alterator-listbox thead tr .headerSortDown, table.alterator-listbox thead 
 	background-color: #@LIGHT_COLOR_HEX@;
 }
 
+/* top line */
+
+#top {
+	text-align:left;
+	background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
+
+	padding: 0.25em;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-khtml-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+
+#product-logo {
+	background: url(/design/images/logo.png) no-repeat;
+	width: 275px;
+	height: 30px;
+	border: 0px;
+}
+
+#title {
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: left;
+
+	font-weight: bold;
+	text-decoration: none;
+	font-size:large;
+}
+
+.top-button {
+        padding-right: 10px;
+}
+
+
 /* deprecated */
 
 .expanded {
