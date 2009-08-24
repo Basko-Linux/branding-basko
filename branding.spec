@@ -325,7 +325,8 @@ install -m 644 etcskel/.wm-select %buildroot/etc/skel/
 install -m 644 etcskel/.Xdefaults %buildroot/etc/skel/
 
 mkdir -p  %buildroot/usr/share/xfce4/backdrops
-install -m 644 backgrounds/* %buildroot/usr/share/xfce4/backdrops
+install -m 644 ../graphics/backgrounds/default.png %buildroot/usr/share/xfce4/backdrops
+install -m 644 ../graphics/backgrounds/xdm.png %buildroot/usr/share/xfce4/backdrops
 mkdir -p  '%buildroot/usr/share/themes/ALTLinux-%Theme/gtk-2.0'
 install -m 644 themes/ALTLinux/gtk-2.0/* '%buildroot/usr/share/themes/ALTLinux-%Theme/gtk-2.0/'
 install -m 644 themes/ALTLinux/*.png '%buildroot/usr/share/themes/ALTLinux-%Theme/'
