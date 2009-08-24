@@ -173,77 +173,6 @@ textarea, select, input.text {
 	height: 16px;
 }
 
-.top-button-menu {
-        background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
-        padding-right: 10px;
-        padding-top: 10px;
-}
-
-/* control center page */
-
-#logo-td {
-	border-left: none;
-	padding-left: 10px;
-	padding-right: 10px;
-	text-align:left;
-	padding-top: 10px;
-	background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
-	width: 275px;
-	-moz-border-radius-topleft: 1em;
-	-webkit-border-radius-topleft: 1em;
-	-khtml-border-radius-topleft: 1em;
-	border-radius-topleft: 1em;
-	-moz-border-radius-bottomleft: 1em;
-	-webkit-border-radius-bottomleft: 1em;
-	-khtml-border-radius-bottomleft: 1em;
-	border-radius-bottomleft: 1em;
-}
-
-#logo-td img {
-	background: url(/design/images/logo.png) no-repeat;
-	width: 275px; /*325*/
-	height: 30px;
-}
-
-#help-td {
-	/*border-left: none;*/
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-	width: 20px;
-	text-align:left;
-	color: #@LIGHT_LABELS_HEX@;
-	background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
-}
-
-#locale-td {
-	padding-left: 10px;
-	padding-top: 10px;
-	color: #@LIGHT_LABELS_HEX@;
-	padding-right: 10px;
-	text-align:center;
-	width: 100px;
-	background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
-	-moz-border-radius-topright: 1em;
-        -webkit-border-radius-topright: 1em;
-        -khtml-border-radius-topright: 1em;
-        border-radius-topright: 1em;
-}
-
-#hostinfo-td {
-	background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
-
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-	text-align: left;
-
-	color: #@LIGHT_LABELS_HEX@; /*#0574B2;*/
-	font-weight: bold;
-	text-decoration: none;
-	font-size:large;
-}
-
 /* main menu */
 
 #menu-td {
@@ -421,10 +350,6 @@ table.alterator-listbox thead tr .headerSortDown, table.alterator-listbox thead 
 
 
 /* deprecated */
-
-.expanded {
-    width: 100%;
-}
 
 .error-message {
 	background-color: #FFCACA;
