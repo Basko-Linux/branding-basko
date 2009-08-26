@@ -307,7 +307,7 @@ popd
 #xfce-settings
 pushd xfce-settings
 mkdir -p %buildroot/etc/skel/.config/xfce4/desktop
-mkdir -p %buildroot/etc/skel/.config/xfconf/xfce-perchannel-xml
+mkdir -p %buildroot/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml
 mkdir -p %buildroot/etc/skel/.config/xfce4/panel
 mkdir -p %buildroot/etc/skel/.config/xfce4-session
 mkdir -p %buildroot/etc/skel/.config/autostart
@@ -316,7 +316,7 @@ mkdir -p %buildroot/etc/skel/Templates
 install -m 644 etcskel/Templates/* %buildroot/etc/skel/Templates/
 install -m 644 etcskel/.config/xfce4/helpers.rc %buildroot/etc/skel/.config/xfce4/
 install -m 644 etcskel/.config/xfce4/desktop/* %buildroot/etc/skel/.config/xfce4/desktop
-install -m 644 etcskel/.config/xfconf/xfce-perchannel-xml/* %buildroot/etc/skel/.config/xfconf/xfce-perchannel-xml
+install -m 644 etcskel/.config/xfce4/xfconf/xfce-perchannel-xml/* %buildroot/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml
 install -m 644 etcskel/.config/xfce4/panel/* %buildroot/etc/skel/.config/xfce4/panel
 install -m 644 etcskel/.config/xfce4-session/* %buildroot/etc/skel/.config/xfce4-session/
 install -m 644 etcskel/.config/autostart/*  %buildroot/etc/skel/.config/autostart
