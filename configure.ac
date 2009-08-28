@@ -58,5 +58,6 @@ AC_CONFIG_FILES([
 		 gnome-settings/metacity-theme-1.xml
 		 components/ahttpd/styles/alterator.css
 		 kde3-styles-splash/Theme.rc
+		 xfce-settings/xinitrc
 ])
 AC_OUTPUT

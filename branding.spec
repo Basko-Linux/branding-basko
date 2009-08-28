@@ -333,6 +333,9 @@ install -m 644 themes/ALTLinux/*.png '%buildroot/usr/share/themes/ALTLinux-%Them
 
 mkdir -p %buildroot/%_bindir
 install -m 644 bin/* %buildroot/%_bindir
+
+mkdir -p %buildroot/etc/sysconfig/ 
+install -m 644 xinitrc %buildroot/etc/sysconfig/xinitrc.xfce
 popd
 
 #bootloader
@@ -370,6 +373,8 @@ echo $lang > lang
 [ "`readlink %_sysconfdir/bootsplash/themes/current`" != %theme ] ||
     %__rm -f %_sysconfdir/bootsplash/themes/current
 
+%post xfce-settings
+cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 %files alterator
 %config %_altdir/*.rcc
@@ -423,6 +428,7 @@ echo $lang > lang
 /etc/skel/.local
 /usr/share/themes/*
 /usr/share/xfce4/backdrops
+/etc/sysconfig/xinitrc.xfce
 %_bindir/*
 
 
