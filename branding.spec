@@ -332,7 +332,7 @@ install -m 644 themes/ALTLinux/gtk-2.0/* '%buildroot/usr/share/themes/ALTLinux-%
 install -m 644 themes/ALTLinux/*.png '%buildroot/usr/share/themes/ALTLinux-%Theme/'
 
 mkdir -p %buildroot/%_bindir
-install -m 644 bin/* %buildroot/%_bindir
+install -m 755 bin/* %buildroot/%_bindir
 
 mkdir -p %buildroot/etc/sysconfig/ 
 install -m 644 xinitrc %buildroot/etc/sysconfig/xinitrc.xfce
