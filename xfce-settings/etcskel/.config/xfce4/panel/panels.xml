@@ -25,7 +25,7 @@
 			<item name="pager" id="11888131361"/>
 			<item name="tasklist" id="11888145122"/>
 			<item name="xkb-plugin" id="11896827708"/>
-			<item name="xfce4-mixer" id="11888134323"/>
+			<item name="xfce4-mixer-plugin" id="11888134323"/>
 			<item name="systray" id="11888132202"/>
 			<item name="clock" id="14"/>
 		</items>
