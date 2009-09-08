@@ -314,6 +314,33 @@ table.alterator-listbox thead tr .headerSortDown, table.alterator-listbox thead 
 	background-color: #@LIGHT_COLOR_HEX@;
 }
 
+/* accordion */
+
+div.alterator-accordion h3 {
+	background-color:  #@MIDDLE_COLOR_HEX@;
+	font-size: 9pt;
+
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 24px;
+
+	margin: 2px;
+
+	background-image: url(/design/images/right.gif);
+	background-repeat: no-repeat;
+	background-position: center left;
+	cursor: pointer;
+
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+}
+
+div.alterator-accordion h3.ui-state-active {
+	background-image: url(/design/images/asc.gif);
+}
+
 /* top line */
 
 #top {
