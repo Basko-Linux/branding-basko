@@ -362,7 +362,7 @@ div.alterator-accordion h3.ui-state-active {
 }
 
 #product-logo {
-	background: url(/design/images/logo.png) no-repeat;
+	background: url(/design/images/product-logo.png) no-repeat;
 	width: 275px;
 	height: 30px;
 	border: 0px;

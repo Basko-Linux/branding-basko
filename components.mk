@@ -14,7 +14,7 @@ browser-qt:components/browser-qt/design/bg.png
 ahttpd:
 	install -d $(datadir)/alterator/design/styles
 	cp -a components/ahttpd/images $(datadir)/alterator/design
-	[ ! -f images/logo.png ] || convert images/logo.png -fill '#ffffff' -font /usr/share/fonts/ttf/dejavu/DejaVuSans-Bold.ttf -style Normal -weight Normal -pointsize 24 -gravity northwest -draw 'text 0,0 "$(VERSION) $(NAME)"' $(datadir)/alterator/design/images/logo.png
+	install -Dpm644 images/product-logo.png $(datadir)/alterator/design/images/product-logo.png
 	cp -a components/ahttpd/styles/*.css $(datadir)/alterator/design/styles
 
 # bootloader and bootsplash
@@ -48,5 +48,5 @@ indexhtml:
 	done
 	install -Dpm644 /dev/null $(INDEXHTML_DIR)/index.html
 	cp -a components/indexhtml/img $(INDEXHTML_DIR)
-	[ ! -f images/logo.png ] || convert images/logo.png -fill '#ffffff' -font /usr/share/fonts/ttf/dejavu/DejaVuSans-Bold.ttf -style Normal -weight Normal -pointsize 24 -gravity northwest -draw 'text 0,0 "$(VERSION) $(NAME)"' $(INDEXHTML_DIR)/img/logo.png
+	install -Dpm644 images/product-logo.png $(INDEXHTML_DIR)/img/product-logo.png
 	install -Dpm644 components/indexhtml/indexhtml.desktop $(datadir)/applications/indexhtml.desktop

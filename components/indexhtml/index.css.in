@@ -123,7 +123,7 @@ div#lang {
 }
 
 #product-logo {
-	background: url('img/logo.png') no-repeat;
+	background: url('img/product-logo.png') no-repeat;
 	width: 275px;
 	height: 30px;
 	border: 0px;
