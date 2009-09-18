@@ -9,104 +9,52 @@ body {
 	font-size: 9pt;
 }
 
-.shadow  { position:relative; display:block; color:black; }
-.shadow nobr { position:absolute; display:block; top:0px;  }
-.shadow:before { display:block; padding:2px; content: attr(title); color:#CCC;  } 
-
-h1 {
-	font-size: 28px;
-	font-weight: bold;
-	color: black;
-	/*text-shadow: #CCC 2px 2px 3px;*/
-	vertical-align: baseline;
+p {
+    text-align: justify;
 }
-
-h2 h3 {
-	color: black;
-}
-
-p { text-align: justify; }
 
 a:link, a:visited { 
-	text-decoration: none; 
-	color: #39c;
+    text-decoration: none; 
+    color: #39c;
 }
 
 a:hover { 
-	text-decoration: underline; 
-	color: #f60;
+    text-decoration: underline; 
+    color: #f60;
 }
 
 ul li {
-   	padding-left: 3px;
-   	text-align: left;
-   	list-style: square url('img/bullet.png');
+    padding-left: 3px;
+    text-align: left;
+    list-style: square url('img/bullet.png');
 }
 
-li.spacebefore { margin-top: 1em;}
-
-form {
-	margin: 5px;
+li.spacebefore {
+    margin-top: 1em;
 }
 
-input#button {
-	height: 20px;
+div.box {
+    position: relative;
+    width: 780px;
+    margin-top: 10px;
+
+    background: #FFFFFF;
+    padding: 0.2em;
+    padding-right: 2mm;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+
+    border: 1px solid #@MIDDLE_COLOR_HEX@;
 }
 
-div#logo {
- 	float: right;
- 	margin-left: 10px;
+#lang {
+    text-align: center;
 }
 
-div#content, div#lang {
-	position: relative;
-	width: 780px;
-	margin: 40px auto;
-}
-
-div#main {
-    background: #FFF;
-    width: 100%;
-	border: 1px solid #@MIDDLE_COLOR_HEX@;
-	padding: 2mm;
-	padding-left: 5mm;
-}
-
-div#pane {
-	float: right;
-	width: 260px;
-	text-align: center;
-	margin: 15px;
-	padding: 0px;
-}
-
-div#team {
-	background: #@MIDDLE_COLOR_HEX@;
-	width: 100%;
-	text-align: center;
-	margin: 0px;
-	padding: 0px;
-	border: 1px solid #@DARK_COLOR_HEX@;
-}
 
 .footer {
 	font-size: 9px;
 	color: #@DARK_COLOR_HEX@;
-}
-
-div.columns  { float: left; }
-
-div#firstcolumn { width: 27em; }
-
-div.indent { padding-left: 5mm; }
-
-div.spacer { clear: both; }
-
-div#lang {
-  text-align: center;
-  background: #fff;
-  padding: 0.2em;
-  border: 1px solid #@DARK_COLOR_HEX@;
 }
 
 /* top line */

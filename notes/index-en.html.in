@@ -20,69 +20,43 @@
 	</table>
 </div>
 
-<div id=lang>
+<div class="box" id="lang">
  <a href="index-ru.html">Русский</a> |
  <a href="index-uk.html">Українська</a>
 </div>
 
-<div id="content">
+<div class="box">
+  <p align="justify">Welcome to <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>. The distribution is set up and ready to use, you may proceed. We hope that results of our work will be of use to you.</p>
 
-<div id="main">
+  <h2>Documentation</h2>
+  <ul>
+   <li><a href="../../@THEME@/index.html">User manual</a></li>
+  </ul>
 
-<div id="pane">
-<div class="footer">Search on ALT Linux websites</div>
-<!-- Google CSE Search Box Begins  -->
-<form action="http://www.google.com/cse" id="searchbox_014412136813254060649:m2__wfh9ajy">
-<!--table border="1" width="100%">
-<tbody><tr><td-->
-<input type="hidden" name="cx" value="014412136813254060649:m2__wfh9ajy" />
-<input type="text" name="q" size="23" />
-<input type="submit" name="sa" value="Поиск" id="button" />
-<!--/td></tr></tbody></table-->
-</form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_014412136813254060649%3Am2__wfh9ajy"></script>
-<!-- Google CSE Search Box Ends -->
+  <h2>In Internet</h2>
+  <ul>
+   <li><a href="http://www.altlinux.ru/">Official ALT Linux website</a></li>
+   <li><a href="http://faq.altlinux.ru/">Frequently Asked QUestion</a></li>
+   <li><a href="http://search.altlinux.ru/">Search on ALT Linux websites</a></li>
+   <li><a href="http://www.altlinux.ru/online_help/users_mailing_lists.html">Mailing lists</a></li>
+   <li><a href="http://forum.altlinux.org/">ALT Linux Forum</a></li>
+   <li><a href="http://support.altlinux.ru/">Technical support</a></li>
+  </ul>
 
-<div id="team">
-<h2>ALT Linux Team</h2>
+  <h2>ALT Linux Team</h2>
+  <p align="justify">This distribution would never be accomplished without active efforts put by ALT Linux Team&nbsp;&mdash; a community of free/libre software developers.</p>
+  <ul>
+   <li><a href="http://www.altlinux.org/">Community Wiki</a></li>
+   <li><a href="http://backports.altlinux.org/">Backports</a></li>
+   <li><a href="http://bugs.altlinux.org/">Report a bug</a></li>
+  </ul>
 
-<img src="img/alt-linux-team.png" width="144" height="55">
-
-<p align="justify" style="padding: 15px;">This distribution would never be accomplished without active efforts put by ALT Linux Team&nbsp;&mdash; a community of free/libre software developers.</p>
-<ul>
- <li><a href="http://www.altlinux.org/">Community Wiki</a></li>
- <li><a href="http://backports.altlinux.org/">Backports</a></li>
- <li><a href="http://bugs.altlinux.org/">Report a bug</a></li>
-</ul>
-</div>
-</div>
-
-<p align="justify">Welcome to <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>. The distribution is set up and ready to use, you may proceed. We hope that results of our work will be of use to you.</p>
-
-<div id="documentation">
-<h2>Documentation</h2>
-<ul>
- <li><a href="../../@THEME@/index.html">User manual</a></li>
-</ul>
-</div>
-
-<div id="web">
-<h2>in Internet</h2>
-<ul>
- <li><a href="http://www.altlinux.ru/">Official ALT Linux website</a></li>
- <li><a href="http://faq.altlinux.ru/">Frequently Asked QUestion</a></li>
- <li><a href="http://search.altlinux.ru/">Search on ALT Linux websites</a></li>
- <li><a href="http://www.altlinux.ru/online_help/users_mailing_lists.html">Mailing lists</a></li>
- <li><a href="http://forum.altlinux.org/">ALT Linux Forum</a></li>
- <li><a href="http://support.altlinux.ru/">Technical support</a></li>
-</ul>
-</div>
 </div>
 
 <p class="footer"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2008. All rights reserved.<br />
-Address: 5th Donskoy proezd, 15/11, Moscow<br />
-Phone/Fax: +7 (495) 662-3883</p>
-</div>
+  Address: 5th Donskoy proezd, 15/11, Moscow<br />
+  Phone/Fax: +7 (495) 662-3883
+</p>
 
 </body>
 </html>
