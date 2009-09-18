@@ -293,6 +293,7 @@ table.alterator-listbox thead tr .header {
 	background-repeat: no-repeat;
 	background-position: center right;
 	cursor: pointer;
+	padding-right: 24px;
 }
 
 table.alterator-listbox tbody td {
