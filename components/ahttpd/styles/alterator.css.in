@@ -122,6 +122,12 @@ textarea, select, input.text {
     vertical-align:middle;
 }
 
+/* clock and timeedit */
+
+canvas.alterator-clock {
+    background: url(/design/images/clock-face.png) no-repeat;
+}
+
 /* calendar and dateedit */
 
 .year {
