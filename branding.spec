@@ -293,17 +293,6 @@ popd
 mkdir -p %buildroot/usr/share/install2/slideshow
 install slideshow/*  %buildroot/usr/share/install2/slideshow/
 
-#indexhtml
-%define _altdocsdir %_defaultdocdir/alt-docs
-%define _indexhtmldir %_altdocsdir/indexhtml
-pushd indexhtml
-mkdir -p %buildroot{%_indexhtmldir/,%_desktopdir/}
-cp -r * %buildroot%_indexhtmldir/
-rm -f %buildroot%_indexhtmldir/*.in %buildroot%_indexhtmldir/indexhtml.desktop
-touch %buildroot%_indexhtmldir/index.html
-install -m644 indexhtml.desktop %buildroot%_desktopdir/
-popd
-
 #xfce-settings
 pushd xfce-settings
 mkdir -p %buildroot/etc/skel/.config/xfce4/desktop
@@ -413,10 +402,14 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %files slideshow
 /usr/share/install2/slideshow
 
+%define indexhtmldir %_datadir/doc/alt-docs/indexhtml
+
 %files indexhtml
-%ghost %_indexhtmldir/index.html
-%_indexhtmldir/*
-%_desktopdir/*
+%ghost %indexhtmldir/index.html
+%indexhtmldir/index-*.html
+%indexhtmldir/index.css
+%indexhtmldir/img
+%_desktopdir/indexhtml.desktop
 
 %files xfce-settings
 /etc/skel/Templates

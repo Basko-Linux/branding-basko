@@ -48,11 +48,11 @@ AC_CONFIG_FILES([
 		 notes/release-notes.all.html
 		 notes/license.ru.html
 		 notes/license.all.html
-		 indexhtml/indexhtml.desktop
-		 indexhtml/index-ru.html
-		 indexhtml/index-uk.html
-		 indexhtml/index-en.html
-		 indexhtml/index.css
+		 notes/index-ru.html
+		 notes/index-uk.html
+		 notes/index-en.html
+		 components/indexhtml/indexhtml.desktop
+		 components/indexhtml/index.css
 		 gnome-settings/gtkrc
 		 gnome-settings/index.theme
 		 gnome-settings/metacity-theme-1.xml

@@ -15,4 +15,4 @@ all:
 	mv kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc "kde3-settings/apps/kdisplay/color-schemes/@BRAND_FNAME@ @NAME@.kcsrc"
 
 include components.mk
-install: browser-qt ahttpd boot
+install: browser-qt ahttpd boot indexhtml

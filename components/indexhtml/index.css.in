@@ -1,11 +1,12 @@
 /* Stylesheet for index file */
 
 body {
-	font-family: Verdana,'DejaVu Sans',Helvetica,sans;
-	text-align:  left;
-	font-size: 12px;
-	background: #@LIGHT_COLOR_HEX@;
-	background-image: url('img/bg.png');
+	background-color: #@MIDDLE_COLOR_HEX@;
+	color: #@MIDDLE_LABELS_HEX@;
+	margin: 0px;
+	padding: 10px;
+	font-family : Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
 }
 
 .shadow  { position:relative; display:block; color:black; }
@@ -106,4 +107,24 @@ div#lang {
   background: #fff;
   padding: 0.2em;
   border: 1px solid #@DARK_COLOR_HEX@;
+}
+
+/* top line */
+
+#top {
+	text-align:left;
+	background: url('img/gradient-top.png') 0% 0% repeat-x;
+
+	padding: 0.25em;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-khtml-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+
+#product-logo {
+	background: url('img/logo.png') no-repeat;
+	width: 275px;
+	height: 30px;
+	border: 0px;
 }

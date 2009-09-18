@@ -9,17 +9,23 @@
 
 <body>
 
+<div id="top">
+	<table>
+	    <tbody>
+		<tr>
+		    <td style="text-align:left;width:100%"><img id="product-logo" src="img/null.gif"/></td>
+		    <td style="text-align:right"><img id="brand-logo" src="img/null.gif"/></td>
+		</tr>
+	    </tbody>
+	</table>
+</div>
+
 <div id=lang>
  <a href="index-en.html">English</a> |
  <a href="index-ru.html">Русский</a>
 </div>
 
 <div id="content">
-
-<table border="0" cellspacing="10"><tr>
-<td><img src="img/altlinux-logo.png" width="95" height="84" style="margin-right: 15px;"></td>
-<td width="99%" valign="bottom"><h1 class="shadow" title="@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr></h1></td>
-</tr></table>
 
 <div id="main">
 

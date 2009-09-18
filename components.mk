@@ -39,3 +39,14 @@ boot:
 	install -d -m 755 $(datadir)/gfxboot/$(THEME)
 	install -m 644 design-bootloader-source/message $(sysconfdir)/../boot/splash/$(THEME)
 	install -m 644 design-bootloader-source/bootlogo $(datadir)/gfxboot/$(THEME)
+
+# index html page, start page for all local browsers
+INDEXHTML_DIR=$(datadir)/doc/alt-docs/indexhtml
+indexhtml:
+	for i in notes/index*.html components/indexhtml/*.css;do \
+	  install -Dpm644 $$i $(INDEXHTML_DIR)/`basename $$i`; \
+	done
+	install -Dpm644 /dev/null $(INDEXHTML_DIR)/index.html
+	cp -a components/indexhtml/img $(INDEXHTML_DIR)
+	[ ! -f images/logo.png ] || convert images/logo.png -fill '#ffffff' -font /usr/share/fonts/ttf/dejavu/DejaVuSans-Bold.ttf -style Normal -weight Normal -pointsize 24 -gravity northwest -draw 'text 0,0 "$(VERSION) $(NAME)"' $(INDEXHTML_DIR)/img/logo.png
+	install -Dpm644 components/indexhtml/indexhtml.desktop $(datadir)/applications/indexhtml.desktop
