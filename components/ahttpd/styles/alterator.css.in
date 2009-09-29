@@ -88,6 +88,29 @@ textarea, select, input.text {
 	height: 20px;
 }
 
+.next-page-button,.prev-page-button,.first-page-button,.last-page-button {
+    width: 25px;
+    height: 20px;
+    vertical-align:middle;
+    cursor: pointer;
+}
+
+.next-page-button {
+    background: url(/design/images/next-page-button.png) no-repeat;
+}
+
+.prev-page-button {
+    background: url(/design/images/prev-page-button.png) no-repeat;
+}
+
+.first-page-button {
+    background: url(/design/images/first-page-button.png) no-repeat;
+}
+
+.last-page-button {
+    background: url(/design/images/last-page-button.png) no-repeat;
+}
+
 /* messages */
 
 .alterator-information-message {

@@ -12,10 +12,15 @@ browser-qt:components/browser-qt/design/bg.png
 # ahttpd
 
 ahttpd:
+	for i in components/ahttpd/images/*.svg; do \
+	    image=$${i%.svg}; \
+	    convert -background none $$image.svg $$image.png ; \
+	done
 	install -d $(datadir)/alterator/design/styles
 	cp -a components/ahttpd/images $(datadir)/alterator/design
 	install -Dpm644 images/product-logo.png $(datadir)/alterator/design/images/product-logo.png
 	cp -a components/ahttpd/styles/*.css $(datadir)/alterator/design/styles
+
 
 # bootloader and bootsplash
 boot:
