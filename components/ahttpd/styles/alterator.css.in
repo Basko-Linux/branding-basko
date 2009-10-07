@@ -58,19 +58,6 @@ textarea, select, input.text {
 	background-color: #@LIGHT_COLOR_HEX@;
 }
 
-
-.frame-table {
-	border-style:solid;
-	border-width:1px;
-	margin: 3px;
-}
-
-.frame-table td, .frame-table th {
-	border-style:solid;
-	border-width:1px;
-	padding: 1px 1px 3px 3px;
-}
-
 .disabled {
 	color: #@DARK_COLOR_HEX@;
 }
