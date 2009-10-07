@@ -111,6 +111,14 @@ textarea, select, input.text {
     background: url(/design/images/last-page-button.png) no-repeat;
 }
 
+.close-dialog-button {
+	width: 22px;
+	height: 22px;
+	border: 0px;
+	cursor: pointer;
+	background: url(/design/images/close-dialog-button.png) no-repeat;
+}
+
 /* messages */
 
 .alterator-information-message {
@@ -274,24 +282,6 @@ canvas.alterator-clock {
 	border-radius-bottomleft: 1em;          /* CSS3 */
 }
 
-/* help popup */
-
-#help-popup {
-	padding-left: 10px;
-	width: 95%;
-	background-color: #@LIGHT_COLOR_HEX@;
-}
-
-.hresizeable {
-	width: 100%;
-	height: 7px;
-	background:#@MIDDLE_COLOR_HEX@ url(/design/images/hgrabber.gif) no-repeat scroll 45%;
-	cursor: s-resize;
-}
-
-.hresizeable:hover {
-	background-color: #@DARK_COLOR_HEX@;
-}
 
 /* tables */
 
@@ -371,6 +361,32 @@ div.alterator-accordion h3.ui-state-active {
 	background-image: url(/design/images/asc.gif);
 }
 
+/* resizeable */
+
+.ui-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    background:#@MIDDLE_COLOR_HEX@ url(/design/images/hgrabber.gif) no-repeat scroll 45%;
+}
+
+.ui-resizable-s:hover {
+	background-color: #@DARK_COLOR_HEX@;
+}
+
+/* help button */
+
+.ui-help-button {
+	background-color: #@LIGHT_COLOR_HEX@;
+}
+
+.ui-help-button-content {
+	padding-left: 10px;
+	padding-right: 30px;
+}
+
 /* top line */
 
 #top {
@@ -414,4 +430,21 @@ div.alterator-accordion h3.ui-state-active {
 	padding-left:10px;
 	padding-right:10px;
 	margin-bottom:10px;
+}
+
+#help-popup {
+       padding-left: 10px;
+       width: 95%;
+       background-color: #@LIGHT_COLOR_HEX@;
+}
+
+.hresizeable {
+	width: 100%;
+	height: 7px;
+	background:#@MIDDLE_COLOR_HEX@ url(/design/images/hgrabber.gif) no-repeat scroll 45%;
+	cursor: s-resize;
+}
+
+.hresizeable:hover {
+	background-color: #@DARK_COLOR_HEX@;
 }
