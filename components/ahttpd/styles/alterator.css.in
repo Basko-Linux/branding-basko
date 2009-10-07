@@ -58,6 +58,20 @@ textarea, select, input.text {
 	background-color: #@LIGHT_COLOR_HEX@;
 }
 
+.box {
+    position: relative;
+    width: 780px;
+    margin-top: 10px;
+
+    background: #FFFFFF;
+    padding: 0.2em;
+    padding-right: 2mm;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+
+    border: 1px solid #@MIDDLE_COLOR_HEX@;
+}
+
 .disabled {
 	color: #@DARK_COLOR_HEX@;
 }
