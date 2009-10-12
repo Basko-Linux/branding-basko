@@ -323,6 +323,24 @@ table.alterator-listbox tbody tr.odd td {
 	background-color:#@LIGHT_COLOR_HEX@;
 }
 
+table.alterator-listbox tbody tr.error td {
+	background-color: #e6999b;
+	font-weight: bold;
+}
+
+table.alterator-listbox tbody tr.odd.error td {
+	background-color: #e68b8d;
+	font-weight: bold;
+}
+
+table.alterator-listbox tbody tr.working td {
+	background-color: #f2ecbd;
+}
+
+table.alterator-listbox tbody tr.odd.working td {
+	background-color: #f2e88f;
+}
+
 table.alterator-listbox thead tr .headerSortUp {
 	background-image: url(/design/images/asc.gif);
 }
