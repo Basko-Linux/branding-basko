@@ -323,6 +323,11 @@ table.alterator-listbox tbody tr.odd td {
 	background-color:#@LIGHT_COLOR_HEX@;
 }
 
+table.alterator-listbox tbody tr.selected td, table.alterator-listbox tbody tr.odd.selected td {
+	background-color: #D0E1FF;
+	border-top:  #ffffff solid 1px;
+}
+
 table.alterator-listbox tbody tr.error td {
 	background-color: #e6999b;
 	font-weight: bold;
