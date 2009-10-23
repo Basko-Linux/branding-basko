@@ -30,7 +30,7 @@
 
   <h2>Documentation</h2>
   <ul>
-   <li><a href="../../@THEME@/index.html">User manual</a></li>
+   <li><a href="../@DOCDIR@/index.html">User manual</a></li>
   </ul>
 
   <h2>In Internet</h2>
