@@ -402,7 +402,7 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %files slideshow
 /usr/share/install2/slideshow
 
-%define indexhtmldir %_datadir/doc/alt-docs/indexhtml
+%define indexhtmldir %_defaultdocdir/indexhtml
 
 %files indexhtml
 %ghost %indexhtmldir/index.html

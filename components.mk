@@ -46,7 +46,7 @@ boot:
 	install -m 644 design-bootloader-source/bootlogo $(datadir)/gfxboot/$(THEME)
 
 # index html page, start page for all local browsers
-INDEXHTML_DIR=$(datadir)/doc/alt-docs/indexhtml
+INDEXHTML_DIR=$(datadir)/doc/indexhtml
 indexhtml:
 	for i in notes/index*.html components/indexhtml/*.css;do \
 	  install -Dpm644 $$i $(INDEXHTML_DIR)/`basename $$i`; \
