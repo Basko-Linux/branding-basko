@@ -45,7 +45,7 @@ textarea, select, input.text {
 	padding: 1px 3px;
 }
 
-.btn {
+.btn, button {
 	background-color: #@MIDDLE_COLOR_HEX@;
 	color: #@MIDDLE_LABELS_HEX@;
 	border: 1px solid #@MIDDLE_LABELS_HEX@;
@@ -54,7 +54,7 @@ textarea, select, input.text {
 	padding: 0px 3px;
 }
 
-.btn:hover {
+.btn:hover, button:hover {
 	background-color: #@LIGHT_COLOR_HEX@;
 }
 
@@ -399,6 +399,149 @@ div.alterator-accordion h3.ui-state-active {
 .ui-resizable-s:hover {
 	background-color: #@DARK_COLOR_HEX@;
 }
+
+
+/* corner radius */
+
+.ui-corner-tl {
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+}
+
+.ui-corner-tr {
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+}
+
+.ui-corner-bl {
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+}
+
+.ui-corner-br {
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+}
+
+.ui-corner-top {
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+}
+
+.ui-corner-bottom {
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+}
+
+.ui-corner-right {
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+}
+
+.ui-corner-left {
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+}
+
+.ui-corner-all {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+/* overlays */
+
+.ui-widget-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #aaaaaa;
+	opacity: .3;
+	filter:Alpha(Opacity=30);
+}
+
+/* dialog */
+
+.ui-widget-content {
+	border: 1px solid #aaaaaa;
+	background: #ffffff;
+	color: #222222
+}
+
+.ui-widget-header {
+	border: 1px solid #aaaaaa;
+	background: url(/design/images/gradient.png) 0% 0% repeat-x;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.ui-dialog .ui-dialog-title {
+    float: left;
+    margin: .1em 0 .2em;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: .5em .3em .3em 1em;
+}
+
+
+.ui-dialog .ui-dialog-titlebar-close {
+    float:right;
+}
+
+.ui-dialog .ui-dialog-titlebar-close span {
+    display: block;
+    margin: 1px;
+}
+
+.ui-dialog .ui-dialog-content {
+    border: 0;
+    padding: .5em 1em;
+    background: none;
+    overflow: auto;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+	text-align: left;
+	border-width: 1px 0 0 0;
+	background-image: none;
+	margin: .5em 0 0 0;
+	padding: .3em 1em .5em .4em;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+	float: right;
+	margin: .5em .4em .5em 0;
+	cursor: pointer;
+	width:auto;
+	overflow:visible;
+}
+
+.ui-icon-closethick {
+    width: 22px;
+    height: 22px;
+    text-indent: -99999px;
+    overflow: hidden;
+    background: url(/design/images/close-dialog-button.png) no-repeat;
+}
+
+/* layout helpers */
+
+.ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.ui-helper-clearfix { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix { height:1%; }
+.ui-helper-clearfix { display:block; }
+/* end clearfix */
 
 /* help button */
 
