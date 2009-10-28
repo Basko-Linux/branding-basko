@@ -257,14 +257,6 @@ canvas.alterator-clock {
 	padding-top: 3px;
 	background: url(/design/images/gradient.png) 0% 0% repeat-x;
 	font-weight: bold;
-	-moz-border-radius-topright: 1em;
-	-webkit-border-radius-topright: 1em;
-	-khtml-border-radius-topright: 1em;
-	border-radius-topright: 1em;
-	-moz-border-radius-topleft: 1em;
-	-webkit-border-radius-topleft: 1em;
-	-khtml-border-radius-topleft: 1em;
-	border-radius-topleft: 1em;
 }
 
 .menu-group {
@@ -273,14 +265,6 @@ canvas.alterator-clock {
 	padding-top: 5px;
 	border-collapse: collapse;
 	background: url(/design/images/gradient-menu.png) 0% 0% repeat-x;
-	-moz-border-radius-bottomright: 1em;     /* mozilla 1.5 */
-	-webkit-border-radius-bottomright: 1em;  /* safari 3 */
-	-khtml-border-radius-bottomright: 1em;   /* Konqueror */
-	border-radius-bottomright: 1em;          /* CSS3 */
-	-moz-border-radius-bottomleft: 1em;     /* mozilla 1.5 */
-	-webkit-border-radius-bottomleft: 1em;  /* safari 3 */
-	-khtml-border-radius-bottomleft: 1em;   /* Konqueror */
-	border-radius-bottomleft: 1em;          /* CSS3 */
 }
 
 
@@ -559,12 +543,7 @@ div.alterator-accordion h3.ui-state-active {
 #top {
 	text-align:left;
 	background: url(/design/images/gradient-top.png) 0% 0% repeat-x;
-
 	padding: 0.25em;
-	-moz-border-radius: 0.5em;
-	-webkit-border-radius: 0.5em;
-	-khtml-border-radius: 0.5em;
-	border-radius: 0.5em;
 }
 
 #product-logo {
