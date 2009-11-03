@@ -24,8 +24,6 @@ BuildRequires: ImageMagick fontconfig bc libGConf-devel
 %define status_en Prototype
 %define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master altlinux-gnome-desktop
 
-Packager: Anton V. Boyarshinov <boyarsh at altlinux dot org>
-
 Source: branding.tar
 
 Group: Graphics
@@ -66,7 +64,6 @@ This package contains graphics for boot process
 Summary: Design for alterator for %Brand %Theme 
 License: GPL
 Group: System/Configuration/Other
-Packager: Anton V. Boyarshiniv <boyarsh@altlinux.org>
 Provides: design-alterator-browser-%theme  branding-alt-%theme-browser-qt branding-altlinux-%theme-browser-qt
 Provides: alterator-icons design-alterator design-alterator-%theme
 Obsoletes:  branding-alt-%theme-browser-qt  branding-altlinux-%theme-browser-qt 
@@ -99,9 +96,7 @@ This package contains some graphics for ALT design.
 %package release
 
 Summary: %distribution %Theme release file
-Copyright: GPL
 Group: System/Configuration/Other
-Packager: Anton V. Boyarshinov <boyarsh@altlinux.org>
 Provides: %(for n in %provide_list; do echo -n "$n-release = %version-%release "; done) altlinux-release-%theme  branding-alt-%theme-release
 Obsoletes: %obsolete_list  branding-alt-%theme-release
 Conflicts: %conflicts_list
