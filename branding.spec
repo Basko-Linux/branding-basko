@@ -87,6 +87,7 @@ Provides: design-graphics-%theme  branding-alt-%theme-graphics
 Obsoletes:  branding-alt-%theme-graphics design-graphics-%theme
 PreReq(post,preun): alternatives >= 0.2
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-graphics ";done )
+Conflicts: design-graphics-default
 
 %description graphics
 This package contains some graphics for ALT design.
