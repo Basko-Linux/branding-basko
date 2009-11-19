@@ -104,3 +104,7 @@ QListView, QTreeView {
 QListView::item:hover, QTreeView::item:hover {
     background-color: #D4E3FC;
 }
+
+#splash_screen QLineEdit {
+    border-style: none;
+}
