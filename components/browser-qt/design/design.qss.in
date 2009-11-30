@@ -1,4 +1,4 @@
-/* Customize any plain widget that is a child of a QMainWindow. */
+
 .AWizardFace {
     border-style: none;
     background-image: url(:/design/bg.png);
@@ -6,29 +6,101 @@
     background-repeat: no-repeat
 }
 
+AWizardFace > QScrollArea {
+    border-width: 2px;
+    border-color: #5175AE;
+    border-style: solid;
+    border-radius: 5;
+    background-color: rgba(234, 232, 226, 50%);
+}
+
 .ACenterFace {
     border-style: none;
-    }
+}
 
 .ACenterFace #modules_view {
     background-color: white;
 }
 
-/* Nice WindowsXP-style password character for password line edits. */
+.ACenterFace #modules_view QToolButton:hover {
+    border-width: 1px;
+    border-color: #5175AE;
+    border-style: solid;
+    background-color: white;
+    border-radius: 5;
+}
+
+.AWizardFaceStepList {
+    border-style: none;
+    border-top-right-radius: 1ex;
+    border-bottom-right-radius: 1ex;
+    background-image: url(:/design/bg-steplist.png);
+}
+
+.AWizardFaceStepList QLabel {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+/* Nice WindowsXP-style password character */
 QLineEdit[echoMode="2"] {
     lineedit-password-character: 9679;
 }
 
-
-/* Customize tooltips. */
 QToolTip {
-    background-color: rgb(@MIDDLE_COLOR_DEC@);
-    border-color: darkslategray;
-    border-width: 1px;
-    border-style: solid;
-    padding: 3px;
-    font: bold;
+    border: 2px solid #5175AE;
+    padding: 5px;
     border-radius: 3px;
     opacity: 200;
 }
 
+QPushButton {
+    background-color: #BDD3EE;
+    border-width: 2px;
+    border-color: #5175AE;
+    border-style: solid;
+    border-radius: 5;
+    padding: 3px;
+    min-width: 9ex;
+    min-height: 2.5ex;
+}
+
+QPushButton:hover {
+   background-color: #CAE2FF;
+}
+
+QPushButton:pressed {
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: #CAE2FF;
+}
+
+QRadioButton, QCheckBox {
+    border-style: none;
+    border-radius: 3px;
+}
+
+QRadioButton:hover, QCheckBox:hover {
+    background-color: #B0C7F3;
+}
+
+QLineEdit {
+    border-width: 2px;
+    padding: 1px;
+    border-style: solid;
+    border-color: #5175AE;
+    border-radius: 5px;
+}
+
+QLineEdit:focus {
+    border-width: 3px;
+    padding: 0px;
+}
+
+QListView, QTreeView {
+    show-decoration-selected: 1;
+}
+
+QListView::item:hover, QTreeView::item:hover {
+    background-color: #D4E3FC;
+}

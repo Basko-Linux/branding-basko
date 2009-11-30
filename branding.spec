@@ -7,7 +7,11 @@
 
 Name: branding-%brand-%theme
 Version: 5.0.0
+<<<<<<< HEAD:branding.spec
 Release: alt17
+=======
+Release: alt25.1
+>>>>>>> 445c878... - update alterator-browser-qt:branding.spec
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu

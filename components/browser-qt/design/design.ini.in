@@ -1,4 +1,4 @@
-Palette\active=#141312, #e8e7e6, #ffffff, #ebebea, #6d6c6b, #b7b5b3, #141312, #ffffff, #141312, #ffffff, #e0dfde, #3d3c3c, #@MIDDLE_COLOR_HEX@, #ffffff, #0057ae, #644a9b, #f8f7f6, #000000, #aed4a1, #141312
-Palette\inactive=#141312, #e8e7e6, #ffffff, #ebebea, #6d6c6b, #b7b5b3, #141312, #ffffff, #141312, #ffffff, #e0dfde, #3d3c3c, #@MIDDLE_COLOR_HEX@, #ffffff, #0057ae, #644a9b, #f8f7f6, #000000, #aed4a1, #141312
- Palette\disabled=#929190, #dedcdb, #ffffff, #e2e1e0, #686766, #b0aeac, #a5a4a4,  #ffffff, #979695, #f4f4f4, #d6d5d3, #3c3b3b, #d6d5d3, #929190, #97bcdf, #c1b6d7,  #eeece9, #000000, #aed4a1, #141312
 
+Palette\active=#141312, #c8d1e0, #d4dcf0, #b5c5e6, #3e5985, #7599d7, #141312, #ffffff, #141312, #ffffff, #a3b7e1, #273853, #418bd4, #ffffff, #0057ae, #644a9b, #f8f7f6, #000000, #c0daff, #141312
+Palette\inactive=#141312, #c8d1e0, #d4dcf0, #b5c5e6, #3e5985, #7599d7, #141312, #ffffff, #141312, #ffffff, #a3b7e1, #273853, #418bd4, #ffffff, #0057ae, #644a9b, #f8f7f6, #000000, #c0daff, #141312
+Palette\disabled=#6c7891, #bcc8da, #c8d3ec, #aabce3, #3b557f, #6a92d5, #a5a4a4, #ffffff, #838891, #f4f4f4, #97afde, #263651, #97afde, #6c7891, #97bcdf, #c1b6d7, #eeece9, #000000, #c0daff, #141312
