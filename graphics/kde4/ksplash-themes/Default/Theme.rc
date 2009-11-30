@@ -1,0 +1,9 @@
+[KSplash Theme: Default]
+Name = ALT Linux
+Description = ALT Linux default splash screen
+Version = 1.0
+Author = Nuno Pinheiro <nuno@oxygen-icons.org>, Riccardo Iaconelli <riccardo@kde.org>, Marco Martin <notmart@gmail.com> and Sergey V Turchin <zerg@altlinux.org>
+Homepage = http://www.altlinux.org
+
+# Theme behaviour settings.
+Engine = KSplashX
