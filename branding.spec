@@ -22,7 +22,7 @@ BuildRequires: ImageMagick fontconfig bc libGConf-devel
 %define Theme Desktop
 %define status ПРОТОТИП
 %define status_en Prototype
-%define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master altlinux-gnome-desktop
+%define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master school-junior school-lite school-server altlinux-gnome-desktop altlinux-kdesktop  ivk-chainmail simply-linux 
 
 Source: branding.tar
 
