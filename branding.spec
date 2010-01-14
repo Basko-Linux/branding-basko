@@ -326,6 +326,7 @@ popd
 #bootloader
 %pre bootloader
 [ -s /usr/share/gfxboot/%theme ] && rm -fr  /usr/share/gfxboot/%theme ||:
+[ -s /boot/splash/%theme ] && rm -fr  /boot/splash/%theme ||:
 
 %post bootloader
 %__ln_s -nf %theme/message /boot/splash/message
@@ -350,9 +351,6 @@ echo $lang > lang
 /boot/splash/%theme
 
 #bootsplash
-%pre bootloader
-[ -s /boot/splash/%theme ] && rm -fr  /boot/splash/%theme ||:
-
 %post bootsplash
 %__ln_s -nf %theme %_sysconfdir/bootsplash/themes/current
 
