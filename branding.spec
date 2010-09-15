@@ -35,7 +35,7 @@ Distro-specific packages with design and texts
 
 %package bootloader
 Group: System/Configuration/Boot and Init
-Summary: Graphical boot logo for lilo and syslinux
+Summary: Graphical boot logo for grub2, lilo and syslinux
 License: GPL
 
 PreReq: coreutils
@@ -43,6 +43,9 @@ Provides: design-bootloader-system-%theme design-bootloader-livecd-%theme design
 
 Obsoletes: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-bootloader ";done )
+
+%define %grub_normal white/black
+%define %grub_high black/white
 
 %description bootloader
 Here you find the graphical boot logo. Suitable for both lilo and syslinux.
@@ -335,7 +338,9 @@ lang=$(echo $LANG | cut -d. -f 1)
 cd boot/splash/%theme/
 echo $lang > lang
 [ "$lang" = "C" ] || echo lang | cpio -o --append -F message
-
+. shell-config
+shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_NORMAL %grub_normal
+shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_HIGHLIGHT %grub_high
 
 
 %preun bootloader
