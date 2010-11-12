@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=@NAME@
+Description=Script for @BRAND_FNAME@ @NAME@
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/@THEME@
+ScriptFile=/usr/share/plymouth/themes/@THEME@/theme.script

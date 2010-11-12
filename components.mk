@@ -29,15 +29,16 @@ boot:
 	cp -a components/bootloader/gfxboot.cfg design-bootloader-source/data-install/
 	cp -a components/bootloader/gfxboot.cfg design-bootloader-source/data-boot/
 	for size in 1024x768 800x600 640x480; do \
-		convert images/boot.jpg -resize "$$size!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' boot-$$size.jpg ;\
-		cp -al boot-$$size.jpg components/bootsplash/images/silent-$$size.jpg ;\
-		convert -resize "$$size!" images/console.jpg components/bootsplash/images/bootsplash-$$size.jpg;\
+		convert images/boot.jpg -quality 97 -resize "$$size!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' boot-$$size.jpg ;\
 	done
 	cp -al boot-800x600.jpg design-bootloader-source/data-boot/back.jpg
 	cp -al boot-800x600.jpg design-bootloader-source/data-install/back.jpg
 #bootsplash
-	mkdir -p $(sysconfdir)/bootsplash/themes/$(THEME)
-	cp -a components/bootsplash/* $(sysconfdir)/bootsplash/themes/$(THEME)
+	mkdir -p $(datadir)/plymouth/themes/$(THEME)
+	cp -al boot-800x600.jpg $(datadir)/plymouth/themes/$(THEME)/grub.jpg
+	cp -al wallpaper.png $(datadir)/plymouth/themes/$(THEME)/
+	cp -a components/bootsplash/* $(datadir)/plymouth/themes/$(THEME)
+	mv $(datadir)/plymouth/themes/$(THEME)/theme.plymouth $(datadir)/plymouth/themes/$(THEME)/$(THEME).plymouth
 #bootloader
 	DEFAULT_LANG='--lang-to-subst--' PATH=$(PATH):/usr/sbin make -C design-bootloader-source
 	install -d -m 755  $(sysconfdir)/../boot/splash/$(THEME)
