@@ -36,8 +36,7 @@
   <h2>In Internet</h2>
   <ul>
    <li><a href="http://www.altlinux.ru/">Official ALT Linux website</a></li>
-   <li><a href="http://faq.altlinux.ru/">Frequently Asked QUestion</a></li>
-   <li><a href="http://search.altlinux.ru/">Search on ALT Linux websites</a></li>
+   <li><a href="http://search.altlinux.org/">Search on ALT Linux websites</a></li>
    <li><a href="http://www.altlinux.ru/online_help/users_mailing_lists.html">Mailing lists</a></li>
    <li><a href="http://forum.altlinux.org/">ALT Linux Forum</a></li>
    <li><a href="http://support.altlinux.ru/">Technical support</a></li>
@@ -53,7 +52,7 @@
 
 </div>
 
-<p class="footer"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2008. All rights reserved.<br />
+<p class="footer"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2010. All rights reserved.<br />
   Address: 5th Donskoy proezd, 15/11, Moscow<br />
   Phone/Fax: +7 (495) 662-3883
 </p>

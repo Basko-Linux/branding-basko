@@ -26,30 +26,19 @@
 </div>
 
 <div class="box">
-  <p>Добро пожаловать в <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>. Дистрибутив настроен и готов к работе, можно приступать. Мы надеемся, что наша работа будет для Вас полезной.</p>
+  <p>Добро пожаловать в <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>. Обратите внимание: данный дистрибутив создан с использованием нестабильной ветки разработки Sisyphus и предназначен для тестирования опытными пользователями и разработчиками. Вы предупреждены.</p>
 
-  <h2>Документация</h2>
-  <ul>
-    <li><a href="../@DOCDIR@/index.html">Руководство пользователя</a></li>
-  </ul>
-
-  <h2>Информация в Интернете</h2>
-  <ul>
-   <li><a href="http://www.altlinux.ru/">Сайт компании ALT Linux</a></li>
-   <li><a href="http://faq.altlinux.ru/">Ответы на часто задаваемые вопросы</a></li>
-   <li><a href="http://search.altlinux.ru/">Поиск информации по ALT Linux</a></li>
-   <li><a href="http://www.altlinux.ru/online_help/users_mailing_lists.html">Списки рассылки</a></li>
-   <li><a href="http://forum.altlinux.org/">Форум пользователей ALT Linux</a></li>
-   <li><a href="http://support.altlinux.ru/">Техническая поддержка через веб-сайт</a></li>
-  </ul>
+  <p>Этот дистрибутив не появился бы без активного участия ALT Linux Team &mdash; сообщества разработчиков свободного программного обеспечения.</p>
 
   <h2>ALT Linux Team</h2>
-  <p>Этот дистрибутив не появился бы без активного участия ALT Linux Team &mdash; сообщества разработчиков свободного программного обеспечения.</p>
   <ul>
-    <li><a href="http://www.altlinux.org/">Wiki сообщества</a></li>
-    <li><a href="http://backports.altlinux.org/">Backports</a></li>
-    <li><a href="http://bugs.altlinux.org/">Сообщить об ошибке</a></li>
+   <li><a href="http://search.altlinux.org/">Поиск информации по ALT Linux</a></li>
+   <li><a href="http://www.altlinux.org/">Wiki сообщества</a></li>
+   <li><a href="http://forum.altlinux.org/">Форум пользователей ALT Linux</a></li>
+   <li><a href="http://lists.altlinux.org/">Списки рассылки</a></li>
+   <li><a href="http://bugs.altlinux.org/">Сообщить об ошибке</a></li>
   </ul>
+
 </div>
 
 <p class="footer"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2008. Все права защищены.<br />
