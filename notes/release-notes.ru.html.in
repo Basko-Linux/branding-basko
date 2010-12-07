@@ -5,16 +5,7 @@
 	<TITLE></TITLE>
 </HEAD>
 <BODY>
-<H2>Благодарим Вас за
-тестирование @BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@!</H2>
+<H2>Дистрибутив @BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@ предположительно установлен и, надеемся, загрузится.</H2>
 
-<p>Центр управления доступен через Веб</p>
-<h1>Спокойной плазмы! ;)</h1>
-<!-- address1 -->
-<!-- address2 -->
-<!-- address3 -->
-<!-- address4 -->
-<!-- address5 -->
-<!-- address6 -->
 </BODY>
 </HTML>

@@ -26,27 +26,16 @@
 </div>
 
 <div class="box">
-  <p align="justify">Welcome to <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>. The distribution is set up and ready to use, you may proceed. We hope that results of our work will be of use to you.</p>
+  <p align="justify">Welcome to <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>.  Please note that this distribution is created on top of unstable development branch named Sisyphus, requires to know what you're doing and is aimed at experienced users and developers.  You have been warned.</p>
 
-  <h2>Documentation</h2>
-  <ul>
-   <li><a href="../@DOCDIR@/index.html">User manual</a></li>
-  </ul>
-
-  <h2>In Internet</h2>
-  <ul>
-   <li><a href="http://www.altlinux.ru/">Official ALT Linux website</a></li>
-   <li><a href="http://search.altlinux.org/">Search on ALT Linux websites</a></li>
-   <li><a href="http://www.altlinux.ru/online_help/users_mailing_lists.html">Mailing lists</a></li>
-   <li><a href="http://forum.altlinux.org/">ALT Linux Forum</a></li>
-   <li><a href="http://support.altlinux.ru/">Technical support</a></li>
-  </ul>
+  <p align="justify">This distribution would never be accomplished without active efforts put forth by ALT Linux Team&nbsp;&mdash; a community of free/libre software developers.</p>
 
   <h2>ALT Linux Team</h2>
-  <p align="justify">This distribution would never be accomplished without active efforts put by ALT Linux Team&nbsp;&mdash; a community of free/libre software developers.</p>
   <ul>
+   <li><a href="http://search.altlinux.org/">Search on ALT Linux websites</a></li>
    <li><a href="http://www.altlinux.org/">Community Wiki</a></li>
-   <li><a href="http://backports.altlinux.org/">Backports</a></li>
+   <li><a href="http://lists.altlinux.org/">Mailing lists</a></li>
+   <li><a href="http://forum.altlinux.org/">ALT Linux Forum</a></li>
    <li><a href="http://bugs.altlinux.org/">Report a bug</a></li>
   </ul>
 

@@ -26,30 +26,16 @@
 </div>
 
 <div class="box">
-  <p>Ласкаво просимо до <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>. Дистрибутив налаштований та готовий до роботи, можна починати. Ми сподіваємось, що наша праця буде для Вас корисною.</p>
+  <p>Ласкаво просимо до <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>. Зверніть увагу: цей дистрибутив було створено із використанням нестабільної гілки розробки Sisyphus для досвідчених користувачів та розробників, він вимагає розуміння того, що робиться.  Вас попереджено.</p>
 
-  <h2>Документація (рос.)</h2>
-  <ul>
-    <li><a href="../@DOCDIR@/index.html">Посібник користувача</a></li>
-  </ul>
-
-  <h2>Інформація в Інтернеті</h2>
-  <ul>
-   <li><a href="http://www.altlinux.ru/">Сайт компанії ALT Linux</a></li>
-   <li><a href="http://faq.altlinux.ru/">Відповіді на часті запитання</a></li>
-   <li><a href="http://search.altlinux.ru/">Пошук інформації по ALT Linux</a></li>
-   <li><a href="http://www.altlinux.ru/online_help/users_mailing_lists.html">Списки розсилання</a></li>
-   <li><a href="http://forum.altlinux.org">Форум користувачів ALT Linux</a></li>
-   <li><a href="http://support.altlinux.ru/">Технічна підтримка через веб-сайт</a></li>
-   <li><a href="http://www.magic.kiev.ua/">Підтримка та рішення в Україні</a></li>
-  </ul>
+  <p>Цей дистрибутив не міг би з'явитися без активної участі ALT Linux Team &mdash; спільноти розробників вільного програмного забезпечення.</p>
 
   <h2>ALT Linux Team</h2>
-  <p>Цей дистрибутив не міг би з'явитися без активної участі ALT Linux Team &mdash; спільноти розробників вільного програмного забезпечення.</p>
   <ul>
-   <li><a href="http://www.altlinux.org/">Wiki спільноти</a> (<a
-	 href="http://uk.altlinux.org/">українською</a>)</li>
-   <li><a href="http://backports.altlinux.org/">Backports</a></li>
+   <li><a href="http://search.altlinux.ru/">Пошук інформації по ALT Linux</a></li>
+   <li><a href="http://www.altlinux.org/">Wiki спільноти</a> (<a href="http://uk.altlinux.org/">українською</a>)</li>
+   <li><a href="http://lists.altlinux.org/">Списки розсилання</a></li>
+   <li><a href="http://forum.altlinux.org">Форум користувачів ALT Linux</a></li>
    <li><a href="http://bugs.altlinux.org/">Повідомити про помилку</a></li>
   </ul>
 
