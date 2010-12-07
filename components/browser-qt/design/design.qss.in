@@ -8,7 +8,7 @@
 
 AWizardFace > QScrollArea {
     border-width: 2px;
-    border-color: #5175AE;
+    border-color: #c1c1b8;
     border-style: solid;
     border-radius: 5;
     background-color: rgba(234, 232, 226, 50%);
@@ -24,7 +24,7 @@ AWizardFace > QScrollArea {
 
 .ACenterFace #modules_view QToolButton:hover {
     border-width: 1px;
-    border-color: #5175AE;
+    border-color: #c1c1b8;
     border-style: solid;
     background-color: white;
     border-radius: 5;
@@ -48,16 +48,16 @@ QLineEdit[echoMode="2"] {
 }
 
 QToolTip {
-    border: 2px solid #5175AE;
+    border: 2px solid #c1c1b8;
     padding: 5px;
     border-radius: 3px;
     opacity: 200;
 }
 
 QPushButton {
-    background-color: #BDD3EE;
+    background-color: #e9e6dc;
     border-width: 2px;
-    border-color: #5175AE;
+    border-color: #c1c1b8;
     border-style: solid;
     border-radius: 5;
     padding: 3px;
@@ -66,13 +66,13 @@ QPushButton {
 }
 
 QPushButton:hover {
-   background-color: #CAE2FF;
+   background-color: #edeae0;
 }
 
 QPushButton:pressed {
     padding-left: 5px;
     padding-top: 5px;
-    background-color: #CAE2FF;
+    background-color: #edeae0;
 }
 
 QRadioButton, QCheckBox {
@@ -81,14 +81,14 @@ QRadioButton, QCheckBox {
 }
 
 QRadioButton:hover, QCheckBox:hover {
-    background-color: #B0C7F3;
+    background-color: #e9dfbe;
 }
 
 QLineEdit {
     border-width: 2px;
     padding: 1px;
     border-style: solid;
-    border-color: #5175AE;
+    border-color: #c1c1b8;
     border-radius: 5px;
 }
 
@@ -102,7 +102,7 @@ QListView, QTreeView {
 }
 
 QListView::item:hover, QTreeView::item:hover {
-    background-color: #D4E3FC;
+    background-color: #f5f2e7;
 }
 
 #splash_screen QLineEdit {

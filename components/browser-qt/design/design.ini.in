@@ -1,4 +1,3 @@
-
-Palette\active=#141312, #c8d1e0, #d4dcf0, #b5c5e6, #3e5985, #7599d7, #141312, #ffffff, #141312, #ffffff, #a3b7e1, #273853, #418bd4, #ffffff, #0057ae, #644a9b, #f8f7f6, #000000, #c0daff, #141312
-Palette\inactive=#141312, #c8d1e0, #d4dcf0, #b5c5e6, #3e5985, #7599d7, #141312, #ffffff, #141312, #ffffff, #a3b7e1, #273853, #418bd4, #ffffff, #0057ae, #644a9b, #f8f7f6, #000000, #c0daff, #141312
-Palette\disabled=#6c7891, #bcc8da, #c8d3ec, #aabce3, #3b557f, #6a92d5, #a5a4a4, #ffffff, #838891, #f4f4f4, #97afde, #263651, #97afde, #6c7891, #97bcdf, #c1b6d7, #eeece9, #000000, #c0daff, #141312
+Palette\active=#000000, #d4d0c8, #ffffff, #e9e7e3, #6a6864, #8d8b85, #000000, #ffffff, #000000, #ffffff, #d2cfc6, #000000, #000080, #ffffff, #0000ff, #ff00ff, #e9e7e3, #000000, #ffffdc, #000000
+Palette\inactive=#000000, #d4d0c8, #ffffff, #f4f0e6, #6a6864, #8d8b85, #000000, #ffffff, #000000, #ffffff, #d2cfc6, #000000, #000080, #ffffff, #0000ff, #ff00ff, #e9e7e3, #000000, #ffffdc, #000000
+Palette\disabled=#808080, #d4d0c8, #ffffff, #f4f0e6, #6a6864, #8d8b85, #808080, #ffffff, #808080, #ffffff, #d2cfc6, #000000, #000080, #ffffff, #0000ff, #ff00ff, #e9e7e3, #000000, #ffffdc, #000000
