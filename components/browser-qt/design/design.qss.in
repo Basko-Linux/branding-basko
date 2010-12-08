@@ -55,7 +55,7 @@ QToolTip {
 }
 
 QPushButton {
-    background-color: #e9e6dc;
+    background-color: #eae8e2;
     border-width: 2px;
     border-color: #c1c1b8;
     border-style: solid;
@@ -81,7 +81,7 @@ QRadioButton, QCheckBox {
 }
 
 QRadioButton:hover, QCheckBox:hover {
-    background-color: #e9dfbe;
+    background-color: #edeae0;
 }
 
 QLineEdit {
@@ -102,7 +102,7 @@ QListView, QTreeView {
 }
 
 QListView::item:hover, QTreeView::item:hover {
-    background-color: #f5f2e7;
+    background-color: #c6c6be;
 }
 
 #splash_screen QLineEdit {
