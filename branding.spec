@@ -22,7 +22,7 @@ BuildRequires: ImageMagick fontconfig bc libGConf-devel
 %define Theme Desktop
 %define status ПРОТОТИП
 %define status_en Prototype
-%define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master school-junior school-lite school-server altlinux-gnome-desktop altlinux-kdesktop  ivk-chainmail simply-linux 
+%define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master school-junior school-lite school-server altlinux-gnome-desktop altlinux-kdesktop ivk-chainmail simply-linux sisyphus-server-light altlinux-sisyphus
 
 Source: branding.tar
 
@@ -44,8 +44,8 @@ Provides: design-bootloader-system-%theme design-bootloader-livecd-%theme design
 Obsoletes: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-bootloader ";done )
 
-%define %grub_normal white/black
-%define %grub_high black/white
+%define grub_normal white/black
+%define grub_high black/white
 
 %description bootloader
 Here you find the graphical boot logo. Suitable for both lilo and syslinux.
@@ -346,7 +346,7 @@ shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_HIGHLIGHT %grub_high
 %preun bootloader
 [ $1 = 0 ] || exit 0
 [ "`readlink /boot/splash/message`" != "%theme/message" ] ||
-    %__rm -f /boot/splash/message
+    rm -f /boot/splash/message
 
 %post indexhtml
 %_sbindir/indexhtml-update
@@ -357,12 +357,12 @@ shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_HIGHLIGHT %grub_high
 
 #bootsplash
 %post bootsplash
-%__ln_s -nf %theme %_sysconfdir/bootsplash/themes/current
+ln -snf %theme %_sysconfdir/bootsplash/themes/current
 
 %preun bootsplash
 [ $1 = 0 ] || exit 0
 [ "`readlink %_sysconfdir/bootsplash/themes/current`" != %theme ] ||
-    %__rm -f %_sysconfdir/bootsplash/themes/current
+    rm -f %_sysconfdir/bootsplash/themes/current
 
 %post xfce-settings
 cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
