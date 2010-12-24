@@ -1,2 +1,4 @@
 #!/bin/sh
-oocalc $@ || gnumeric $@
+localc="localc"
+gnumeric="gnumeric"
+$localc $@ || $gnumeric $@

@@ -1,2 +1,4 @@
 #!/bin/sh
-oowriter $@ || abiword $@
+lowriter="lowriter"
+abiword="abiword"
+$lowriter $@ || $abiword $@
