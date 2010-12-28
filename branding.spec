@@ -6,7 +6,7 @@
 
 
 Name: branding-%brand-%theme
-Version: 20101209
+Version: 20101228
 Release: alt1
 BuildArch: noarch
 
@@ -55,17 +55,10 @@ Suitable for grub2, lilo and syslinux.
 %package bootsplash
 Summary: Theme for splash animations during bootup
 License: Distributable
-<<<<<<< HEAD
-Group: System/Configuration/Boot and Init
-Provides: design-bootsplash design-bootsplash-%theme branding-alt-%theme-bootsplash
-Requires: bootsplash >= 3.3
-Obsoletes: branding-alt-%theme-bootsplash
-=======
 Group:  System/Configuration/Boot and Init
 Provides: plymouth-theme-%theme
 Requires: plymouth-plugin-script
 PreReq: plymouth
->>>>>>> b44341c... bootsplash changed to plymouth
 
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-bootsplash ";done )
 %description bootsplash
@@ -376,14 +369,6 @@ shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_HIGHLIGHT %grub_high
 
 #bootsplash
 %post bootsplash
-<<<<<<< HEAD
-ln -snf %theme %_sysconfdir/bootsplash/themes/current
-
-%preun bootsplash
-[ $1 = 0 ] || exit 0
-[ "`readlink %_sysconfdir/bootsplash/themes/current`" != %theme ] ||
-    rm -f %_sysconfdir/bootsplash/themes/current
-=======
 subst "s/Theme=.*/Theme=%theme/" /etc/plymouth/plymouthd.conf
 [ -f /etc/sysconfig/grub2 ] && \
       subst "s|GRUB_WALLPAPER=.*|GRUB_WALLPAPER=/usr/share/plymouth/themes/%theme/grub.jpg|" \
@@ -392,7 +377,6 @@ subst "s/Theme=.*/Theme=%theme/" /etc/plymouth/plymouthd.conf
 %post gnome-settings
 %gconf2_set string /desktop/gnome/interface/font_name Sans 11
 %gconf2_set string /desktop/gnome/interface/monospace_font_name Monospace 10
->>>>>>> b44341c... bootsplash changed to plymouth
 
 %post xfce-settings
 cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
@@ -457,6 +441,10 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Tue Dec 28 2010 Anton V. Boyarshinov <boyarsh@altlinux.ru> 20101228-alt1
+- bootsplash->plymouth
+- OO.o->libreoffice
+
 * Thu Dec 09 2010 Michael Shigorin <mike@altlinux.org> 20101209-alt1
 - initial Sisyphus-specific adaptation,
   including custom texts, background and colour scheme
