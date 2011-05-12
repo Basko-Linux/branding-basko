@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 20101228
-Release: alt1
+Release: alt2
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -441,6 +441,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Thu May 12 2011 Michael Shigorin <mike@altlinux.org> 20101228-alt2
+- dropped R: altlinux-menus (closes: #25565)
+
 * Tue Dec 28 2010 Anton V. Boyarshinov <boyarsh@altlinux.ru> 20101228-alt1
 - bootsplash->plymouth
 - OO.o->libreoffice
