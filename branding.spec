@@ -6,8 +6,8 @@
 
 
 Name: branding-%brand-%theme
-Version: 20101228
-Release: alt2
+Version: 20110706
+Release: alt1
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -441,6 +441,10 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Wed Jul 06 2011 Michael Shigorin <mike@altlinux.org> 20110706-alt1
+- rebuilt against current design-bootloader-source
+  (syslinux-3.86 support)
+
 * Thu May 12 2011 Michael Shigorin <mike@altlinux.org> 20101228-alt2
 - dropped R: altlinux-menus (closes: #25565)
 
