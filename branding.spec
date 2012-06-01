@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 20110706
-Release: alt1
+Release: alt2
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -56,7 +56,7 @@ Suitable for grub2, lilo and syslinux.
 Summary: Theme for splash animations during bootup
 License: Distributable
 Group:  System/Configuration/Boot and Init
-Provides: plymouth-theme-%theme
+Provides: plymouth-theme-%theme plymouth(system-theme)
 Requires: plymouth-plugin-script
 PreReq: plymouth
 
@@ -441,6 +441,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Fri Jun 01 2012 Michael Shigorin <mike@altlinux.org> 20110706-alt2
+- bootsplash subpackage provides plymouth(system-theme)
+
 * Wed Jul 06 2011 Michael Shigorin <mike@altlinux.org> 20110706-alt1
 - rebuilt against current design-bootloader-source
   (syslinux-3.86 support)
