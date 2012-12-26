@@ -2,7 +2,7 @@
 .AWizardFace {
     border-style: none;
     background-image: url(:/design/bg.png);
-    background-position: bottom right;
+    background-position: top right;
     background-repeat: no-repeat
 }
 
