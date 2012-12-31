@@ -19,15 +19,7 @@ AWizardFace > QScrollArea {
 }
 
 .ACenterFace #modules_view {
-    background-color: white;
-}
-
-.ACenterFace #modules_view QToolButton:hover {
-    border-width: 1px;
-    border-color: #c1c1b8;
-    border-style: solid;
-    background-color: white;
-    border-radius: 5;
+    background-color: #edeae0;
 }
 
 .AWizardFaceStepList {
@@ -55,6 +47,7 @@ QToolTip {
 }
 
 QPushButton {
+    color: black;
     background-color: #eae8e2;
     border-width: 2px;
     border-color: #c1c1b8;
