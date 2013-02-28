@@ -23,6 +23,7 @@ AC_SUBST(BRAND_FNAME)
 AC_SUBST(STATUS)
 AC_SUBST(STATUS_EN)
 AC_SUBST(VERSION)
+AC_SUBST(CODENAME)
 AC_SUBST(DOCDIR)
 AC_SUBST(PROGRESS_COLOR)
 AC_SUBST(LIGHT_COLOR_HEX)
@@ -59,5 +60,6 @@ AC_CONFIG_FILES([
 		 components/ahttpd/styles/alterator.css
 		 kde3-styles-splash/Theme.rc
 		 xfce-settings/xinitrc
+		 components/systemd/os-release
 ])
 AC_OUTPUT

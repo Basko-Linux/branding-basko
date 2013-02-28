@@ -219,8 +219,7 @@ ALT Linux index.html welcome page.
 
 %build
 autoconf
-THEME=%theme NAME='%Theme' BRAND_FNAME='%Brand' BRAND='%brand' STATUS_EN='%status_en' STATUS='%status' VERSION='%version' ./configure
-LC_ALL=en_US.UTF-8 make
+THEME=%theme NAME='%Theme' BRAND_FNAME='%Brand' BRAND='%brand' STATUS_EN=%status_en STATUS=%status VERSION=%version CODENAME=%codename ./configure
 
 %install
 %makeinstall
@@ -258,6 +257,7 @@ install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%
 for n in fedora redhat system alt; do
 	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
 done
+install -pD -m644 components/systemd/os-release %buildroot%_sysconfdir/os-release
 
 #notes
 pushd notes
@@ -401,7 +401,7 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %_datadir/plymouth/themes/%theme/*
 
 %files release
-%_sysconfdir/*-*
+%_sysconfdir/*-release
 %_sysconfdir/buildreqs/packages/ignore.d/*
 
 %files notes
