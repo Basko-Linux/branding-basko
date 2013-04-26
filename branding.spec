@@ -1,12 +1,12 @@
-%define theme sisyphus
-%define Theme Sisyphus
+%define theme p7
+%define Theme p7
 %define codename %nil
 %define brand altlinux
 %define Brand ALT Linux
 
 
 Name: branding-%brand-%theme
-Version: 20130322
+Version: 20130427
 Release: alt1
 BuildArch: noarch
 
@@ -20,10 +20,9 @@ BuildRequires: libqt4-devel
 BuildRequires: ImageMagick fontconfig bc libGConf-devel
 BuildRequires: fribidi
 
-%define Theme Sisyphus
-%define status unstable
-%define status_en unstable
-%define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master school-junior school-lite school-server altlinux-gnome-desktop altlinux-kdesktop ivk-chainmail simply-linux sisyphus-server-light altlinux-sisyphus
+%define status %nil
+%define status_en %nil
+%define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master school-junior school-lite school-server altlinux-gnome-desktop altlinux-kdesktop ivk-chainmail simply-linux sisyphus-server-light altlinux-sisyphus altlinux-p7
 
 Source: branding.tar
 
@@ -237,7 +236,6 @@ __EOF__
 install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%name-release
 {
 	echo -n "%distribution"
-	[ "%status_en" = "unstable" ] || echo -n " %version"	# FIXME: kludgery :-/
 	[ -n "%Theme" ] && echo -n " %Theme"
 	[ -n "%status_en" ] && {
 		[ "%status_en" = "unstable" ] \
@@ -440,6 +438,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Sat Apr 27 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt1
+- adapted for p7/branch
+
 * Fri Mar 22 2013 Michael Shigorin <mike@altlinux.org> 20130322-alt1
 - rebuilt upon d-b-s with Kazakh translation
 
