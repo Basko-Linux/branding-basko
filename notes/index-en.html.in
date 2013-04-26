@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</title>
+  <title>@BRAND_FNAME@ @NAME@ @STATUS@</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="box">
-  <p align="justify">Welcome to <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>.  Please note that this distribution is created on top of unstable development branch named Sisyphus, requires to know what you're doing and is aimed at experienced users and developers.  You have been warned.</p>
+  <p align="justify">Welcome to <nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr>.  Please note that this distribution is created for experienced users who would like a convenient image to start off.</p>
 
   <p align="justify">This distribution would never be accomplished without active efforts put forth by ALT Linux Team&nbsp;&mdash; a community of free/libre software developers.</p>
 
@@ -41,7 +41,7 @@
 
 </div>
 
-<p class="footer"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2010. All rights reserved.<br />
+<p class="footer"><nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2013. All rights reserved.<br />
   Address: 5th Donskoy proezd, 15/11, Moscow<br />
   Phone/Fax: +7 (495) 662-3883
 </p>

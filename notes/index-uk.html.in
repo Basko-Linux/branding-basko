@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</title>
+  <title>@BRAND_FNAME@ @NAME@ @STATUS@</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="box">
-  <p>Ласкаво просимо до <nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr>. Зверніть увагу: цей дистрибутив було створено із використанням нестабільної гілки розробки Sisyphus для досвідчених користувачів та розробників, він вимагає розуміння того, що робиться.  Вас попереджено.</p>
+  <p>Ласкаво просимо до <nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr>. Зверніть увагу: цей дистрибутив було створено для досвідчених користувачів, котрим треба зручний початковий образ.</p>
 
   <p>Цей дистрибутив не міг би з'явитися без активної участі ALT Linux Team &mdash; спільноти розробників вільного програмного забезпечення.</p>
 
@@ -41,7 +41,7 @@
 
 </div>
 
-<p class="footer"><nobr>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2008. Усі права застережено.<br />
+<p class="footer"><nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2013. Усі права застережено.<br />
    Адреса: м. Москва, 5-й Донський проїзд, 15, буд. 11<br />
    Телефон/факс: +7 (495) 662-3883
 </p>

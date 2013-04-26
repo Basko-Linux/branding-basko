@@ -5,7 +5,7 @@
 	<TITLE></TITLE>
 </HEAD>
 <BODY>
-<H2>Дистрибутив @BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@ предположительно установлен и, надеемся, загрузится.</H2>
+<H2>Дистрибутив на основе @BRAND_FNAME@ @NAME@ @STATUS@ установлен.</H2>
 
 </BODY>
 </HTML>

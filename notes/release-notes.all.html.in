@@ -3,6 +3,6 @@
     <meta http-equiv="content-type" value="text/html;charset=utf-8"/>
 </head>
 <body>
-    <p>@BRAND_FNAME@ @VERSION@ @NAME@ distribution is supposedly installed and hopefully ready to use.</p>
+    <p>@BRAND_FNAME@ @NAME@ based distribution is installed.</p>
 </body>
 </html>
