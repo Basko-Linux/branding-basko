@@ -1,11 +1,32 @@
 # This is an example plymouth plugin script
 
-#Window.SetBackgroundTopColor(0.234, 0.43, 0.705);
-#Window.SetBackgroundBottomColor(0.16, 0.25, 0.44);
+# borrowed from Centaurus theme
 
-logo.image = Image("wallpaper.png");
+fun imgscale( image, scale )
+{
+   image.Scale( image.GetWidth() * scale, image.GetHeight() * scale );
+}
+
+fun imgscale2( image, scaleX, scaleY )
+{
+   image.Scale( image.GetWidth() * scaleX, image.GetHeight() * scaleY );
+}
+
+# background
+if( Window.GetWidth()/Window.GetHeight() > 1.5 )
+{
+   logo.raw = Image("background16x9.png");
+}
+else
+{
+   logo.raw = Image("background4x3.png");
+}
+
+logo.image = imgscale2( logo.raw, 
+                        Window.GetWidth()/logo.raw.GetWidth(),
+			Window.GetHeight()/logo.raw.GetHeight());
 logo.sprite = Sprite(logo.image);
-logo.opacity_angle = 0;
+logo.sprite.SetPosition(0, 0, 0);
 
 fun refresh_callback ()
   {
