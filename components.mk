@@ -36,6 +36,7 @@ boot:
 #bootsplash
 	mkdir -p $(datadir)/plymouth/themes/$(THEME)
 	cp -al boot-800x600.jpg $(datadir)/plymouth/themes/$(THEME)/grub.jpg
+	cp -al images/background*x*.png $(datadir)/plymouth/themes/$(THEME)/
 	cp -al images/wallpaper.png $(datadir)/plymouth/themes/$(THEME)/wallpaper.png
 	cp -a components/bootsplash/* $(datadir)/plymouth/themes/$(THEME)
 	mv $(datadir)/plymouth/themes/$(THEME)/theme.plymouth $(datadir)/plymouth/themes/$(THEME)/$(THEME).plymouth
