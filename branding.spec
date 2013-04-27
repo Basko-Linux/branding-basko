@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 20130427
-Release: alt1.M70P.1
+Release: alt1.M70P.2
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -97,8 +97,8 @@ This package contains some graphics for ALT design.
 %define provide_list altlinux fedora redhat system altlinux
 %define obsolete_list altlinux-release fedora-release redhat-release
 %define conflicts_list altlinux-release-sisyphus altlinux-release-4.0 altlinux-release-junior altlinux-release-master altlinux-release-server altlinux-release-terminal altlinux-release-small_business
-%package release
 
+%package release
 Summary: %distribution %Theme release file
 Group: System/Configuration/Other
 Provides: %(for n in %provide_list; do echo -n "$n-release = %version-%release "; done) altlinux-release-%theme branding-alt-%theme-release
@@ -197,6 +197,9 @@ Conflicts: indexhtml-school_master
 Conflicts: indexhtml-school_terminal
 Conflicts: indexhtml-small_business
 Conflicts: indexhtml-school-server
+Conflicts: branding-sisyphus-server-light-indexhtml
+
+Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-indexhtml";done )
 
 Requires: xdg-utils
 Requires(post): indexhtml-common
@@ -438,6 +441,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Sat Apr 27 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt1.M70P.2
+- added missing Conflicts:
+
 * Sat Apr 27 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt1.M70P.1
 - fixed Release: (thx aen@)
 
