@@ -1,13 +1,13 @@
 %define theme p7
 %define Theme p7
-%define codename %nil
+%define codename Trientalis
 %define brand altlinux
 %define Brand ALT Linux
 
 
 Name: branding-%brand-%theme
 Version: 20130427
-Release: alt1
+Release: alt2
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -438,6 +438,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Sat Apr 27 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt2
+- added codename ;-)
+
 * Sat Apr 27 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt1
 - adapted for p7/branch
 
