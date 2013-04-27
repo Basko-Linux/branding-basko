@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 20130427
-Release: alt2
+Release: alt1.M70P.1
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -438,6 +438,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Sat Apr 27 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt1.M70P.1
+- fixed Release: (thx aen@)
+
 * Sat Apr 27 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt2
 - added codename ;-)
 
