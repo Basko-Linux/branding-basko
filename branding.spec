@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 20130427
-Release: alt1.M70P.3
+Release: alt1.M70P.4
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -443,6 +443,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Sun Apr 28 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt1.M70P.4
+- fixed bootloader config for p7/branch
+
 * Sun Apr 28 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt1.M70P.3
 - stuck design-graphics versioning in (for kde4)
 
