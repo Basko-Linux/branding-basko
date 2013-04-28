@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: 20130427
-Release: alt1.M70P.2
+Release: alt1.M70P.3
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -84,6 +84,8 @@ Summary: design for ALT
 License: Different licenses
 Group: Graphics
 
+# FIXME: have a closer look at kdesktop flavour's spec
+Provides: design-graphics = 12.0.0
 Provides: design-graphics-%theme branding-alt-%theme-graphics
 Obsoletes: branding-alt-%theme-graphics design-graphics-%theme
 PreReq(post,preun): alternatives >= 0.2
@@ -441,6 +443,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Sun Apr 28 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt1.M70P.3
+- stuck design-graphics versioning in (for kde4)
+
 * Sat Apr 27 2013 Michael Shigorin <mike@altlinux.org> 20130427-alt1.M70P.2
 - added missing Conflicts:
 
