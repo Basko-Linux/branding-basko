@@ -1,7 +1,7 @@
 # browser-qt
 
 components/browser-qt/design/bg.png: images/installer.png
-	convert $< -resize '800x600!' -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' $@
+	convert $< -resize '800x600!' -fill '#857b7b' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' $@
 
 browser-qt:components/browser-qt/design/bg.png
 	install -d $(datadir)/alterator-browser-qt/design
@@ -29,7 +29,7 @@ boot:
 	cp -a components/bootloader/gfxboot.cfg design-bootloader-source/data-install/
 	cp -a components/bootloader/gfxboot.cfg design-bootloader-source/data-boot/
 	for size in 1024x768 800x600 640x480; do \
-		convert images/boot.jpg -quality 97 -resize "$$size!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' boot-$$size.jpg ;\
+		convert images/boot.jpg -quality 97 -resize "$$size!" -fill '#857b7b' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' boot-$$size.jpg ;\
 	done
 	cp -al boot-800x600.jpg design-bootloader-source/data-boot/back.jpg
 	cp -al boot-800x600.jpg design-bootloader-source/data-install/back.jpg
