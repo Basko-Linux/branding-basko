@@ -214,7 +214,7 @@ ALT Linux index.html welcome page.
 
 %build
 autoconf
-THEME=%theme NAME='%Theme' BRAND_FNAME='%Brand' BRAND='%brand' STATUS_EN=%status_en STATUS=%status VERSION=%version ./configure
+THEME=%theme NAME='%Theme' BRAND_FNAME='%Brand' BRAND='%brand' STATUS_EN='%status_en' STATUS='%status' VERSION='%version' ./configure
 LC_ALL=en_US.UTF-8 make
 
 %install
