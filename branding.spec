@@ -6,7 +6,7 @@
 
 
 Name: branding-%brand-%theme
-Version: 20130610
+Version: 20130924
 Release: alt0.M70P.1
 BuildArch: noarch
 
@@ -443,6 +443,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Tue Sep 24 2013 Michael Shigorin <mike@altlinux.org> 20130924-alt0.M70P.1
+- tweaked notes (thx zerg@)
+
 * Mon Jun 10 2013 Michael Shigorin <mike@altlinux.org> 20130610-alt0.M70P.1
 - starter kit branding
 
