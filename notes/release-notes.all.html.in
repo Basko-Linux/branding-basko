@@ -3,6 +3,6 @@
     <meta http-equiv="content-type" value="text/html;charset=utf-8"/>
 </head>
 <body>
-    <p>@BRAND_FNAME@ @NAME@ based distribution is installed.</p>
+    <p>@BRAND_FNAME@ @NAME@ based operating system is installed.</p>
 </body>
 </html>
