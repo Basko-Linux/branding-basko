@@ -1,12 +1,12 @@
 %define theme starterkit
-%define Theme starterkit
+%define Theme starter kit
 %define codename Trientalis
 %define brand altlinux
 %define Brand ALT Linux
 
 
 Name: branding-%brand-%theme
-Version: 20130924
+Version: p7
 Release: alt0.M70P.1
 BuildArch: noarch
 
@@ -20,8 +20,8 @@ BuildRequires: libqt4-devel
 BuildRequires: ImageMagick fontconfig bc libGConf-devel
 BuildRequires: fribidi
 
-%define status starter kit
-%define status_en starter kit
+%define status %nil
+%define status_en %nil
 %define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master school-junior school-lite school-server altlinux-gnome-desktop altlinux-kdesktop ivk-chainmail simply-linux sisyphus-server-light altlinux-sisyphus altlinux-p7 altlinux-starterkit
 
 Source: branding.tar
@@ -443,6 +443,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Tue Sep 24 2013 Michael Shigorin <mike@altlinux.org> p7-alt0.M70P.1
+- version changed to reflect branch and not build date
+
 * Tue Sep 24 2013 Michael Shigorin <mike@altlinux.org> 20130924-alt0.M70P.1
 - tweaked notes (thx zerg@)
 
