@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: p7
-Release: alt1.M70P.1
+Release: alt2.M70P.1
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -449,6 +449,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Tue Feb 11 2014 Michael Shigorin <mike@altlinux.org> p7-alt2.M70P.1
+- updated license agreement
+
 * Wed Nov 27 2013 Michael Shigorin <mike@altlinux.org> p7-alt1.M70P.1
 - fixed graphics subpackage provides (altlinux-sisyphus-20130322-alt2)
 - added informika-schoolmaster to known variants
