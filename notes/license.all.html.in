@@ -1,92 +1,75 @@
 <html>
 <head>
 <title>License agreement</title>
-<meta http-equiv="content-type" value="text/html;charset=utf-8"/>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 </head>
 <body>
 
 <h1>License agreement</h1>
-<h2>for @BRAND_FNAME@ @NAME@ based product @STATUS@ and included software applications</h2>
+<h2>for @BRAND_FNAME@ @VERSION@ based product @STATUS@ and software applications included therein</h2>
 
 <p><b>1. Agreement information</b></p>
 <p>1.1 Parties to the contract</p>
 
-<p>This Software License Agreement ("Agreement") is made and effective by and between ALT Linux Ltd. ("Developer"), which owns rights for <strong>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</strong> ("Software Product") and you ("Licensee"), end-user of the Software Product.</p>
+<p>This Software License Agreement ("Agreement") is made and effective by and between ALT Linux Ltd which owns the rights to
+<strong>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</strong>
+("Distribution") and you, the owner of a Distribution's copy.</p>
 
-<p>1.2 Agreement object</p>
+<p>1.2 Scope of contract</p>
 
-<p>This Agreement regulates rights of an owner of a Software Product's copy for using the Software Product and computer programs ("Applications") that are part of the Software Product and other intellectual property and means of individualization to extent specified in this Agreement.</p>
+<p>This Agreement defines the rights of the owner of a Distribution's copy to use the Distribution and computer programs ("Applications") that are part of the Distribution and other intellectual property and means of individualization to the extent specified in this Agreement.</p>
 
-<p>1.3 Formation of a contract</p>
+<p>1.3 Contract formation</p>
 
-<p>This License Agreement is a contract of adhesion and does not require a written contract formation. Use of the Software Product in ways specified in this Agreement means accepting of the Agreement's conditions and leads to formation of the contract.</p>
+<p>This Agreement defines the rights of end users and does not grant distribution rights to the Distribution.  Systems integrators, distributors and OEM vendors should contact ALT Linux Ltd at sales@altlinux.ru for a written distribution contract.</p>
+<p>This Agreement is contract of adhesion and does not require written contract formation. Use of the Distribution in ways specified in this Agreement means accepting the Agreement's conditions and leads to contract formation.</p>
 
-<p><strong>2. Licensee rights</strong></p>
+<p><strong>2. Rights of the owner of a Distribution's copy</strong></p>
 
-<p>2.1 Free reproduction of the Software Product</p>
+<p>2.1 Rights to the Distribution</p>
 
-<p>Owner of the Software Product as a person that lawfully own a copy of a computer program has a right to freely reproduce the Software Product according to provisions of the applicable copyright law regardless of provisions of the Agreement or license agreements for individual Applications included in the Software Product.</p>
+<p>Distribution includes both free and non-free components. Permission to distribute the non-free components with ALT Linux distributions has been obtained from corresponding copyright owners. ALT Linux Ltd holds copyright to the Distribution as a composite work.
 
-<p>2.2 Use of free applications included in the Software Product</p>
+<p>2.2 Use of free software included within the Distribution</p>
 
-<p>All but those listed in item 2.3 applications included in the Software Product are licensed as free applications and are accompanied by license agreements that permanently and freely of charge additionally (to free reproduction) grants the following non-exclusive rights valid on territory of any country:</p>
+<p>All of the Free Software Applications included within the Distribution are accompanied with license agreements which permanently grant you free of charge the following non-exclusive rights valid on territory of any country:
 
 <ul> 
-<li>right to use Applications (copies of Applications) on an unlimited amount of computers for any purpose;</li>
-<li>right to modify Applications, publish and distribute modifications free of charge or for a fee on conditions of the license for the original Application;</li>
-<li>roght to pass Application to third parties free of charge or for a fee without paying royalty to copyright owners; </li>
-<li>right to have a freely access to source code of the Application and to study this source code.</li>
+<li>right to use the Applications (copies of the Applications) on unlimited number of computers for any purpose;</li>
+<li>right to modify the Applications, right to publish and distribute modifications free of charge or for a fee (you decide) according to the license terms of an original Application;</li>
+<li>right to pass the Applications to third parties free of charge or for a fee (you decide) without paying royalty to copyright owners;</li>
+<li>right to obtain and study the source code of the Applications.</li>
 </ul>
 
-<p>ALT Linux Ltd. undertakes to provide source code of any FREE APPLICATION included in Software Product on your demand within three years for a fee that is not higher than cost of physical copy of the source code.</p>
+<p>ALT Linux Ltd is obliged to provide source code of any Free Software Application included within the Distribution on your demand for a fee that is not higher than cost of physical copy of the source code within the period of three years.</p>
 
-<p>2.3 Use of non-free applications included in Software Product. </p>
-<p>The following APPLICATIONS are used and distributed by ALT Linux Ltd. on conditions other than those listed in item 2.2 of the Agreement:</p>
-<ul>
-<li>    Firmware for Intel WiFi adapters</li>
-<li>    NVIDIA video adapter drivers</li>
-<li>    Matrox video adapter drivers</li>
-<li>    VIA video adapter drivers</li>
-<li>    NVIDIA NForce video adapter drivers</li>
-<li>    Drivers for pct789 (PCTel), cm8738, i8xx, sis and via686a modems</li>
-<li>    Promise IDE/RAID controller drivers</li>
-<li>    Lucent/Agere support modules </li>
-<li>    Adobe Flash Player Plugin</li>
-<li>    Java 2 (SUN) Runtime Environment, Standard Edition</li>
-</ul>
+<p>2.3 Use of non-free applications included within the Distribution.</p>
+<p>Permission to distribute each of the non-free Applications included within the Distribution with an ALT Linux Distribution and for end users to use these has been obtained from their copyright owners.
 
-<p>Owners of exclusive rights for the listed above APPLICATIONS this way or the other limit your freedom of using these APPLICATIONS. Please familiarize yourself with license agreements accompanying these APPLICATIONS to decide, whether any use of any of those APPLICATIONS is legitimate, if it's outside boundaries of "free reproduction". License agreements for these APPLICATIONS are inside correspondent packages of the Software Product.
-</p>
-<p>Drivers for ATI, NVIDIA and VIA video adapters are allowed to be distributed as part of ALT Linux distributions.</p>
+<p>2.4 Use of the Distribution's design elements and text on its cover or box</p>
 
-<p>2.4 Use of Software Product's design elements and text on its cover or box</p>
-
-<p>Rights of ALT Linux Ltd. for design elements of the Software Product and text on its cover or box are subject to copyright, trade marks and industrial design law. Their use in ways specified by applicable law that demands availability of exclusive rights is possible only with written consent given by ALT Linux Ltd.</p>
+<p>ALT Linux Ltd rights to design elements of the Distribution and text on its cover or box are subject to copyright and trademark law. Their use in ways that require exclusive rights according to applicable law is only possible via written permission by ALT Linux Ltd.</p>
 
 <p>2.5 Other rights</p>
 
-<p>Copyright, right on name and other personal non-property rights of an author that are unalienable in line with applicable national legislation or that are not granted to you by applicable legislation or license agreements for standalone Applications included in the Software Product are preserved by their owners and cannot be granted to owner of a copy of the Software Product.</p>
+<p>Authorship, right to the name and other non-property rights that are not alienable according to the applicable national legislation or that are not granted to you by applicable legislation or license agreements for the particular Applications included within the Distribution are preserved by their owners and are not granted to the owner of a copy of the Distribution.</p>
 
-<p>2.6 Reports on use of the Software Product</p>
+<p>2.6 Reports on use of the Distribution</p>
 
-<p>ALT Linux Ltd. does not demand reports on using the Software Product from owners of a copy of the Software Product.</p>
+<p>ALT Linux Ltd does not request reports regarding use of the Distribution from the owner of a copy of the Distribution.</p>
 
 <p><strong>3. Amenability of parties</strong></p>
 
-<p>Copyright for Applications that are part of the Software Product, including exclusive right to allow use of applications, is subject to applicable copyright law, including applicable international agreements on copyright. Users are solely responsible for observation of national legislation while using Applications that are part of the Software Product.</p>
+<p>Copyright for the Applications that are part of the Distribution, including exclusive right to allow use of the Applications, is subject to applicable copyright law, including applicable international agreements. The user is solely responsible for abiding to national legislation while using the Applications included within the Distribution.</p>
 
-<p>ALT Linux Ltd. guarantees replacement of production defected media of the Software Product.</p>
+<p>ALT Linux Ltd warrants the media used to ship the Distribution against manufacturing defects and will replace media found defective.</p>
 
-<p>ALT Linux Ltd. hope that Applications that are part of the Software Product will will be useful, but does not give any warranty for their fitness for any particular purpose or their quality (including absence of errors or standards conformity) and is not in charge for any possible damage, direct or implied, that is result of using these Applications.</p>
+<p>Applications included within the Distribution are distributed in hope that these will be useful but without any warranty; without even the implied warranty of fitness for any particular purpose. ALT Linux Ltd is not liable for any damages, direct or indirect, arising out of the use of these Applications.</p>
 
-<p>Technical support responsibilities of ALT Linux Ltd. for users of the Software Product are listed in the technical support coupon and can be extended with an additional agreement.</p>
-
-<hr/>
 <p>
-<em>ALT Linux Ltd. Moscow, 5th Donskoy proezd, 15/6<br>
+<em>ALT Linux Ltd, Moscow, 5th Donskoy proezd, 15/6<br>
 http://www.altlinux.com
 </em>
 </p>
 </body>
 </html>
-
