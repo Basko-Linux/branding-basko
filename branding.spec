@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: p7
-Release: alt2.M70P.1
+Release: alt3.M70P.1
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -449,6 +449,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Mon Mar 10 2014 Michael Shigorin <mike@altlinux.org> p7-alt3.M70P.1
+- replaced images (qtbrowser background and slideshow)
+
 * Tue Feb 11 2014 Michael Shigorin <mike@altlinux.org> p7-alt2.M70P.1
 - updated license agreement
 
