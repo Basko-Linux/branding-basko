@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: p7
-Release: alt3.M70P.1
+Release: alt4.M70P.1
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -449,6 +449,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Tue Apr 01 2014 Michael Shigorin <mike@altlinux.org> p7-alt4.M70P.1
+- enabled mediachk by default
+
 * Mon Mar 10 2014 Michael Shigorin <mike@altlinux.org> p7-alt3.M70P.1
 - replaced images (qtbrowser background and slideshow)
 
