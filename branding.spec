@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: p7
-Release: alt4.M70P.1
+Release: alt5.M70P.1
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -449,6 +449,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Tue Sep 02 2014 Michael Shigorin <mike@altlinux.org> p7-alt5.M70P.1
+- updated company address
+
 * Tue Apr 01 2014 Michael Shigorin <mike@altlinux.org> p7-alt4.M70P.1
 - enabled mediachk by default
 
