@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: p7
-Release: alt5.M70P.1
+Release: alt6.M70P.1
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -449,6 +449,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 
 %changelog
+* Thu Sep 10 2015 Michael Shigorin <mike@altlinux.org> p7-alt6.M70P.1
+- updated company address
+
 * Tue Sep 02 2014 Michael Shigorin <mike@altlinux.org> p7-alt5.M70P.1
 - updated company address
 
