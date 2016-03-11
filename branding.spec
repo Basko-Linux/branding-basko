@@ -4,16 +4,15 @@
 %define brand altlinux
 %define Brand ALT Linux
 
-
 Name: branding-%brand-%theme
 Version: p7
-Release: alt6.M70P.1
+Release: alt7.M70P.1
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
 BuildRequires: design-bootloader-source >= 5.0-alt2
 
-BuildRequires(pre): libqt4-core
+BuildRequires: libqt4-core
 BuildRequires: libalternatives-devel
 BuildRequires: libqt4-devel
 
@@ -447,8 +446,11 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 /etc/sysconfig/xinitrc.xfce
 %_bindir/*
 
-
 %changelog
+* Fri Mar 11 2016 Michael Shigorin <mike@altlinux.org> p7-alt7.M70P.1
+- fixed license (closes: #31748)
+- tweaked bootloader help cursor background colour
+
 * Thu Sep 10 2015 Michael Shigorin <mike@altlinux.org> p7-alt6.M70P.1
 - updated company address
 
