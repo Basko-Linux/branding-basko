@@ -6,7 +6,7 @@
 
 Name: branding-%brand-%theme
 Version: p7
-Release: alt7.M70P.1
+Release: alt7.M70P.2
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -447,6 +447,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %_bindir/*
 
 %changelog
+* Fri Mar 11 2016 Michael Shigorin <mike@altlinux.org> p7-alt7.M70P.2
+- tweaked license a bit more
+
 * Fri Mar 11 2016 Michael Shigorin <mike@altlinux.org> p7-alt7.M70P.1
 - fixed license (closes: #31748)
 - tweaked bootloader help cursor background colour
