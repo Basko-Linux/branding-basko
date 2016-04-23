@@ -1,12 +1,12 @@
 %define theme starterkit
 %define Theme starter kit
-%define codename Trientalis
-%define brand altlinux
-%define Brand ALT Linux
+%define codename Hypericum
+%define brand basealt
+%define Brand BaseALT
 
 Name: branding-%brand-%theme
-Version: p7
-Release: alt7.M70P.2
+Version: p8
+Release: alt0.M80P.1
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -255,7 +255,7 @@ install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%
 	[ -n "%codename" ] && echo -n " (%codename)"
 	echo
 } >%buildroot%_sysconfdir/altlinux-release
-for n in fedora redhat system; do
+for n in fedora redhat system basealt; do
 	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
 done
 
@@ -447,6 +447,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %_bindir/*
 
 %changelog
+* Sat Apr 23 2016 Michael Shigorin <mike@altlinux.org> p8-alt0.M80P.1
+- updated for basealt-p8-starterkits
+
 * Fri Mar 11 2016 Michael Shigorin <mike@altlinux.org> p7-alt7.M70P.2
 - tweaked license a bit more
 
