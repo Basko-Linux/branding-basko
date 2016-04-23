@@ -11,7 +11,7 @@
 <p><b>1. Agreement information</b></p>
 <p>1.1 Parties to the contract</p>
 
-<p>This Software License Agreement ("Agreement") is made and effective by and between ALT Linux Ltd which owns the rights to
+<p>This Software License Agreement ("Agreement") is made and effective by and between BaseALT Ltd which owns the rights to
 <strong>@BRAND_FNAME@ @VERSION@ @NAME@ @STATUS@</strong>
 ("Kit") and you, the owner of a Kit's copy.</p>
 
@@ -27,7 +27,7 @@
 
 <p>2.1 Rights to the Kit</p>
 
-<p>This Kit includes both free and non-free components licensed for redistribution by corresponding copyright owners. ALT Linux Ltd holds copyright to the Kit as a composite work.</p>
+<p>This Kit includes both free and non-free components licensed for redistribution by corresponding copyright owners. BaseALT Ltd holds copyright to the Kit as a composite work.</p>
 
 <p>The Kit as a composite work is licensed under the terms of GNU General Public License, version 2 or (at your option) any later version; thus granting you the below non-exclusive rights to it as such. The source profile used to build a particular Kit is included with it on the same terms.</p>
 
@@ -44,14 +44,14 @@
 <li>right to obtain and study the source code of the Applications.</li>
 </ul>
 
-<p>ALT Linux Ltd is obliged to provide source code of any Free Software Application included within the Kit on your demand for a fee that is not higher than cost of physical copy of the source code within the period of three years.</p>
+<p>BaseALT Ltd is obliged to provide source code of any Free Software Application included within the Kit on your demand for a fee that is not higher than cost of physical copy of the source code within the period of three years.</p>
 
 <p>2.3 Use of non-free applications included within the Kit.</p>
-<p>Permission to distribute each of the non-free Applications included within the Kit with an ALT Linux Kit and for end users to use these has been obtained from their copyright owners.
+<p>Permission to distribute each of the non-free Applications included within the Kit with an BaseALT Kit and for end users to use these has been obtained from their copyright owners.
 
 <p>2.4 Use of the Kit's design elements and text on its cover or box</p>
 
-<p>ALT Linux Ltd rights to design elements of the Kit and text on its cover or box are subject to copyright and trademark law. Their use in ways that require exclusive rights according to applicable law is only possible via written permission by ALT Linux Ltd.</p>
+<p>BaseALT Ltd rights to design elements of the Kit and text on its cover or box are subject to copyright and trademark law. Their use in ways that require exclusive rights according to applicable law is only possible via written permission by BaseALT Ltd.</p>
 
 <p>2.5 Other rights</p>
 
@@ -59,19 +59,19 @@
 
 <p>2.6 Reports on use of the Kit</p>
 
-<p>ALT Linux Ltd does not request reports regarding use of the Kit from the owner of a copy of the Kit.</p>
+<p>BaseALT Ltd does not request reports regarding use of the Kit from the owner of a copy of the Kit.</p>
 
 <p><strong>3. Amenability of parties</strong></p>
 
 <p>Copyright for the Applications that are part of the Kit, including exclusive right to allow use of the Applications, is subject to applicable copyright law, including applicable international agreements. The user is solely responsible for abiding to national legislation while using the Applications included within the Kit.</p>
 
-<p>ALT Linux Ltd warrants the media used to ship the Kit against manufacturing defects and will replace media found defective.</p>
+<p>BaseALT Ltd warrants the media used to ship the Kit against manufacturing defects and will replace media found defective.</p>
 
-<p>Applications included within the Kit are distributed in hope that these will be useful but without any warranty; without even the implied warranty of fitness for any particular purpose. ALT Linux Ltd is not liable for any damages, direct or indirect, arising out of the use of these Applications.</p>
+<p>Applications included within the Kit are distributed in hope that these will be useful but without any warranty; without even the implied warranty of fitness for any particular purpose. BaseALT Ltd is not liable for any damages, direct or indirect, arising out of the use of these Applications.</p>
 
 <p>
-<em>ALT Linux Ltd, Moscow, 5th Donskoy proezd, 15/9<br>
-http://www.altlinux.com
+<em>BaseALT Ltd, Moscow, Butyrskaya street, 75<br>
+http://www.basealt.ru
 </em>
 </p>
 </body>
