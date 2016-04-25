@@ -21,8 +21,7 @@
 </div>
 
 <div class="box" id="lang">
- <a href="index-ru.html">Русский</a> |
- <a href="index-uk.html">Українська</a>
+ <a href="index-ru.html">Русский</a>
 </div>
 
 <div class="box">
@@ -33,7 +32,8 @@
   <h2>ALT Linux Team</h2>
   <ul>
    <li><a href="http://search.altlinux.org/">Search on ALT Linux websites</a></li>
-   <li><a href="http://www.altlinux.org/">Community Wiki</a></li>
+   <li><a href="http://www.altlinux.org/">Community Wiki</a>
+      (<a href="http://en.altlinux.org/">in English</a>)</li>
    <li><a href="http://lists.altlinux.org/">Mailing lists</a></li>
    <li><a href="http://forum.altlinux.org/">ALT Linux Forum</a></li>
    <li><a href="http://bugs.altlinux.org/">Report a bug</a></li>
@@ -41,9 +41,9 @@
 
 </div>
 
-<p class="footer"><nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr> &copy; ALT Linux, 2013. All rights reserved.<br />
-  Address: 5th Donskoy proezd, 15/11, Moscow<br />
-  Phone/Fax: +7 (495) 662-3883
+<p class="footer"><nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr> &copy; BaseALT Ltd, 2016.<br />
+  Address: Butyrskaya str. 75, Moscow, Russia<br />
+  Phone/Fax: +7 (495) 123-47-99
 </p>
 
 </body>

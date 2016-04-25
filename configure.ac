@@ -50,7 +50,6 @@ AC_CONFIG_FILES([
 		 notes/license.ru.html
 		 notes/license.all.html
 		 notes/index-ru.html
-		 notes/index-uk.html
 		 notes/index-en.html
 		 components/indexhtml/indexhtml.desktop
 		 components/indexhtml/index.css
