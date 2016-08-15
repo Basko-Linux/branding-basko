@@ -1,12 +1,12 @@
 %define theme starterkit
 %define Theme starter kit
 %define codename Hypericum
-%define brand basealt
-%define Brand BaseALT
+%define brand alt
+%define Brand ALT
 
 Name: branding-%brand-%theme
 Version: p8
-Release: alt0.M80P.1
+Release: alt0.M80P.2
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -21,7 +21,7 @@ BuildRequires: fribidi
 
 %define status %nil
 %define status_en %nil
-%define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master school-junior school-lite school-server altlinux-gnome-desktop altlinux-kdesktop ivk-chainmail simply-linux sisyphus-server-light altlinux-sisyphus altlinux-p7 altlinux-starterkit informika-schoolmaster
+%define variants altlinux-office-desktop altlinux-office-server altlinux-lite altlinux-workbench school-master school-junior school-lite school-server altlinux-gnome-desktop altlinux-kdesktop ivk-chainmail simply-linux sisyphus-server-light altlinux-sisyphus altlinux-p7 altlinux-starterkit basealt-starterkit informika-schoolmaster
 
 # argh
 %define design_graphics_abi_epoch 0
@@ -255,7 +255,7 @@ install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%
 	[ -n "%codename" ] && echo -n " (%codename)"
 	echo
 } >%buildroot%_sysconfdir/altlinux-release
-for n in fedora redhat system basealt; do
+for n in fedora redhat system alt; do
 	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
 done
 
@@ -447,6 +447,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %_bindir/*
 
 %changelog
+* Mon Aug 15 2016 Michael Shigorin <mike@altlinux.org> p8-alt0.M80P.2
+- updated again for alt-p8-starterkits
+
 * Sat Apr 23 2016 Michael Shigorin <mike@altlinux.org> p8-alt0.M80P.1
 - updated for basealt-p8-starterkits
 
