@@ -3,10 +3,14 @@
 %define codename Hypericum
 %define brand alt
 %define Brand ALT
+%define distro_name ALT Starterkit
 
 Name: branding-%brand-%theme
 Version: p8
 Release: alt0.M80P.2
+
+Url: http://en.altlinux.org/starterkits
+
 BuildArch: noarch
 
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
@@ -219,7 +223,8 @@ ALT Linux index.html welcome page.
 
 %build
 autoconf
-THEME=%theme NAME='%Theme' BRAND_FNAME='%Brand' BRAND='%brand' STATUS_EN=%status_en STATUS=%status VERSION=%version CODENAME=%codename ./configure
+THEME=%theme NAME='%Theme' BRAND_FNAME='%Brand' BRAND='%brand' STATUS_EN=%status_en STATUS=%status VERSION=%version PRODUCT_NAME='%distro_name' CODENAME=%codename URL='%url' ./configure
+LC_ALL=en_US.UTF-8 make
 
 %install
 %makeinstall
