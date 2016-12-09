@@ -5,7 +5,8 @@
 	<TITLE></TITLE>
 </HEAD>
 <BODY>
-<H2>ОС на основе @BRAND_FNAME@ @NAME@ @STATUS@ установлена.</H2>
+<H2>ОС на основе @BRAND_FNAME@ @NAME@ @STATUS@ установлена</H2>
+<p>Подробности на <a href="http://altlinux.org/starterkits">altlinux.org/starterkits</a></p>
 
 </BODY>
 </HTML>
