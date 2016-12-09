@@ -7,7 +7,7 @@
 
 Name: branding-%brand-%theme
 Version: p8
-Release: alt0.M80P.2
+Release: alt0.M80P.3
 
 Url: http://en.altlinux.org/starterkits
 
@@ -452,6 +452,13 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %_bindir/*
 
 %changelog
+* Mon Dec 05 2016 Michael Shigorin <mike@altlinux.org> p8-alt0.M80P.3
+- added /etc/os-release
+- fixed progressbar position
+- tweaked release notes
+- replaced licene step icon
+- rebuilt in current environment
+
 * Mon Aug 15 2016 Michael Shigorin <mike@altlinux.org> p8-alt0.M80P.2
 - updated again for alt-p8-starterkits
 
