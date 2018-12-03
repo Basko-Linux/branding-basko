@@ -16,9 +16,8 @@ BuildArch: noarch
 BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
 BuildRequires: design-bootloader-source >= 5.0-alt2
 
-BuildRequires: libqt4-core
+BuildRequires: qt5-base-devel
 BuildRequires: libalternatives-devel
-BuildRequires: libqt4-devel
 
 BuildRequires: ImageMagick fontconfig bc libGConf-devel
 BuildRequires: fribidi

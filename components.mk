@@ -5,7 +5,7 @@ components/browser-qt/design/bg.png: images/installer.png
 
 browser-qt:components/browser-qt/design/bg.png
 	install -d $(datadir)/alterator-browser-qt/design
-	cd components/browser-qt; rcc-qt4 -binary theme.qrc -o $(datadir)/alterator-browser-qt/design/$(THEME).rcc; cd -
+	cd components/browser-qt; rcc-qt5 -binary theme.qrc -o $(datadir)/alterator-browser-qt/design/$(THEME).rcc; cd -
 	install -d $(sysconfdir)/alternatives/packages.d
 	printf '/etc/alterator/design-browser-qt\t/usr/share/alterator-browser-qt/design/$(THEME).rcc\t50\n'>$(sysconfdir)/alternatives/packages.d/$(THEME).rcc
 
