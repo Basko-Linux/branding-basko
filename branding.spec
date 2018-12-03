@@ -1,3 +1,6 @@
+# Unpackaged files in buildroot should terminate build
+%define _unpackaged_files_terminate_build 1
+
 %define theme starterkit
 %define Theme starter kit
 %define codename Hypericum
