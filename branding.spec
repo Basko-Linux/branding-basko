@@ -10,7 +10,7 @@
 
 Name: branding-%brand-%theme
 Version: p8
-Release: alt0.M80P.3
+Release: alt0.M80P.4
 
 Url: http://en.altlinux.org/starterkits
 
@@ -307,10 +307,10 @@ install -m 644 gtkrc '%buildroot/%_datadir/themes/%XdgThemeName/gtk-2.0'
 mkdir -p '%buildroot/%_datadir/themes/%XdgThemeName/metacity-1'
 install -m 644 metacity-theme-1.xml '%buildroot/%_datadir/themes/%XdgThemeName/metacity-1/'
 install -m 644 index.theme '%buildroot/%_datadir/themes/%XdgThemeName/'
-mkdir -p '%buildroot/etc/gnome/xdg/menus/applications-merged/'
-install -m 644 applications.menu '%buildroot/etc/gnome/xdg/menus/applications-merged/'
-mkdir -p '%buildroot/etc/xdg/menus/'
-install -m 644 settings.menu '%buildroot/etc/xdg/menus/'
+#mkdir -p '%buildroot/etc/gnome/xdg/menus/applications-merged/'
+#install -m 644 applications.menu '%buildroot/etc/gnome/xdg/menus/applications-merged/'
+#mkdir -p '%buildroot/etc/xdg/menus/'
+#install -m 644 settings.menu '%buildroot/etc/xdg/menus/'
 cp -a skel/.gconf '%buildroot/etc/skel/'
 popd
 
@@ -454,6 +454,12 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %_bindir/*
 
 %changelog
+* Fri Dec 07 2018 Anton Midyukov <antohami@altlinux.org> p8-alt0.M80P.4
+- Use resources generator from Qt5
+- Use _unpackaged_files_terminate_build
+- Update background for installer
+- Fix build
+
 * Mon Dec 05 2016 Michael Shigorin <mike@altlinux.org> p8-alt0.M80P.3
 - added /etc/os-release
 - fixed progressbar position
