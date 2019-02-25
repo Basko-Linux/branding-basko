@@ -10,7 +10,7 @@
 
 Name: branding-%brand-%theme
 Version: p8
-Release: alt0.M80P.4.1
+Release: alt0.M80P.5
 
 Url: http://en.altlinux.org/starterkits
 
@@ -454,6 +454,9 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %_bindir/*
 
 %changelog
+* Mon Feb 25 2019 Anton Midyukov <antohami@altlinux.org> p8-alt0.M80P.5
+- Cleanup plymouth theme
+
 * Wed Dec 19 2018 Anton Midyukov <antohami@altlinux.org> p8-alt0.M80P.4.1
 - Fix the installer background defect
 
