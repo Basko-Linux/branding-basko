@@ -42,6 +42,7 @@ boot:
 	cp -al images/wallpaper.png $(datadir)/plymouth/themes/$(THEME)/wallpaper.png
 	cp -a components/bootsplash/* $(datadir)/plymouth/themes/$(THEME)
 	mv $(datadir)/plymouth/themes/$(THEME)/theme.plymouth $(datadir)/plymouth/themes/$(THEME)/$(THEME).plymouth
+	rm -f $(datadir)/plymouth/themes/$(THEME)/*.in
 #bootloader
 	DEFAULT_LANG='--lang-to-subst--' PATH=$(PATH):/usr/sbin make -C design-bootloader-source
 	install -d -m 755  $(sysconfdir)/../boot/splash/$(THEME)
