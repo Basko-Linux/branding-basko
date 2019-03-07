@@ -49,7 +49,7 @@ Group: System/Configuration/Boot and Init
 Summary: Graphical boot logo for grub2, lilo and syslinux
 License: GPL
 
-PreReq: coreutils
+Requires: coreutils
 Provides: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
 
 Obsoletes: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
@@ -68,7 +68,7 @@ License: Distributable
 Group:  System/Configuration/Boot and Init
 Provides: plymouth-theme-%theme plymouth(system-theme)
 Requires: plymouth-plugin-script
-PreReq: plymouth
+Requires: plymouth
 
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-bootsplash ";done )
 %description bootsplash
@@ -85,7 +85,7 @@ Obsoletes: branding-alt-%theme-browser-qt branding-altlinux-%theme-browser-qt
 
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-alterator ";done )
 Obsoletes: design-alterator-server design-alterator-desktop design-alterator-browser-desktop design-alterator-browser-server
-PreReq(post,preun): alternatives >= 0.2 alterator
+Requires: alternatives >= 0.2 alterator
 
 %description alterator
 Design for QT and web alterator for %Brand %Theme
@@ -100,7 +100,7 @@ Provides: design-graphics = 12.0.0
 Provides: design-graphics-%theme branding-alt-%theme-graphics
 Provides: design-graphics = %design_graphics_abi_major.%design_graphics_abi_minor.%design_graphics_abi_bugfix
 Obsoletes: branding-alt-%theme-graphics design-graphics-%theme
-PreReq(post,preun): alternatives >= 0.2
+Requires: alternatives >= 0.2
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-graphics ";done )
 Conflicts: design-graphics-default
 
