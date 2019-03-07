@@ -145,18 +145,6 @@ PreReq: %name-graphics
 %description kde4-settings
 KDE4 settings for %Brand %version %Theme
 
-%package kde3-settings
-
-Summary: KDE3 settings for %Brand %version %Theme
-License: Distributable
-Group: Graphical desktop/KDE
-Requires: ksplash-engine-moodin
-PreReq: %name-graphics
-Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-kde3-settings ";done )
-
-%description kde3-settings
-KDE3 settings for %Brand %version %Theme
-
 %package gnome-settings
 
 Summary: GNOME settings for %Brand %version %Theme
@@ -279,25 +267,6 @@ mkdir -p %buildroot%_sysconfdir/kde4/xdg/menus/applications-merged/
 install -m 644 menu/* %buildroot%_sysconfdir/kde4/xdg/menus/applications-merged/
 popd
 
-#kde3-settings
-pushd kde3-settings
-mkdir -p %buildroot%_sysconfdir/skel/.kde
-cp -a kde/* %buildroot%_sysconfdir/skel/.kde/
-mkdir -p %buildroot%_sysconfdir/skel/.kde/share
-mkdir -p %buildroot%_sysconfdir/skel/.kde/share/config
-mkdir -p %buildroot%_sysconfdir/skel/.kde/share/apps
-cp -a config/* %buildroot%_sysconfdir/skel/.kde/share/config/
-cp -a apps/* %buildroot%_sysconfdir/skel/.kde/share/apps/
-popd
-
-#kde3-splash
-pushd kde3-styles-splash
-mkdir -p "%buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme"
-install -m 644 *.jpg "%buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/"
-install -m 644 *.png "%buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/"
-install -m 644 *.rc "%buildroot/%_datadir/apps/ksplash/Themes/ALTLinux%Theme/"
-popd
-
 #gnome-settings
 %define XdgThemeName %Brand %Theme
 pushd gnome-settings
@@ -417,10 +386,6 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %files kde4-settings
 %_sysconfdir/skel/.kde4
 %_sysconfdir/kde4/xdg/menus/applications-merged/*
-
-%files kde3-settings
-%_sysconfdir/skel/.kde
-%_datadir/apps/ksplash/Themes/*
 
 %files gnome-settings
 %_datadir/themes/*

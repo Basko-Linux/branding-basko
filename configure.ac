@@ -47,7 +47,6 @@ AC_CONFIG_FILES([
 		 components/browser-qt/design/design.ini
 		 components/browser-qt/design/design.qss
 		 components/bootloader/gfxboot.cfg
-		 kde3-settings/apps/kdisplay/color-schemes/scheme.kcsrc
 		 notes/release-notes.ru.html
 		 notes/release-notes.all.html
 		 notes/license.ru.html
@@ -60,7 +59,6 @@ AC_CONFIG_FILES([
 		 gnome-settings/index.theme
 		 gnome-settings/metacity-theme-1.xml
 		 components/ahttpd/styles/alterator.css
-		 kde3-styles-splash/Theme.rc
 		 xfce-settings/xinitrc
 		 components/systemd/os-release
 ])

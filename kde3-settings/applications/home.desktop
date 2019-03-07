@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Type=Application
-Exec=kfmclient openProfile filemanagement 
-Icon=folder_home
-
-Name=Home Folder
-Name[ru]=Домашняя папка
-Categories=Qt;KDE;Core;Filesystem;Application;Utility
