@@ -1,9 +1,0 @@
-URxvt*font: xft:monospace:pixelsize=14
-URxvt*boldFont: xft:monospace:bold:pixelsize=14
-URxvt*italicFont: xft:monospace:italic:pixelsize=14
-URxvt*saveLines: 5000
-URxvt*geometry: 95x22
-URxvt*scrollstyle: rxvt
-URxvt*scrollBar_right: on
-URxvt*internalBorder: 1
-URxvt*externalBorder: 1

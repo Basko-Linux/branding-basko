@@ -55,11 +55,7 @@ AC_CONFIG_FILES([
 		 notes/index-en.html
 		 components/indexhtml/indexhtml.desktop
 		 components/indexhtml/index.css
-		 gnome-settings/gtkrc
-		 gnome-settings/index.theme
-		 gnome-settings/metacity-theme-1.xml
 		 components/ahttpd/styles/alterator.css
-		 xfce-settings/xinitrc
 		 components/systemd/os-release
 ])
 AC_OUTPUT

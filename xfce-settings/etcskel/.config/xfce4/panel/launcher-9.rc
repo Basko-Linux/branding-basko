@@ -1,8 +1,0 @@
-[Entry 0]
-Name=File Manager
-Exec=thunar
-Terminal=false
-StartupNotify=true
-Comment=Управление файлами и каталогами
-X-XFCE-IconCategory=2
-

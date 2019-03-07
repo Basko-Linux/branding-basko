@@ -1,8 +1,0 @@
-[X-GNOME-Metatheme]
-Name=@BRAND_FNAME@ @NAME@
-Type=X-GNOME-Metatheme
-Comment=Theme for @BRAND_FNAME@ @NAME@
-Encoding=UTF-8
-GtkTheme=@BRAND_FNAME@ @NAME@
-MetacityTheme=@BRAND_FNAME@ @NAME@
-IconTheme=Mist

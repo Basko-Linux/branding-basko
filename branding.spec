@@ -134,34 +134,6 @@ Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "brandi
 %description notes
 Distribution license and release notes
 
-%package gnome-settings
-
-Summary: GNOME settings for %Brand %version %Theme
-License: Distributable
-Group: Graphical desktop/GNOME
-Requires: gtk2-theme-mist
-Provides: gnome-theme-%brand-%theme = %version-%release
-Provides: metacity-theme-%brand-%theme = %version-%release
-Provides: metacity-theme
-#Provides: gnome-menus
-Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-gnome-settings ";done )
-
-%description gnome-settings
-GNOME settings for %Brand %version %Theme
-
-%package xfce-settings
-
-Summary: XFCE settings for %Brand %version %Theme
-License: Distributable
-Group: Graphical desktop/XFce
-Requires: PolicyKit-gnome
-Obsoletes: xfce-settings-lite xfce-settings-school-lite
-Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-xfce-settings ";done )
-
-%description xfce-settings
-XFCE settings for %Brand %version %Theme
-
-
 %package slideshow
 
 Summary: Slideshow for %Brand %version %Theme installer
@@ -248,59 +220,9 @@ pushd notes
 %makeinstall
 popd
 
-#gnome-settings
-%define XdgThemeName %Brand %Theme
-pushd gnome-settings
-mkdir -p '%buildroot/%_datadir/themes/%XdgThemeName'
-mkdir -p '%buildroot/%_datadir/themes/%XdgThemeName/gtk-2.0'
-install -m 644 gtkrc '%buildroot/%_datadir/themes/%XdgThemeName/gtk-2.0'
-mkdir -p '%buildroot/%_datadir/themes/%XdgThemeName/metacity-1'
-install -m 644 metacity-theme-1.xml '%buildroot/%_datadir/themes/%XdgThemeName/metacity-1/'
-install -m 644 index.theme '%buildroot/%_datadir/themes/%XdgThemeName/'
-#mkdir -p '%buildroot/etc/gnome/xdg/menus/applications-merged/'
-#install -m 644 applications.menu '%buildroot/etc/gnome/xdg/menus/applications-merged/'
-#mkdir -p '%buildroot/etc/xdg/menus/'
-#install -m 644 settings.menu '%buildroot/etc/xdg/menus/'
-cp -a skel/.gconf '%buildroot/etc/skel/'
-popd
-
 #slideshow
 mkdir -p %buildroot/usr/share/install2/slideshow
 install slideshow/* %buildroot/usr/share/install2/slideshow/
-
-#xfce-settings
-pushd xfce-settings
-mkdir -p %buildroot/etc/skel/.config/xfce4/desktop
-mkdir -p %buildroot/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml
-mkdir -p %buildroot/etc/skel/.config/xfce4/panel
-mkdir -p %buildroot/etc/skel/.config/xfce4-session
-mkdir -p %buildroot/etc/skel/.config/autostart
-mkdir -p %buildroot/etc/skel/.local/share/applications
-mkdir -p %buildroot/etc/skel/Templates
-install -m 644 etcskel/Templates/* %buildroot/etc/skel/Templates/
-install -m 644 etcskel/.config/xfce4/helpers.rc %buildroot/etc/skel/.config/xfce4/
-install -m 644 etcskel/.config/xfce4/desktop/* %buildroot/etc/skel/.config/xfce4/desktop
-install -m 644 etcskel/.config/xfce4/xfconf/xfce-perchannel-xml/* %buildroot/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml
-install -m 644 etcskel/.config/xfce4/panel/* %buildroot/etc/skel/.config/xfce4/panel
-install -m 644 etcskel/.config/xfce4-session/* %buildroot/etc/skel/.config/xfce4-session/
-install -m 644 etcskel/.config/autostart/* %buildroot/etc/skel/.config/autostart
-install -m 644 etcskel/.local/share/applications/* %buildroot/etc/skel/.local/share/applications
-install -m 644 etcskel/.wm-select %buildroot/etc/skel/
-install -m 644 etcskel/.Xdefaults %buildroot/etc/skel/
-
-mkdir -p %buildroot/usr/share/xfce4/backdrops
-install -m 644 ../graphics/backgrounds/default.png %buildroot/usr/share/xfce4/backdrops
-install -m 644 ../graphics/backgrounds/xdm.png %buildroot/usr/share/xfce4/backdrops
-mkdir -p '%buildroot/usr/share/themes/ALTLinux-%Theme/gtk-2.0'
-install -m 644 themes/ALTLinux/gtk-2.0/* '%buildroot/usr/share/themes/ALTLinux-%Theme/gtk-2.0/'
-install -m 644 themes/ALTLinux/*.png '%buildroot/usr/share/themes/ALTLinux-%Theme/'
-
-mkdir -p %buildroot/%_bindir
-install -m 755 bin/* %buildroot/%_bindir
-
-mkdir -p %buildroot/etc/sysconfig/
-install -m 644 xinitrc %buildroot/etc/sysconfig/xinitrc.xfce
-popd
 
 #bootloader
 %pre bootloader
@@ -338,13 +260,6 @@ subst "s/Theme=.*/Theme=%theme/" /etc/plymouth/plymouthd.conf
       subst "s|GRUB_WALLPAPER=.*|GRUB_WALLPAPER=/usr/share/plymouth/themes/%theme/grub.jpg|" \
              /etc/sysconfig/grub2 ||:
 
-%post gnome-settings
-%gconf2_set string /desktop/gnome/interface/font_name Sans 11
-%gconf2_set string /desktop/gnome/interface/monospace_font_name Monospace 10
-
-%post xfce-settings
-cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
-
 %files alterator
 %config %_altdir/*.rcc
 /usr/share/alterator-browser-qt/design/*.rcc
@@ -364,12 +279,6 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %files notes
 %_datadir/alt-notes/*
 
-%files gnome-settings
-%_datadir/themes/*
-#/etc/gnome/xdg/menus/applications-merged/
-#/etc/xdg/menus/*
-/etc/skel/.gconf
-
 %files slideshow
 /usr/share/install2/slideshow
 
@@ -381,19 +290,6 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 %indexhtmldir/index.css
 %indexhtmldir/img
 %_desktopdir/indexhtml.desktop
-
-%files xfce-settings
-/etc/skel/Templates
-%exclude /etc/skel/Templates/*
-/etc/skel/.wm-select
-/etc/skel/.Xdefaults
-/etc/skel/.config
-/etc/skel/.config
-/etc/skel/.local
-/usr/share/themes/*
-/usr/share/xfce4/backdrops
-/etc/sysconfig/xinitrc.xfce
-%_bindir/*
 
 %changelog
 * Mon Feb 25 2019 Anton Midyukov <antohami@altlinux.org> p8-alt0.M80P.5
