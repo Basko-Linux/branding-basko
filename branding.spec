@@ -134,17 +134,6 @@ Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "brandi
 %description notes
 Distribution license and release notes
 
-%package kde4-settings
-
-Summary: KDE4 settings for %Brand %version %Theme
-License: Distributable
-Group: Graphical desktop/KDE
-Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-kde4-settings ";done )
-PreReq: %name-graphics
-
-%description kde4-settings
-KDE4 settings for %Brand %version %Theme
-
 %package gnome-settings
 
 Summary: GNOME settings for %Brand %version %Theme
@@ -257,14 +246,6 @@ install -pD -m644 components/systemd/os-release %buildroot%_sysconfdir/os-releas
 #notes
 pushd notes
 %makeinstall
-popd
-
-#kde4-settings
-pushd kde4-settings
-mkdir -p %buildroot%_sysconfdir/skel/.kde4
-cp -a kde4/* %buildroot%_sysconfdir/skel/.kde4/
-mkdir -p %buildroot%_sysconfdir/kde4/xdg/menus/applications-merged/
-install -m 644 menu/* %buildroot%_sysconfdir/kde4/xdg/menus/applications-merged/
 popd
 
 #gnome-settings
@@ -382,10 +363,6 @@ cat /etc/sysconfig/xinitrc.xfce >> /etc/sysconfig/xinitrc
 
 %files notes
 %_datadir/alt-notes/*
-
-%files kde4-settings
-%_sysconfdir/skel/.kde4
-%_sysconfdir/kde4/xdg/menus/applications-merged/*
 
 %files gnome-settings
 %_datadir/themes/*
