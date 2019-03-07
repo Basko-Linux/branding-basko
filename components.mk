@@ -21,7 +21,7 @@ ahttpd:
 	install -Dpm644 images/product-logo.png $(datadir)/alterator/design/images/product-logo.png
 	cp -a components/ahttpd/styles/*.css $(datadir)/alterator/design/styles
 
-
+ifeq (,$(filter-out i586 i686 x86_64,$(ARCH)))
 # bootloader and bootsplash
 boot:
 	cp -a  /usr/src/design-bootloader-source ./
@@ -49,6 +49,9 @@ boot:
 	install -d -m 755 $(datadir)/gfxboot/$(THEME)
 	install -m 644 design-bootloader-source/message $(sysconfdir)/../boot/splash/$(THEME)
 	install -m 644 design-bootloader-source/bootlogo $(datadir)/gfxboot/$(THEME)
+else
+boot: ; @:
+endif
 
 # index html page, start page for all local browsers
 INDEXHTML_DIR=$(datadir)/doc/indexhtml

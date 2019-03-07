@@ -14,10 +14,7 @@ Release: alt0.M80P.5
 
 Url: http://en.altlinux.org/starterkits
 
-BuildArch: noarch
-
-BuildRequires: cpio gfxboot >= 4 fonts-ttf-dejavu
-BuildRequires: design-bootloader-source >= 5.0-alt2
+BuildRequires: cpio fonts-ttf-dejavu
 
 BuildRequires: qt5-base-devel
 BuildRequires: libalternatives-devel
@@ -44,11 +41,14 @@ License: GPL
 %description
 Distro-specific packages with design and texts
 
+%ifarch %ix86 x86_64
 %package bootloader
 Group: System/Configuration/Boot and Init
 Summary: Graphical boot logo for grub2, lilo and syslinux
 License: GPL
 
+BuildRequires: gfxboot >= 4
+BuildRequires: design-bootloader-source >= 5.0-alt2
 Requires: coreutils
 Provides: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
 
@@ -73,7 +73,7 @@ Requires: plymouth
 Conflicts: %(for n in %variants ; do [ "$n" = %brand-%theme ] || echo -n "branding-$n-bootsplash ";done )
 %description bootsplash
 This package contains graphics for boot process, displayed via Plymouth
-
+%endif #ifarch
 
 %package alterator
 Summary: Design for alterator for %Brand %Theme
@@ -224,6 +224,7 @@ popd
 mkdir -p %buildroot/usr/share/install2/slideshow
 install slideshow/* %buildroot/usr/share/install2/slideshow/
 
+%ifarch %ix86 x86_64
 #bootloader
 %pre bootloader
 [ -s /usr/share/gfxboot/%theme ] && rm -fr /usr/share/gfxboot/%theme ||:
@@ -245,10 +246,12 @@ shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_HIGHLIGHT %grub_high
 [ $1 = 0 ] || exit 0
 [ "`readlink /boot/splash/message`" != "%theme/message" ] ||
     rm -f /boot/splash/message
+%endif #ifarch
 
 %post indexhtml
 %_sbindir/indexhtml-update
 
+%ifarch %ix86 x86_64
 %files bootloader
 %_datadir/gfxboot/%theme
 /boot/splash/%theme
@@ -259,6 +262,7 @@ subst "s/Theme=.*/Theme=%theme/" /etc/plymouth/plymouthd.conf
 [ -f /etc/sysconfig/grub2 ] && \
       subst "s|GRUB_WALLPAPER=.*|GRUB_WALLPAPER=/usr/share/plymouth/themes/%theme/grub.jpg|" \
              /etc/sysconfig/grub2 ||:
+%endif #ifarch
 
 %files alterator
 %config %_altdir/*.rcc
@@ -269,8 +273,10 @@ subst "s/Theme=.*/Theme=%theme/" /etc/plymouth/plymouthd.conf
 %config /etc/alternatives/packages.d/%name-graphics
 %_datadir/design
 
+%ifarch %ix86 x86_64
 %files bootsplash
 %_datadir/plymouth/themes/%theme/*
+%endif #ifarch
 
 %files release
 %_sysconfdir/*-release

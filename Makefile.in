@@ -2,6 +2,7 @@ STATUS=@STATUS@
 THEME=@THEME@
 NAME=@NAME@
 VERSION=@VERSION@
+ARCH=$(shell arch)
 
 all:
 # background
