@@ -1,0 +1,113 @@
+# Debian Lenny theme for GRUB2
+#
+# Copyright © 2010 Jo Shields
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+#general settings
+message-font: "DejaVu Sans Regular 12"
+title-text: ""
+message-color: "#000000"
+message-bg-color: "#0c2c6c"
+desktop-image: "grub.jpg"
+terminal-font: "Misc Fixed Regular 13"
+
+#help bar at the bottom
++ label {
+	top = 100%-100
+	left = 20%
+	width = 60%
+	height = 25
+	text = "Select a menu item and press Enter to start the system."
+	align = "center"
+	#font = "Droid Sans Bold 14"
+	color = "#F8E97C"
+}
+
+#help bar at the bottom
++ label {
+	top = 100%-80
+	left = 20%
+	width = 60%
+	height = 25
+	text = "Для запуска системы выберите пункт меню и нажмите Enter."
+	align = "center"
+	#font = "Droid Sans Bold 14"
+	color = "#F8E97C"
+}
+
++ label {
+	top = 100%-60
+	left = 20%
+	width = 60%
+	height = 25
+	text = "Press E to edit the menu. Esc to exit."
+	align = "center"
+	#font = "Droid Sans Bold 14"
+	color = "#cccccc"
+}
+
++ label {
+	top = 100%-40
+	left = 20%
+	width = 60%
+	height = 25
+	text = "Для редактирования меню нажмите E. Для выхода - Esc."
+	align = "center"
+	#font = "Droid Sans Bold 14"
+	color = "#cccccc"
+}
+
+#menu
++ boot_menu {
+	left = 20%
+	width = 60%
+	top = 30%
+	height = 40%
+	item_font = "DejaVu Sans Bold 14"
+	selected_item_font = "DejaVu Sans Bold 14"
+	icon_width = 24
+	item_height = 26
+	item_padding = 0
+	item_icon_space = 0
+	item_spacing = 1
+	selected_item_pixmap_style = "selected_blob_*.png"
+	scrollbar = true
+	scrollbar_width = 20
+	scrollbar_thumb = "scrollbar_slider_*.png"
+	scrollbar_frame = "scrollbar_border_*.png"
+	item_color = "#ffffff"
+	selected_item_color = "#F8E97C"
+}
+
++ circular_progress
+{
+   id = "__timeout__"
+   left = 52%
+   top = 13%
+   width = 36
+   height =36 
+   num_ticks = 12
+   ticks_disappear = false 
+   start_angle = -60
+   center_bitmap = "zero.png"
+   tick_bitmap = "tick.png"
+
+}
+
