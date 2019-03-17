@@ -14,7 +14,7 @@ Release: alt1
 
 Url: http://en.altlinux.org/starterkits
 
-BuildRequires: cpio fonts-ttf-dejavu
+BuildRequires: cpio fonts-ttf-dejavu fonts-ttf-google-droid-sans
 
 BuildRequires: qt5-base-devel
 BuildRequires: libalternatives-devel
