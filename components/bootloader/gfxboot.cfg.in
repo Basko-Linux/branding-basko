@@ -44,7 +44,7 @@ mainmenu.selected.fg=0x@LIGHT_LABELS_HEX@
 bootopt.label.fg=0x@LIGHT_LABELS_HEX@
 bootopt.text.fg=0x@LIGHT_LABELS_HEX@
 ; progress bar color
-progress.bar.color=0x@MIDDLE_COLOR_HEX@
+progress.bar.color=0x0000FF
 ; menu colors
 menu.normal.bg=0x798491
 menu.normal.fg=0x@DARK_LABELS_HEX@
