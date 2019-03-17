@@ -9,8 +9,8 @@
 %define distro_name ALT Starterkit
 
 Name: branding-%brand-%theme
-Version: p8
-Release: alt0.M80P.5
+Version: p9
+Release: alt1
 
 Url: http://en.altlinux.org/starterkits
 
@@ -300,6 +300,14 @@ subst "s/Theme=.*/Theme=%theme/" /etc/plymouth/plymouthd.conf
 %_desktopdir/indexhtml.desktop
 
 %changelog
+* Sun Mar 17 2019 Anton Midyukov <antohami@altlinux.org> p9-alt1
+- updated for basealt-p9-starterkits
+- drop kde3-settings
+- drop kde4-settings
+- drop gnome-settings and gnome-themes
+- fix build for non-x86
+- added grub theme
+
 * Mon Feb 25 2019 Anton Midyukov <antohami@altlinux.org> p8-alt0.M80P.5
 - Cleanup plymouth theme
 
