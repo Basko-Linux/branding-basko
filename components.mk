@@ -21,7 +21,6 @@ ahttpd:
 	install -Dpm644 images/product-logo.png $(datadir)/alterator/design/images/product-logo.png
 	cp -a components/ahttpd/styles/*.css $(datadir)/alterator/design/styles
 
-ifeq (,$(filter-out i586 i686 x86_64,$(ARCH)))
 # bootloader and bootsplash
 boot-images:
 	cp -a  /usr/src/design-bootloader-source ./
@@ -61,20 +60,19 @@ boot: boot-images
 	mv $(datadir)/plymouth/themes/$(THEME)/theme.plymouth $(datadir)/plymouth/themes/$(THEME)/$(THEME).plymouth
 	rm -f $(datadir)/plymouth/themes/$(THEME)/*.in
 #bootloader
+ifeq (,$(filter-out i586 i686 x86_64,$(ARCH)))
 	DEFAULT_LANG='--lang-to-subst--' PATH=$(PATH):/usr/sbin make -C design-bootloader-source
 	install -d -m 755  $(sysconfdir)/../boot/splash/$(THEME)
 	install -d -m 755 $(datadir)/gfxboot/$(THEME)
 	install -m 644 design-bootloader-source/message $(sysconfdir)/../boot/splash/$(THEME)
 	install -m 644 design-bootloader-source/bootlogo $(datadir)/gfxboot/$(THEME)
+endif
 #grub2
 	convert -size 16x16 -define png:color-type=2 -depth 8 xc:'#798491' components/grub2/selected_blob_c.png
 	install -d -m 755  $(sysconfdir)/../boot/grub/themes/$(THEME)
 	cp -a components/grub2/* $(sysconfdir)/../boot/grub/themes/$(THEME)/
 	install -m 644 images/boot.png $(sysconfdir)/../boot/grub/themes/$(THEME)/boot.png
 	install -m 644 images/boot.jpg $(sysconfdir)/../boot/grub/themes/$(THEME)/grub.jpg
-else
-boot: ; @:
-endif
 
 # index html page, start page for all local browsers
 INDEXHTML_DIR=$(datadir)/doc/indexhtml
