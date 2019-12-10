@@ -10,7 +10,7 @@
 
 Name: branding-%brand-%theme
 Version: p9
-Release: alt5
+Release: alt6
 
 Url: http://en.altlinux.org/starterkits
 
@@ -335,6 +335,9 @@ subst "s/Theme=.*/Theme=%theme/" /etc/plymouth/plymouthd.conf
 %_sysconfdir/skel/.config/autostart/*
 
 %changelog
+* Wed Dec 11 2019 Anton Midyukov <antohami@altlinux.org> p9-alt6
+- setup black background for grub
+
 * Sat Oct 26 2019 Anton Midyukov <antohami@altlinux.org> p9-alt5
 - bootsplash: add system-logo
 
