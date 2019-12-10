@@ -273,7 +273,9 @@ echo $lang > lang
 shell_config_set /etc/sysconfig/grub2 GRUB_THEME /boot/grub/themes/%theme/theme.txt
 shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_NORMAL %grub_normal
 shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_HIGHLIGHT %grub_high
-shell_config_set /etc/sysconfig/grub2 GRUB_WALLPAPER /boot/grub/themes/%theme/boot.png
+shell_config_set /etc/sysconfig/grub2 GRUB_BACKGROUND ''
+# deprecated
+shell_config_set /etc/sysconfig/grub2 GRUB_WALLPAPER ''
 
 %ifarch %ix86 x86_64
 %preun bootloader
