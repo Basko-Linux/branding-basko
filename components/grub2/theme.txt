@@ -24,8 +24,8 @@
 message-font: "DejaVu Sans Regular 12"
 title-text: ""
 message-color: "#000000"
-message-bg-color: "#0c2c6c"
-desktop-image: "grub.jpg"
+message-bg-color: "#ffffff"
+desktop-image: "boot.png"
 terminal-font: "Misc Fixed Regular 13"
 
 #help bar at the bottom
