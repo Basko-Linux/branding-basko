@@ -8,6 +8,7 @@ all:
 # background
 	convert images/wallpaper.png -fill '#857b7b' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 64,64 "@STATUS@"' wallpaper.png
 	cp -alf wallpaper.png graphics/backgrounds/default.png
+	cp -alf wallpaper.png graphics/backgrounds/default-wide.png
 	cp -alf wallpaper.png graphics/backgrounds/xdm.png
 
 include components.mk
