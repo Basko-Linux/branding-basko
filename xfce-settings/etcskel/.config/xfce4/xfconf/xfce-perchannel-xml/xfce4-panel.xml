@@ -87,5 +87,6 @@
       <property name="base-directory" type="string" value="/home/user"/>
     </property>
     <property name="plugin-16" type="string" value="xkb"/>
+    <property name="plugin-17" type="string" value="power-manager-plugin"/>
   </property>
 </channel>
