@@ -27,10 +27,10 @@ boot-images:
 	cp -a components/bootloader/config design-bootloader-source/
 	cp -a components/bootloader/gfxboot.cfg design-bootloader-source/data-install/
 	cp -a components/bootloader/gfxboot.cfg design-bootloader-source/data-boot/
-	#for size in 1024x768 800x600 640x480; do \
-	#	convert images/boot.jpg -quality 97 -resize "$$size!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' boot-$$size.jpg ;\
-	#done
-	#convert images/boot.png -resize "800x600!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' design-bootloader-source/data-install/back.jpg
+	for size in 1024x768 800x600 640x480; do \
+		convert images/boot.png -quality 97 -resize "$$size!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' boot-$$size.jpg ;\
+	done
+	convert images/boot.png -resize "800x600!" -fill '#c62530' -font /usr/share/fonts/ttf/dejavu/DejaVuSansCondensed-Bold.ttf -style Normal -weight Normal -pointsize 20 -gravity northeast -draw 'text 25,25 "$(STATUS)"' design-bootloader-source/data-install/back.jpg
 	convert -colorspace YCbCr -sampling-factor 2x2 images/boot.png JPEG:images/boot.jpg
 	cp -al images/boot.jpg design-bootloader-source/data-boot/back.jpg
 	cp -afl images/boot.jpg design-bootloader-source/data-install/back.jpg
@@ -53,9 +53,9 @@ boot: boot-images
 	cp -afl boot-800x600.jpg design-bootloader-source/data-install/back.jpg
 #bootsplash
 	mkdir -p $(datadir)/plymouth/themes/$(THEME)
-	cp -afl boot-800x600.jpg $(datadir)/plymouth/themes/$(THEME)/grub.jpg
+#	cp -afl boot-800x600.jpg $(datadir)/plymouth/themes/$(THEME)/grub.jpg
 	cp -afl images/background*x*.png $(datadir)/plymouth/themes/$(THEME)/
-	cp -afl images/wallpaper.png $(datadir)/plymouth/themes/$(THEME)/wallpaper.png
+#	cp -afl images/wallpaper.png $(datadir)/plymouth/themes/$(THEME)/wallpaper.png
 	cp -af components/bootsplash/* $(datadir)/plymouth/themes/$(THEME)
 	mv $(datadir)/plymouth/themes/$(THEME)/theme.plymouth $(datadir)/plymouth/themes/$(THEME)/$(THEME).plymouth
 	rm -f $(datadir)/plymouth/themes/$(THEME)/*.in
@@ -72,7 +72,7 @@ endif
 	install -d -m 755  $(sysconfdir)/../boot/grub/themes/$(THEME)
 	cp -a components/grub2/* $(sysconfdir)/../boot/grub/themes/$(THEME)/
 	install -m 644 images/boot.png $(sysconfdir)/../boot/grub/themes/$(THEME)/boot.png
-	install -m 644 images/boot.jpg $(sysconfdir)/../boot/grub/themes/$(THEME)/grub.jpg
+#	install -m 644 images/boot.jpg $(sysconfdir)/../boot/grub/themes/$(THEME)/grub.jpg
 
 # index html page, start page for all local browsers
 INDEXHTML_DIR=$(datadir)/doc/indexhtml
