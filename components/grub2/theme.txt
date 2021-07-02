@@ -37,7 +37,7 @@ terminal-font: "Misc Fixed Regular 13"
 	text = "Select a menu item and press Enter to start the system."
 	align = "center"
 	#font = "Droid Sans Bold 14"
-	color = "#F8E97C"
+	color = "#000000"
 }
 
 #help bar at the bottom
@@ -49,7 +49,7 @@ terminal-font: "Misc Fixed Regular 13"
 	text = "Для запуска системы выберите пункт меню и нажмите Enter."
 	align = "center"
 	#font = "Droid Sans Bold 14"
-	color = "#F8E97C"
+	color = "#000000"
 }
 
 + label {
@@ -60,7 +60,7 @@ terminal-font: "Misc Fixed Regular 13"
 	text = "Press E to edit the menu. Esc to exit."
 	align = "center"
 	#font = "Droid Sans Bold 14"
-	color = "#cccccc"
+	color = "#000000"
 }
 
 + label {
@@ -71,7 +71,7 @@ terminal-font: "Misc Fixed Regular 13"
 	text = "Для редактирования меню нажмите E. Для выхода - Esc."
 	align = "center"
 	#font = "Droid Sans Bold 14"
-	color = "#cccccc"
+	color = "#000000"
 }
 
 #menu
@@ -92,8 +92,8 @@ terminal-font: "Misc Fixed Regular 13"
 	scrollbar_width = 20
 	scrollbar_thumb = "scrollbar_slider_*.png"
 	scrollbar_frame = "scrollbar_border_*.png"
-	item_color = "#ffffff"
-	selected_item_color = "#F8E97C"
+	item_color = "#000000"
+	selected_item_color = "#feff00"
 }
 
 + circular_progress
