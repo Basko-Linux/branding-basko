@@ -62,9 +62,7 @@ boot: boot-images
 #bootloader
 ifeq (,$(filter-out i586 i686 x86_64,$(ARCH)))
 	DEFAULT_LANG='--lang-to-subst--' PATH=$(PATH):/usr/sbin make -C design-bootloader-source
-	install -d -m 755  $(sysconfdir)/../boot/splash/$(THEME)
 	install -d -m 755 $(datadir)/gfxboot/$(THEME)
-	install -m 644 design-bootloader-source/message $(sysconfdir)/../boot/splash/$(THEME)
 	install -m 644 design-bootloader-source/bootlogo $(datadir)/gfxboot/$(THEME)
 endif
 #grub2

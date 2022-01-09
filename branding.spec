@@ -258,17 +258,8 @@ popd
 #bootloader
 %pre bootloader
 [ -s /usr/share/gfxboot/%theme ] && rm -fr /usr/share/gfxboot/%theme ||:
-[ -s /boot/splash/%theme ] && rm -fr /boot/splash/%theme ||:
 
 %post bootloader
-%ifarch %ix86 x86_64
-ln -snf %theme/message /boot/splash/message
-. /etc/sysconfig/i18n
-lang=$(echo $LANG | cut -d. -f 1)
-cd boot/splash/%theme/
-echo $lang > lang
-[ "$lang" = "C" ] || echo lang | cpio -o --append -F message
-%endif #ifarch
 . shell-config
 shell_config_set /etc/sysconfig/grub2 GRUB_THEME /boot/grub/themes/%theme/theme.txt
 shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_NORMAL %grub_normal
@@ -277,20 +268,12 @@ shell_config_set /etc/sysconfig/grub2 GRUB_BACKGROUND ''
 # deprecated
 shell_config_set /etc/sysconfig/grub2 GRUB_WALLPAPER ''
 
-%ifarch %ix86 x86_64
-%preun bootloader
-[ $1 = 0 ] || exit 0
-[ "`readlink /boot/splash/message`" != "%theme/message" ] ||
-    rm -f /boot/splash/message
-%endif #ifarch
-
 %post indexhtml
 %_sbindir/indexhtml-update
 
 %files bootloader
 %ifarch %ix86 x86_64
 %_datadir/gfxboot/%theme
-/boot/splash/%theme
 %endif #ifarch
 /boot/grub/themes/%theme
 
