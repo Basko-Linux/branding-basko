@@ -111,7 +111,7 @@ Conflicts: design-graphics-default
 %description graphics
 This package contains some graphics for ALT design.
 
-%define provide_list altlinux fedora redhat system altlinux
+%define provide_list altlinux fedora redhat system
 %define obsolete_list altlinux-release fedora-release redhat-release
 %define conflicts_list altlinux-release-sisyphus altlinux-release-4.0 altlinux-release-junior altlinux-release-master altlinux-release-server altlinux-release-terminal altlinux-release-small_business
 
