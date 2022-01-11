@@ -210,9 +210,9 @@ popd
 
 install -d %buildroot//etc/alternatives/packages.d
 cat >%buildroot/etc/alternatives/packages.d/%name-graphics <<__EOF__
-%_datadir/artworks	%_datadir/design/%theme 10	
-%_datadir/design-current	%_datadir/design/%theme	10
-%_datadir/design/current	%_datadir/design/%theme	10
+%_datadir/artworks	%_datadir/design/%theme 9
+%_datadir/design-current	%_datadir/design/%theme	9
+%_datadir/design/current	%_datadir/design/%theme	9
 __EOF__
 
 #release
