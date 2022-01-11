@@ -12,7 +12,7 @@
 
 Name: branding-%flavour
 Version: p10
-Release: alt1
+Release: alt2
 
 Url: http://en.altlinux.org/starterkits
 
@@ -329,6 +329,15 @@ subst "s/Theme=.*/Theme=%theme/" /etc/plymouth/plymouthd.conf
 %_sysconfdir/skel/.config/autostart/*
 
 %changelog
+* Tue Jan 11 2022 Anton Midyukov <antohami@altlinux.org> p10-alt2
+- drop old bootsplash support
+- fix Requires tag for alternatives
+- do not use fetch_color
+- do not pack system-logo to %_pixmapsdir
+- new bootsplash theme (based on Kworkstation)
+- save initial release
+- fix duplicate provides
+
 * Fri Jul 02 2021 Anton Midyukov <antohami@altlinux.org> p10-alt1
 - first release for p10
 
