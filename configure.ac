@@ -44,6 +44,7 @@ AC_CONFIG_FILES([
 		 Makefile
 		 components/bootloader/config
 		 components/bootsplash/theme.plymouth
+		 components/bootsplash/theme.script
 		 components/browser-qt/design/design.ini
 		 components/browser-qt/design/design.qss
 		 components/bootloader/gfxboot.cfg

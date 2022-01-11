@@ -1,6 +1,6 @@
 [Plymouth Theme]
 Name=@NAME@
-Description=Script for @BRAND_FNAME@ @NAME@
+Description=Breeze theme mod for @BRAND_FNAME@ @NAME@ @STATUS@
 ModuleName=script
 
 [script]
