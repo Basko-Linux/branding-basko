@@ -88,7 +88,7 @@ Provides: design-alterator-browser-%theme branding-alt-%theme-browser-qt brandin
 Provides: alterator-icons design-alterator design-alterator-%theme
 Obsoletes: branding-alt-%theme-browser-qt branding-altlinux-%theme-browser-qt design-alterator-server design-alterator-desktop design-alterator-browser-desktop design-alterator-browser-server
 %branding_add_conflicts %flavour alterator
-Requires: alternatives >= 0.2 alterator
+Requires(post,preun): alternatives >= 0.2 alterator
 
 %description alterator
 Design for QT and web alterator for %Brand %Theme
@@ -104,7 +104,7 @@ Provides: design-graphics = 12.0.0
 Provides: design-graphics-%theme branding-alt-%theme-graphics
 Provides: design-graphics = %design_graphics_abi_major.%design_graphics_abi_minor.%design_graphics_abi_bugfix
 Obsoletes: design-graphics-%theme
-Requires: alternatives >= 0.2
+Requires(post,preun): alternatives >= 0.2
 %branding_add_conflicts %flavour graphics
 Conflicts: design-graphics-default
 
