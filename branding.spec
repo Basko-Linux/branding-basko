@@ -228,7 +228,7 @@ install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%
 	[ -n "%codename" ] && echo -n " (%codename)"
 	echo
 } >%buildroot%_sysconfdir/altlinux-release
-for n in fedora redhat system alt; do
+for n in fedora redhat system; do
 	ln -s altlinux-release %buildroot%_sysconfdir/$n-release
 done
 install -pD -m644 components/systemd/os-release %buildroot%_sysconfdir/os-release
