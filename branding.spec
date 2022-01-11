@@ -8,6 +8,7 @@
 %define Brand ALT
 %define flavour %brand-%theme
 %define distro_name ALT Starterkit
+%define branding_data_dir %_datadir/branding-data-current
 
 Name: branding-%flavour
 Version: p10
@@ -118,6 +119,7 @@ This package contains some graphics for ALT design.
 Summary: %distribution %Theme release file
 Group: System/Configuration/Other
 BuildArch: noarch
+Requires: alt-os-release
 Provides: %(for n in %provide_list; do echo -n "$n-release = %version-%release "; done) altlinux-release-%theme branding-alt-%theme-release
 Obsoletes: %obsolete_list
 Conflicts: %conflicts_list
@@ -231,6 +233,13 @@ for n in fedora redhat system alt; do
 done
 install -pD -m644 components/systemd/os-release %buildroot%_sysconfdir/os-release
 
+# save release
+mkdir -p %buildroot/%branding_data_dir/release/
+cp -ar %buildroot/%_sysconfdir/altlinux-release %buildroot/%branding_data_dir/release/altlinux-release
+cp -ar %buildroot/%_sysconfdir/os-release %buildroot/%branding_data_dir/release/os-release
+mkdir -p %buildroot/%prefix/lib/
+cp -ar %buildroot/%_sysconfdir/os-release %buildroot/%prefix/lib/os-release
+
 #notes
 pushd notes
 %makeinstall
@@ -289,8 +298,16 @@ subst "s/Theme=.*/Theme=%theme/" /etc/plymouth/plymouthd.conf
 %_datadir/plymouth/themes/%theme/*
 
 %files release
-%_sysconfdir/*-release
+%ghost %config(noreplace) %_sysconfdir/os-release
+%_sysconfdir/altlinux-release
+%config(noreplace) %_sysconfdir/fedora-release
+%config(noreplace) %_sysconfdir/redhat-release
+%config(noreplace) %_sysconfdir/system-release
 %_sysconfdir/buildreqs/packages/ignore.d/*
+%dir %branding_data_dir/
+%dir %branding_data_dir/release/
+%branding_data_dir/release/*-release
+%prefix/lib/os-release
 
 %files notes
 %_datadir/alt-notes/*
