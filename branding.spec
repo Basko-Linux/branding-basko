@@ -73,7 +73,6 @@ BuildArch: noarch
 Provides: plymouth-theme-%theme plymouth(system-theme)
 Requires: plymouth-plugin-script
 Requires: plymouth
-Conflicts: system-logo
 %branding_add_conflicts %flavour bootsplash
 
 %description bootsplash
@@ -214,10 +213,6 @@ cat >%buildroot/etc/alternatives/packages.d/%name-graphics <<__EOF__
 %_datadir/design/current	%_datadir/design/%theme	10
 __EOF__
 
-# bootsplash
-mkdir -p %buildroot%_pixmapsdir
-cp -a images/system-logo.png %buildroot%_pixmapsdir/
-
 #release
 install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%name-release
 {
@@ -292,7 +287,6 @@ subst "s/Theme=.*/Theme=%theme/" /etc/plymouth/plymouthd.conf
 
 %files bootsplash
 %_datadir/plymouth/themes/%theme/*
-%_pixmapsdir/system-logo.png
 
 %files release
 %_sysconfdir/*-release
