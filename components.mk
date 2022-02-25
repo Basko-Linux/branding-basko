@@ -52,14 +52,14 @@ boot: boot-images
 	cp -afl boot-800x600.jpg design-bootloader-source/data-boot/back.jpg
 	cp -afl boot-800x600.jpg design-bootloader-source/data-install/back.jpg
 #bootsplash
-	mkdir -p $(datadir)/plymouth/themes/$(THEME)
+#	mkdir -p $(datadir)/plymouth/themes/$(THEME)
 #	cp -afl boot-800x600.jpg $(datadir)/plymouth/themes/$(THEME)/grub.jpg
-	cp -afl images/background*x*.png $(datadir)/plymouth/themes/$(THEME)/
+#	cp -afl images/background*x*.png $(datadir)/plymouth/themes/$(THEME)/
 #	cp -afl images/wallpaper.png $(datadir)/plymouth/themes/$(THEME)/wallpaper.png
-	cp -al images/system-logo.png $(datadir)/plymouth/themes/$(THEME)/system-logo.png
-	cp -af components/bootsplash/* $(datadir)/plymouth/themes/$(THEME)
-	mv $(datadir)/plymouth/themes/$(THEME)/theme.plymouth $(datadir)/plymouth/themes/$(THEME)/$(THEME).plymouth
-	rm -f $(datadir)/plymouth/themes/$(THEME)/*.in
+#	cp -al images/system-logo.png $(datadir)/plymouth/themes/$(THEME)/system-logo.png
+#	cp -af components/bootsplash/* $(datadir)/plymouth/themes/$(THEME)
+#	mv $(datadir)/plymouth/themes/$(THEME)/theme.plymouth $(datadir)/plymouth/themes/$(THEME)/$(THEME).plymouth
+#	rm -f $(datadir)/plymouth/themes/$(THEME)/*.in
 #bootloader
 ifeq (,$(filter-out i586 i686 x86_64,$(ARCH)))
 	DEFAULT_LANG='--lang-to-subst--' PATH=$(PATH):/usr/sbin make -C design-bootloader-source

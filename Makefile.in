@@ -11,6 +11,9 @@ all:
 	cp -alf background4x3.png graphics/backgrounds/default.png
 	cp -alf background16x9.png graphics/backgrounds/default-wide.png
 	cp -alf background4x3.png graphics/backgrounds/xdm.png
+# system-logo
+	mkdir -p graphics/icons/
+	cp -alf images/system-logo.png graphics/icons/
 
 include components.mk
 install: browser-qt ahttpd boot indexhtml

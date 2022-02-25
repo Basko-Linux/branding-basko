@@ -1,8 +1,0 @@
-[Plymouth Theme]
-Name=@NAME@
-Description=Breeze theme mod for @BRAND_FNAME@ @NAME@ @STATUS@
-ModuleName=script
-
-[script]
-ImageDir=/usr/share/plymouth/themes/@THEME@
-ScriptFile=/usr/share/plymouth/themes/@THEME@/theme.script
