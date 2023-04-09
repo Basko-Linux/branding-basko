@@ -14,8 +14,9 @@
 %define altbranch %_priority_distbranch
 
 Name: branding-%flavour
-Version: p10
-Release: alt4
+Version: 10
+Release: alt1
+Epoch: 1
 
 Url: http://en.altlinux.org/starterkits
 
@@ -337,6 +338,12 @@ subst "s/Theme=.*/Theme=bgrt-alt/" /etc/plymouth/plymouthd.conf
 %_sysconfdir/skel/.config/autostart/*
 
 %changelog
+* Sun Apr 09 2023 Anton Midyukov <antohami@altlinux.org> 1:10-alt1
+- version without 'p', bump Epoch
+- os-release: remove CODENAME from VERSION
+- os-release: add BUILD_ID
+- os-release: add ALT_BRANCH_ID
+
 * Mon Oct 31 2022 Anton Midyukov <antohami@altlinux.org> p10-alt4
 - disable slideshow subpackage
 
