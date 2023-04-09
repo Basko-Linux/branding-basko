@@ -11,6 +11,7 @@
 %define flavour %brand-%theme
 %define distro_name ALT Starterkit
 %define branding_data_dir %_datadir/branding-data-current
+%define altbranch %_priority_distbranch
 
 Name: branding-%flavour
 Version: p10
@@ -195,7 +196,7 @@ XFCE settings for %Brand %version %Theme
 
 %build
 autoconf
-THEME=%theme NAME='%Theme' BRAND_FNAME='%Brand' BRAND='%brand' STATUS_EN=%status_en STATUS=%status VERSION=%version PRODUCT_NAME='%distro_name' CODENAME=%codename URL='%url' ./configure
+THEME=%theme NAME='%Theme' BRAND_FNAME='%Brand' BRAND='%brand' STATUS_EN=%status_en STATUS=%status VERSION=%version PRODUCT_NAME='%distro_name' CODENAME=%codename URL='%url' BRANCH='%altbranch' ./configure
 LC_ALL=en_US.UTF-8 make
 
 %install
