@@ -40,7 +40,7 @@
 
 </div>
 
-<p class="footer"><nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr> &copy; ООО «Базальт СПО», 2016.<br />
+<p class="footer"><nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr> &copy; ООО «Базальт СПО», 2015&ndash;@YEAR@.<br />
    Адрес: г. Москва, ул. Бутырская, д.75.<br />
    Телефон/факс: +7 (495) 123-47-99
 </p>

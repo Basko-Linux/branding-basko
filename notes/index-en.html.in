@@ -41,7 +41,7 @@
 
 </div>
 
-<p class="footer"><nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr> &copy; BaseALT Ltd, 2016.<br />
+<p class="footer"><nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr> &copy; BaseALT Ltd, 2015&ndash;@YEAR@.<br />
   Address: Butyrskaya str. 75, Moscow, Russia<br />
   Phone/Fax: +7 (495) 123-47-99
 </p>
