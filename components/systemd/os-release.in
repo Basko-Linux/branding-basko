@@ -9,3 +9,4 @@ BUILD_ID="@NAME@ @VERSION@@STATUS@"
 ALT_BRANCH_ID="@BRANCH@"
 HOME_URL="@URL@"
 BUG_REPORT_URL="https://bugs.altlinux.org/"
+LOGO=altlinux
