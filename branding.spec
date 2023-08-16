@@ -30,6 +30,8 @@ BuildRequires: libalternatives-devel
 BuildRequires: ImageMagick fontconfig bc libGConf-devel
 BuildRequires: fribidi
 
+BuildRequires: distro-licenses
+
 %define status %nil
 %define status_en %nil
 
@@ -194,6 +196,7 @@ XFCE settings for %Brand %version %Theme
 
 %prep
 %setup -n branding
+cp /usr/share/distro-licenses/ALT_Regular_License/license.{all,ru}.html.in notes/
 
 %build
 autoconf
