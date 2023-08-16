@@ -9,7 +9,7 @@
 %define brand alt
 %define Brand ALT
 %define flavour %brand-%theme
-%define distro_name ALT Starterkit
+%define distro_name Starterkit
 %define branding_data_dir %_datadir/branding-data-current
 %define altbranch %_priority_distbranch
 
