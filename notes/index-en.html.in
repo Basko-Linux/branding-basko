@@ -25,7 +25,7 @@
 </div>
 
 <div class="box">
-  <p align="justify">Welcome to <nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr>.  Please note that this software product is created for experienced users who would like a convenient image to start off.</p>
+  <p align="justify">Welcome to <nobr>@BRAND_FNAME@ @PRODUCT_NAME@</nobr>.  Please note that this software product is created for experienced users who would like a convenient image to start off.</p>
 
   <p align="justify">This software product would never be accomplished without active efforts put forth by ALT Linux Team&nbsp;&mdash; a community of free/libre software developers.</p>
 
