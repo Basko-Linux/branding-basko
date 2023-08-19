@@ -3,7 +3,6 @@
     <meta http-equiv="content-type" value="text/html;charset=utf-8"/>
 </head>
 <body>
-    <h2>@BRAND_FNAME@ @NAME@ based operating system is installed</h2>
-    <p>Details available at <a href="http://en.altlinux.org/starterkits">en.altlinux.org/starterkits</a></p>
+    <h2>@BRANCH@ based @BRAND_FNAME@ @PRODUCT_NAME@ distribution is supposedly installed and hopefully ready to use.</h2>
 </body>
 </html>
