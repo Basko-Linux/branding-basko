@@ -80,6 +80,6 @@ indexhtml:
 	  install -Dpm644 $$i $(INDEXHTML_DIR)/`basename $$i`; \
 	done
 	install -Dpm644 /dev/null $(INDEXHTML_DIR)/index.html
-	cp -a components/indexhtml/img $(INDEXHTML_DIR)
-	install -Dpm644 images/product-logo.png $(INDEXHTML_DIR)/img/product-logo.png
+	cp -a components/indexhtml/images $(INDEXHTML_DIR)
+	install -Dpm644 images/product-logo.png $(INDEXHTML_DIR)/images/product-logo.png
 	install -Dpm644 components/indexhtml/indexhtml.desktop $(datadir)/applications/indexhtml.desktop

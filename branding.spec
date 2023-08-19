@@ -321,7 +321,7 @@ subst "s/Theme=.*/Theme=bgrt-alt/" /etc/plymouth/plymouthd.conf
 %ghost %indexhtmldir/index.html
 %indexhtmldir/index-*.html
 %indexhtmldir/index.css
-%indexhtmldir/img
+%indexhtmldir/images
 %_desktopdir/indexhtml.desktop
 
 %files xfce-settings

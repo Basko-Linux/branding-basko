@@ -4,7 +4,7 @@ Type=Application
 Exec=xdg-open /usr/share/doc/indexhtml/index.html
 StartupNotify=false
 Icon=altlinux
-Name=About System
+Name=About system
 Categories=System;Documentation;
 
 # Translations

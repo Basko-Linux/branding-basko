@@ -1,49 +1,79 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title>@BRAND_FNAME@ @NAME@ @STATUS@</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="UTF-8">
+    <!-- Disto name in title -->
+    <title>@BRAND_FNAME@ @PRODUCT_NAME@</title>
+    <link href="index.css" rel="stylesheet">
+    <link href="images/product.png" rel="shortcut icon" type="image/png" />
 </head>
 
 <body>
+    <section id="content">
 
-<div id="top">
-	<table>
-	    <tbody>
-		<tr>
-		    <td style="text-align:left;width:100%"><img id="product-logo" src="img/null.gif"/></td>
-		    <td style="text-align:right"><img id="brand-logo" src="img/null.gif"/></td>
-		</tr>
-	    </tbody>
-	</table>
-</div>
+        <!-- Language selection -->
+        <div id="languages">
+            <a href="index-en.html">English</a>
+        </div>
 
-<div class="box" id="lang">
- <a href="index-en.html">English</a>
-</div>
+        <!-- Disto name -->
+        <div id="title">@BRAND_FNAME@ @PRODUCT_NAME@</div>
 
-<div class="box">
-	<p>Добро пожаловать в <nobr>@BRAND_FNAME@ @PRODUCT_NAME@</nobr>. Обратите внимание: данный программный продукт предназначен для опытных пользователей, предпочитающих удобный стартовый образ.</p>
+        <div id="main">
+            <!-- Links columns -->
+            <div class="grid">
+                <div class="grid-title"><img src="images/Logo_light_gray_basealt.png" alt="Базальт СПО"></div>
+                <div class="grid-title"><img src="images/Logo_light_gray_altlinux.png"
+                        alt="Дистрибутив ОС «@BRAND_FNAME@ @PRODUCT_NAME@»"></div>
+                <div class="grid-title"><img src="images/Logo_light_gray_usefull_links.png" alt="Полезные ссылки"></div>
+            </div>
+            <div class="grid">
+                <div class="grid-cell side-pane">
+                    <ul>
+                        <li><a href="https://www.basealt.ru">Сайт компании</a></li>
+                        <li><a href="https://vk.com/altlinux">Группа ВКонтакте</a></li>
+                        <li><a href="https://t.me/alt_linux">Телеграм-канал</a></li>
+                        <li><a href="https://dzen.ru/id/621e0fc88b26266f04745c3f">Видеоблог на Дзен</a></li>
+                    </ul>
+                </div>
+                <div class="grid-cell central-pane">
+                    <ul>
+                        <li><a href="https://www.altlinux.org/Starterkits">Об @BRAND_FNAME@ @PRODUCT_NAME@</a></li>
+                        <li><a href="https://www.altlinux.org">Wiki сообщества</a></li>
+                        <li><a href="https://lists.altlinux.org/">Списки рассылки</a></li>
+                        <li><a href="https://forum.altlinux.org/index.php?board=47.0">Форум</a></li>
+                        <li><a href="https://bugzilla.altlinux.org/enter_bug.cgi?product=Regular">Сообщить об ошибке</a></li>
+                    </ul>
+                </div>
+                <div class="grid-cell side-pane">
+                    <ul>
+                        <li><a href="https://packages.altlinux.org/ru/@BRANCH@/">Сведения о пакетной базе</a></li>
+                        <li><a href="https://altlinux.org/FAQ">Ответы на часто задаваемые вопросы</a></li>
+                    </ul>
+                </div>
+            </div>
 
-  <p>Этот программный продукт не появился бы без активного участия ALT Linux Team &mdash; сообщества разработчиков свободного программного обеспечения.</p>
+            <div id="search">
+                <!-- Search pane -->
+                <form action="https://yandex.ru/search?text={text}" method="get">
+                    <img src="images/magnifier.png" alt="Поиск по ресурсам">
+                    <input id="search_string" type="search" name="text" size="35">
+                    <input type="hidden" name="site" value="altlinux.org">
+                    <input id="search_button" type="submit" value="Поиск в Интернете">
+                </form>
+            </div>
 
-  <h2>ALT Linux Team</h2>
-  <ul>
-   <li><a href="http://search.altlinux.org/">Поиск информации по ALT Linux</a></li>
-   <li><a href="http://www.altlinux.org/">Wiki сообщества</a></li>
-   <li><a href="http://lists.altlinux.org/">Списки рассылки</a></li>
-   <li><a href="http://forum.altlinux.org/">Форум пользователей ALT Linux</a></li>
-   <li><a href="http://bugs.altlinux.org/">Сообщить об ошибке</a></li>
-  </ul>
+            <!-- Copyright information -->
+            <footer id="footer">
+                <div id="left_footer">&copy; ООО «Базальт СПО», 2015-@YEAR@. Все права защищены.</div>
+                <div id="right_footer">
+                    ул. Бутырская, д.75<br>
+                    Москва, Россия, 127015
+                </div>
+            </footer>
 
-</div>
+        </div>
 
-<p class="footer"><nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr> &copy; ООО «Базальт СПО», 2015&ndash;@YEAR@.<br />
-   Адрес: г. Москва, ул. Бутырская, д.75.<br />
-   Телефон/факс: +7 (495) 123-47-99
-</p>
-
+    </section>
 </body>
-</html>

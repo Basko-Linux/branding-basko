@@ -1,50 +1,81 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title>@BRAND_FNAME@ @NAME@ @STATUS@</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="UTF-8">
+    <!-- Disto name in title -->
+    <title>@BRAND_FNAME@ @PRODUCT_NAME@</title>
+    <link href="index.css" rel="stylesheet">
+    <link href="images/product.png" rel="shortcut icon" type="image/png" />
 </head>
 
 <body>
+    <section id="content">
 
-<div id="top">
-	<table>
-	    <tbody>
-		<tr>
-		    <td style="text-align:left;width:100%"><img id="product-logo" src="img/null.gif"/></td>
-		    <td style="text-align:right"><img id="brand-logo" src="img/null.gif"/></td>
-		</tr>
-	    </tbody>
-	</table>
-</div>
+        <!-- Language selection -->
+        <div id="languages">
+            <a href="index-ru.html">Русский</a>
+        </div>
 
-<div class="box" id="lang">
- <a href="index-ru.html">Русский</a>
-</div>
+        <!-- Disto name -->
+        <div id="title">@BRAND_FNAME@ @PRODUCT_NAME@</div>
 
-<div class="box">
-  <p align="justify">Welcome to <nobr>@BRAND_FNAME@ @PRODUCT_NAME@</nobr>.  Please note that this software product is created for experienced users who would like a convenient image to start off.</p>
+        <div id="main">
+            <!-- Links columns -->
+            <div class="grid">
+                <div class="grid-title"><img src="images/Logo_light_gray_basealt.png" alt="Basealt Ltd"></div>
+                <div class="grid-title"><img src="images/Logo_light_gray_altlinux.png"
+                        alt="@BRAND_FNAME@ @PRODUCT_NAME@ OS Distribution"></div>
+                <div class="grid-title"><img src="images/Logo_light_gray_usefull_links.png" alt="Useful Links"></div>
+            </div>
+            <div class="grid">
+                <div class="grid-cell side-pane">
+                    <ul>
+                        <li><a href="https://www.basealt.ru">Company Website</a></li>
+                        <li><a href="https://vk.com/altlinux">VK Community</a></li>
+                        <li><a href="https://t.me/alt_linux">Telegram Channel</a></li>
+                        <li><a href="https://dzen.ru/id/621e0fc88b26266f04745c3f">Dzen Video Blog</a></li>
+                    </ul>
+                </div>
+                <div class="grid-cell central-pane">
+                    <ul>
+                        <li><a href="https://en.altlinux.org/Starterkits">About @BRAND_FNAME@ @PRODUCT_NAME@</a></li>
+                        <li><a href="https://en.altlinux.org">Wiki Community</a></li>
+                        <li><a href="https://lists.altlinux.org/">Mailing Lists</a></li>
+                        <li><a href="https://bugzilla.altlinux.org/enter_bug.cgi?product=Regular">Report a bug</a></li>
+                    </ul>
+                </div>
+                <div class="grid-cell side-pane">
+                    <ul>
+                        <li><a href="https://forum.altlinux.org">User Forum (Russian)</a></li>
+                        <li><a href="https://packages.altlinux.org/en/@BRANCH@/">Software Repository</a></li>
+                        <li><a href="https://altlinux.org/FAQ">FAQ (Russian)</a></li>
+                    </ul>
+                </div>
+            </div>
 
-  <p align="justify">This software product would never be accomplished without active efforts put forth by ALT Linux Team&nbsp;&mdash; a community of free/libre software developers.</p>
+            <div id="search">
+                <!-- Search pane -->
+                <form action="https://yandex.ru/search?text={text}" method="get">
+                    <img src="images/magnifier.png" alt="Search on online resources">
+                    <input id="search_string" type="search" name="text" size="35">
+                    <input type="hidden" name="site" value="altlinux.org">
+                    <input id="search_button" type="submit" value="Search in Internet">
+                </form>
+            </div>
 
-  <h2>ALT Linux Team</h2>
-  <ul>
-   <li><a href="http://search.altlinux.org/">Search on ALT Linux websites</a></li>
-   <li><a href="http://www.altlinux.org/">Community Wiki</a>
-      (<a href="http://en.altlinux.org/">in English</a>)</li>
-   <li><a href="http://lists.altlinux.org/">Mailing lists</a></li>
-   <li><a href="http://forum.altlinux.org/">ALT Linux Forum</a></li>
-   <li><a href="http://bugs.altlinux.org/">Report a bug</a></li>
-  </ul>
+            <!-- Copyright information -->
+            <footer id="footer">
+                <div id="left_footer">&copy; 2015-@YEAR@ Basealt Ltd. All rights reserved.</div>
+                <div id="right_footer">
+                    75 Butyrskaya<br>
+                    Moscow<br>
+                    Russian Federation<br>
+                    127015
+                </div>
+            </footer>
 
-</div>
+        </div>
 
-<p class="footer"><nobr>@BRAND_FNAME@ @NAME@ @STATUS@</nobr> &copy; BaseALT Ltd, 2015&ndash;@YEAR@.<br />
-  Address: Butyrskaya str. 75, Moscow, Russia<br />
-  Phone/Fax: +7 (495) 123-47-99
-</p>
-
+    </section>
 </body>
-</html>
