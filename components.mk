@@ -76,7 +76,7 @@ endif
 # index html page, start page for all local browsers
 INDEXHTML_DIR=$(datadir)/doc/indexhtml
 indexhtml:
-	for i in notes/index*.html components/indexhtml/*.css;do \
+	for i in components/indexhtml/*.{css,html};do \
 	  install -Dpm644 $$i $(INDEXHTML_DIR)/`basename $$i`; \
 	done
 	install -Dpm644 /dev/null $(INDEXHTML_DIR)/index.html

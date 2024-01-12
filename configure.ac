@@ -53,8 +53,8 @@ AC_CONFIG_FILES([
 		 notes/release-notes.all.html
 		 notes/license.ru.html
 		 notes/license.all.html
-		 notes/index-ru.html
-		 notes/index-en.html
+		 components/indexhtml/index-ru.html
+		 components/indexhtml/index-en.html
 		 components/indexhtml/indexhtml.desktop
 		 components/indexhtml/index.css
 		 components/ahttpd/styles/alterator.css
