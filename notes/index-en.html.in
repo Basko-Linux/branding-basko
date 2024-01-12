@@ -25,7 +25,7 @@
             <div class="grid">
                 <div class="grid-title"><img src="images/Logo_light_gray_basealt.png" alt="Basealt Ltd"></div>
                 <div class="grid-title"><img src="images/Logo_light_gray_altlinux.png"
-                        alt="@BRAND_FNAME@ @PRODUCT_NAME@ OS Distribution"></div>
+                        alt="@BRAND_FNAME@ @PRODUCT_NAME@"></div>
                 <div class="grid-title"><img src="images/Logo_light_gray_usefull_links.png" alt="Useful Links"></div>
             </div>
             <div class="grid">

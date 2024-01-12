@@ -25,7 +25,7 @@
             <div class="grid">
                 <div class="grid-title"><img src="images/Logo_light_gray_basealt.png" alt="Базальт СПО"></div>
                 <div class="grid-title"><img src="images/Logo_light_gray_altlinux.png"
-                        alt="Дистрибутив ОС «@BRAND_FNAME@ @PRODUCT_NAME@»"></div>
+                        alt="«@BRAND_FNAME@ @PRODUCT_NAME@»"></div>
                 <div class="grid-title"><img src="images/Logo_light_gray_usefull_links.png" alt="Полезные ссылки"></div>
             </div>
             <div class="grid">
