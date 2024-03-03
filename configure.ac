@@ -49,8 +49,6 @@ AC_CONFIG_FILES([
 		 components/bootloader/gfxboot.cfg
 		 notes/release-notes.ru.html
 		 notes/release-notes.all.html
-		 notes/license.ru.html
-		 notes/license.all.html
 		 components/systemd/os-release
 ])
 AC_OUTPUT

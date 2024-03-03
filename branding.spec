@@ -121,7 +121,6 @@ XFCE settings for %Brand %version %Theme
 
 %prep
 %setup -n branding
-cp /usr/share/distro-licenses/ALT_Regular_License/license.{all,ru}.html.in notes/
 
 %build
 autoconf
