@@ -1,22 +1,22 @@
 # Unpackaged files in buildroot should terminate build
 %define _unpackaged_files_terminate_build 1
 
-%define theme basko
-%define Theme starter kit
-%define codename Hypericum
-%define brand alt
-%define Brand ALT
-%define flavour %theme
-%define distro_name Starterkit
+%define theme base
+%define Theme Base
+%define codename 2403
+%define brand basko
+%define Brand Basko Linux
+%define flavour %brand
+%define distro_name Base
 %define branding_data_dir %_datadir/branding-data-current
-%define altbranch %_priority_distbranch
+%define altbranch p10
 
 Name: branding-%flavour
 Version: 10
 Release: alt5
 Epoch: 1
 
-Url: http://en.altlinux.org/starterkits
+Url: http://baskolinux.ru/
 
 BuildRequires(pre): rpm-macros-branding
 
@@ -84,7 +84,7 @@ This package contains some graphics for ALT design.
 %define conflicts_list altlinux-release-sisyphus altlinux-release-4.0 altlinux-release-junior altlinux-release-master altlinux-release-server altlinux-release-terminal altlinux-release-small_business
 
 %package release
-Summary: %distribution %Theme release file
+Summary: %Brand %Theme release file
 Group: System/Configuration/Other
 BuildArch: noarch
 Requires: alt-os-release
@@ -94,7 +94,7 @@ Conflicts: %conflicts_list
 %branding_add_conflicts %flavour release
 
 %description release
-%distribution %version %Theme release file.
+%Brand %version %Theme release file.
 
 %package notes
 Provides: alt-license-theme = %version alt-notes-%theme
@@ -133,7 +133,7 @@ LC_ALL=en_US.UTF-8 make
 #release
 install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%name-release
 {
-	echo -n "%distribution"
+	echo -n "%Brand"
 	[ -n "%Theme" ] && echo -n " %Theme"
 	[ -n "%status_en" ] && {
 		[ "%status_en" = "unstable" ] \
