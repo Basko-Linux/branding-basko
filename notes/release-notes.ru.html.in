@@ -5,7 +5,7 @@
 	<TITLE></TITLE>
 </HEAD>
 <BODY>
-<H2>@BRAND_FNAME@ @PRODUCT_NAME@ на основе @BRANCH@ предположительно установлен и, надеемся, загрузится.</H2>
+<H2>Установка завершена.</H2>
 
 </BODY>
 </HTML>

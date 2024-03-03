@@ -3,6 +3,6 @@
     <meta http-equiv="content-type" value="text/html;charset=utf-8"/>
 </head>
 <body>
-    <h2>@BRANCH@ based @BRAND_FNAME@ @PRODUCT_NAME@ is supposedly installed and hopefully ready to use.</h2>
+    <h2>The installation is complete.</h2>
 </body>
 </html>
