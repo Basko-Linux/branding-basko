@@ -48,6 +48,19 @@ License: GPLv2+
 %description
 Distro-specific packages with design and texts
 
+%package alterator
+Summary: Design for alterator for %Brand %Theme
+License: GPLv2+
+Group: System/Configuration/Other
+BuildArch: noarch
+Provides: design-alterator-browser-%theme branding-alt-%theme-browser-qt branding-altlinux-%theme-browser-qt
+Provides: alterator-icons design-alterator design-alterator-%theme
+%branding_add_conflicts %flavour alterator
+Requires(post,preun): alternatives >= 0.2 alterator
+
+%description alterator
+Design for QT and web alterator for %Brand %Theme
+
 %package graphics
 Summary: design for ALT
 License: Different licenses
@@ -138,6 +151,9 @@ done
 mkdir -p %buildroot/%prefix/lib/
 install -pD -m644 components/systemd/os-release %buildroot/%prefix/lib/os-release
 
+mkdir -p %buildroot/usr/share/alterator/design
+touch %buildroot/usr/share/alterator/design/%theme
+
 #notes
 pushd notes
 %makeinstall
@@ -148,6 +164,9 @@ pushd xfce-settings
 mkdir -p %buildroot/etc/skel/.config/
 cp -r etcskel/.config/xfce4 %buildroot/etc/skel/.config/xfce4
 popd
+
+%files alterator
+/usr/share/alterator/design/%theme
 
 %files release
 %_sysconfdir/buildreqs/packages/ignore.d/*
