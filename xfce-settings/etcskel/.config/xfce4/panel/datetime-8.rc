@@ -1,0 +1,6 @@
+layout=3
+date_font=Droid Sans 12
+time_font=Droid Sans 12
+date_format=%A, %d %B %Y
+time_format=%H:%M
+

@@ -3,12 +3,12 @@
 
 #def_with slideshow
 
-%define theme starterkit
+%define theme basko
 %define Theme starter kit
 %define codename Hypericum
 %define brand alt
 %define Brand ALT
-%define flavour %brand-%theme
+%define flavour %theme
 %define distro_name Starterkit
 %define branding_data_dir %_datadir/branding-data-current
 %define altbranch %_priority_distbranch
@@ -254,12 +254,8 @@ install slideshow/* %buildroot/usr/share/install2/slideshow/
 
 #xfce-settings
 pushd xfce-settings
-mkdir -p %buildroot/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml
-mkdir -p %buildroot/etc/skel/.config/xfce4/panel
-mkdir -p %buildroot/etc/skel/.config/autostart
-cp -r etcskel/.config/xfce4/xfconf/xfce-perchannel-xml/* %buildroot/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml
-cp -r etcskel/.config/xfce4/panel/* %buildroot/etc/skel/.config/xfce4/panel
-cp -r etcskel/.config/autostart/* %buildroot/etc/skel/.config/autostart
+mkdir -p %buildroot/etc/skel/.config/
+cp -r etcskel/.config/xfce4 %buildroot/etc/skel/.config/xfce4
 popd
 
 #bootloader
@@ -326,7 +322,6 @@ subst "s/Theme=.*/Theme=bgrt-alt/" /etc/plymouth/plymouthd.conf
 
 %files xfce-settings
 %_sysconfdir/skel/.config/xfce4
-%_sysconfdir/skel/.config/autostart/*
 
 %changelog
 * Fri Jan 12 2024 Anton Midyukov <antohami@altlinux.org> 1:10-alt5
