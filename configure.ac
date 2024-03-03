@@ -46,18 +46,11 @@ AC_SUBST(BRANCH)
 AC_CONFIG_FILES([
 		 Makefile
 		 components/bootloader/config
-		 components/browser-qt/design/design.ini
-		 components/browser-qt/design/design.qss
 		 components/bootloader/gfxboot.cfg
 		 notes/release-notes.ru.html
 		 notes/release-notes.all.html
 		 notes/license.ru.html
 		 notes/license.all.html
-		 components/indexhtml/index-ru.html
-		 components/indexhtml/index-en.html
-		 components/indexhtml/indexhtml.desktop
-		 components/indexhtml/index.css
-		 components/ahttpd/styles/alterator.css
 		 components/systemd/os-release
 ])
 AC_OUTPUT

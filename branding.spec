@@ -1,8 +1,6 @@
 # Unpackaged files in buildroot should terminate build
 %define _unpackaged_files_terminate_build 1
 
-#def_with slideshow
-
 %define theme basko
 %define Theme starter kit
 %define codename Hypericum
@@ -49,56 +47,6 @@ License: GPLv2+
 
 %description
 Distro-specific packages with design and texts
-
-%package bootloader
-Group: System/Configuration/Boot and Init
-Summary: Graphical boot logo for grub2, lilo and syslinux
-License: GPLv2+
-
-%ifarch %ix86 x86_64
-BuildRequires: gfxboot >= 4
-%endif #ifarch
-BuildRequires: design-bootloader-source >= 5.0-alt2
-Requires: coreutils
-Provides: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme branding-alt-%theme-bootloader
-
-Obsoletes: design-bootloader-system-%theme design-bootloader-livecd-%theme design-bootloader-livecd-%theme design-bootloader-%theme
-%branding_add_conflicts %flavour bootloader
-
-%define grub_normal white/black
-%define grub_high black/white
-
-%description bootloader
-Here you find the graphical boot logo.
-Suitable for grub2, lilo and syslinux.
-
-%package bootsplash
-Summary: Theme for splash animations during bootup
-License: Distributable
-Group:  System/Configuration/Boot and Init
-BuildArch: noarch
-Provides: plymouth-theme-%theme plymouth(system-theme)
-Requires: plymouth-plugin-script
-Requires: plymouth
-Requires: plymouth-theme-bgrt-alt
-%branding_add_conflicts %flavour bootsplash
-
-%description bootsplash
-This package contains graphics for boot process, displayed via Plymouth
-
-%package alterator
-Summary: Design for alterator for %Brand %Theme
-License: GPLv2+
-Group: System/Configuration/Other
-BuildArch: noarch
-Provides: design-alterator-browser-%theme branding-alt-%theme-browser-qt branding-altlinux-%theme-browser-qt
-Provides: alterator-icons design-alterator design-alterator-%theme
-Obsoletes: branding-alt-%theme-browser-qt branding-altlinux-%theme-browser-qt design-alterator-server design-alterator-desktop design-alterator-browser-desktop design-alterator-browser-server
-%branding_add_conflicts %flavour alterator
-Requires(post,preun): alternatives >= 0.2 alterator
-
-%description alterator
-Design for QT and web alterator for %Brand %Theme
 
 %package graphics
 Summary: design for ALT
@@ -148,42 +96,6 @@ Conflicts: alt-notes-children alt-notes-hpc alt-notes-junior alt-notes-junior-sj
 %description notes
 Distribution license and release notes
 
-%package slideshow
-
-Summary: Slideshow for %Brand %version %Theme installer
-License: Distributable
-Group: System/Configuration/Other
-BuildArch: noarch
-%branding_add_conflicts %flavour slideshow
-
-%description slideshow
-Slideshow for %Brand %version %Theme installer
-
-%package indexhtml
-
-Summary: ALT Linux welcome page
-License: distributable
-Group: System/Base
-BuildArch: noarch
-Provides: indexhtml indexhtml-%theme = %version indexhtml-Desktop = 1:5.0
-Obsoletes: indexhtml-desktop indexhtml-Desktop
-
-Conflicts: indexhtml-sisyphus
-Conflicts: indexhtml-school_junior
-Conflicts: indexhtml-school_lite
-Conflicts: indexhtml-school_master
-Conflicts: indexhtml-school_terminal
-Conflicts: indexhtml-small_business
-Conflicts: indexhtml-school-server
-Conflicts: branding-sisyphus-server-light-indexhtml
-%branding_add_conflicts %flavour indexhtml
-
-Requires: xdg-utils
-Requires(post): indexhtml-common
-
-%description indexhtml
-ALT Linux index.html welcome page.
-
 %package xfce-settings
 
 Summary: XFCE settings for %Brand %version %Theme
@@ -205,23 +117,6 @@ LC_ALL=en_US.UTF-8 make
 
 %install
 %makeinstall
-
-#graphics
-mkdir -p %buildroot/%_datadir/design/{%theme,backgrounds}
-cp -ar graphics/* %buildroot/%_datadir/design/%theme
-
-pushd %buildroot/%_datadir/design/%theme
-    pushd backgrounds
-	ln -sf ../../../wallpapers more
-    popd
-popd
-
-install -d %buildroot//etc/alternatives/packages.d
-cat >%buildroot/etc/alternatives/packages.d/%name-graphics <<__EOF__
-%_datadir/artworks	%_datadir/design/%theme 9
-%_datadir/design-current	%_datadir/design/%theme	9
-%_datadir/design/current	%_datadir/design/%theme	9
-__EOF__
 
 #release
 install -pD -m644 /dev/null %buildroot%_sysconfdir/buildreqs/packages/ignore.d/%name-release
@@ -248,53 +143,11 @@ pushd notes
 %makeinstall
 popd
 
-#slideshow
-mkdir -p %buildroot/usr/share/install2/slideshow
-install slideshow/* %buildroot/usr/share/install2/slideshow/
-
 #xfce-settings
 pushd xfce-settings
 mkdir -p %buildroot/etc/skel/.config/
 cp -r etcskel/.config/xfce4 %buildroot/etc/skel/.config/xfce4
 popd
-
-#bootloader
-%pre bootloader
-[ -s /usr/share/gfxboot/%theme ] && rm -fr /usr/share/gfxboot/%theme ||:
-
-%post bootloader
-. shell-config
-shell_config_set /etc/sysconfig/grub2 GRUB_THEME /boot/grub/themes/%theme/theme.txt
-shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_NORMAL %grub_normal
-shell_config_set /etc/sysconfig/grub2 GRUB_COLOR_HIGHLIGHT %grub_high
-shell_config_set /etc/sysconfig/grub2 GRUB_BACKGROUND ''
-# deprecated
-shell_config_set /etc/sysconfig/grub2 GRUB_WALLPAPER ''
-
-%post indexhtml
-%_sbindir/indexhtml-update
-
-%files bootloader
-%ifarch %ix86 x86_64
-%_datadir/gfxboot/%theme
-%endif #ifarch
-/boot/grub/themes/%theme
-
-#bootsplash
-%post bootsplash
-subst "s/Theme=.*/Theme=bgrt-alt/" /etc/plymouth/plymouthd.conf
-
-%files alterator
-%config %_altdir/*.rcc
-/usr/share/alterator-browser-qt/design/*.rcc
-/usr/share/alterator/design/*
-
-%files graphics
-%config /etc/alternatives/packages.d/%name-graphics
-%_datadir/design
-
-%files bootsplash
-#_datadir/plymouth/themes/%theme/*
 
 %files release
 %_sysconfdir/buildreqs/packages/ignore.d/*
@@ -303,22 +156,6 @@ subst "s/Theme=.*/Theme=bgrt-alt/" /etc/plymouth/plymouthd.conf
 
 %files notes
 %_datadir/alt-notes/*
-
-%if_with slideshow
-%files slideshow
-/usr/share/install2/slideshow
-%else
-%exclude /usr/share/install2/slideshow
-%endif
-
-%define indexhtmldir %_defaultdocdir/indexhtml
-
-%files indexhtml
-%ghost %indexhtmldir/index.html
-%indexhtmldir/index-*.html
-%indexhtmldir/index.css
-%indexhtmldir/images
-%_desktopdir/indexhtml.desktop
 
 %files xfce-settings
 %_sysconfdir/skel/.config/xfce4
